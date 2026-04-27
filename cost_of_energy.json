@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Cost of Electrical Energy",
+    "subject": "Physics · Energy & Electricity",
+    "lock_key": "quiz_cost_of_energy_done"
+  },
+  "examples": [
+    {
+      "q": "A 1 000 W appliance is used for 3 hours. How much electrical energy does it consume in kilowatt-hours (kWh)?",
+      "solution": "Electrical energy consumed is calculated using:\n\n    E = P × t\n\nwhere  E = energy    (kWh — kilowatt-hours)\n       P = power     (kW — kilowatts)\n       t = time      (hours)\n\nIMPORTANT: Convert watts to kilowatts first!\n    1 000 W = 1 kW\n\nStep 1 — Convert power:\n    P = 1 000 W = 1 kW\n\nStep 2 — Multiply by time:\n    E = 1 kW × 3 h\n    E = 3 kWh\n\nAnswer:  E = 3 kWh\n\nNote: The kWh is the standard unit used by\nelectric companies to bill consumers.",
+      "opts": [
+        "3 kWh",
+        "3 000 kWh",
+        "0.3 kWh",
+        "300 kWh"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A household uses 3 kWh of electrical energy. If the cost of electricity is ₱10.00 per kWh, what is the total cost?",
+      "solution": "To find the cost of electrical energy:\n\n    Cost = Energy × Rate\n    Cost = E (kWh) × price per kWh\n\nStep 1 — Identify the values:\n    E    = 3 kWh\n    Rate = ₱10.00 per kWh\n\nStep 2 — Multiply:\n    Cost = 3 × ₱10.00\n    Cost = ₱30.00\n\nAnswer:  Cost = ₱30.00\n\nTip: To reduce electricity cost — reduce power\n(use efficient appliances) or reduce time of use.",
+      "opts": [
+        "₱30.00",
+        "₱300.00",
+        "₱3.00",
+        "₱13.00"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 500 W electric fan is used 8 hours a day for 30 days. If electricity costs ₱12.00 per kWh, what is the monthly cost?",
+      "solution": "Step 1 — Convert power to kilowatts:\n    P = 500 W = 0.5 kW\n\nStep 2 — Calculate total time used:\n    t = 8 hours/day × 30 days = 240 hours\n\nStep 3 — Calculate energy consumed:\n    E = P × t\n    E = 0.5 kW × 240 h\n    E = 120 kWh\n\nStep 4 — Calculate cost:\n    Cost = E × rate\n    Cost = 120 kWh × ₱12.00\n    Cost = ₱1 440.00\n\nAnswer:  Monthly cost = ₱1 440.00",
+      "opts": [
+        "₱1 440.00",
+        "₱144.00",
+        "₱14 400.00",
+        "₱720.00"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "What unit do electric companies use to measure the energy consumed by households?",
+      "given": "This unit combines power (kW) and time (hours).\nIt is the standard billing unit worldwide.",
+      "opts": ["Kilowatt-hour (kWh)", "Joule (J)", "Watt (W)", "Newton (N)"],
+      "ans": 0,
+      "sol": "The kilowatt-hour (kWh) is the standard unit of electrical energy used for billing. 1 kWh = 1 kW used for 1 hour."
+    },
+    {
+      "q": "A 2 000 W air conditioner runs for 5 hours. How many kWh of energy does it use?",
+      "given": "Formula:  E = P × t\nConvert W to kW first:  1 000 W = 1 kW",
+      "opts": ["10 kWh", "1 000 kWh", "0.4 kWh", "2 005 kWh"],
+      "ans": 0,
+      "sol": "P = 2 000 W = 2 kW.  E = 2 × 5 = 10 kWh."
+    },
+    {
+      "q": "A household consumes 250 kWh in a month. If the rate is ₱9.50 per kWh, what is the electricity bill?",
+      "given": "Formula:  Cost = Energy × Rate",
+      "opts": ["₱2 375.00", "₱259.50", "₱23 750.00", "₱237.50"],
+      "ans": 0,
+      "sol": "Cost = 250 × ₱9.50 = ₱2 375.00."
+    },
+    {
+      "q": "A 60 W bulb is left on for 10 hours. How much energy does it consume in kWh?",
+      "given": "Formula:  E = P × t\nConvert W to kW:  60 W = 0.06 kW",
+      "opts": ["0.6 kWh", "600 kWh", "6 kWh", "0.06 kWh"],
+      "ans": 0,
+      "sol": "P = 60 W = 0.06 kW.  E = 0.06 × 10 = 0.6 kWh."
+    },
+    {
+      "q": "An appliance uses 5 kWh of energy. If electricity costs ₱11.00 per kWh, what is the cost?",
+      "given": "Formula:  Cost = Energy × Rate",
+      "opts": ["₱55.00", "₱5.50", "₱550.00", "₱16.00"],
+      "ans": 0,
+      "sol": "Cost = 5 × ₱11.00 = ₱55.00."
+    },
+    {
+      "q": "How many joules of energy are in 1 kWh?",
+      "given": "1 kW = 1 000 W = 1 000 J/s\n1 hour = 3 600 seconds\n1 kWh = 1 000 J/s × 3 600 s",
+      "opts": ["3 600 000 J", "1 000 J", "3 600 J", "1 000 000 J"],
+      "ans": 0,
+      "sol": "1 kWh = 1 000 W × 3 600 s = 3 600 000 J (3.6 × 10⁶ J)."
+    },
+    {
+      "q": "A 250 W television is watched 6 hours daily for 30 days. What is the total energy consumed in kWh?",
+      "given": "Formula:  E = P × t\nP in kW, t in total hours.\nTotal time = hours/day × days",
+      "opts": ["45 kWh", "450 kWh", "4.5 kWh", "4 500 kWh"],
+      "ans": 0,
+      "sol": "P = 0.25 kW. t = 6 × 30 = 180 h. E = 0.25 × 180 = 45 kWh."
+    },
+    {
+      "q": "Which appliance costs more to run for 1 hour: a 1 500 W microwave for 1 hour, or a 3 000 W oven for 30 minutes?",
+      "given": "Calculate energy (kWh) for each:\nE = P (kW) × t (hours)\nThen compare.",
+      "opts": [
+        "They cost the same — both use 1.5 kWh",
+        "The microwave costs more",
+        "The oven costs more",
+        "Cannot be determined"
+      ],
+      "ans": 0,
+      "sol": "Microwave: 1.5 kW × 1 h = 1.5 kWh. Oven: 3 kW × 0.5 h = 1.5 kWh. Equal cost."
+    },
+    {
+      "q": "A family wants to reduce their electric bill. They replace a 100 W bulb with a 20 W LED used 5 hours daily. How much energy is saved per day?",
+      "given": "Calculate energy for each bulb per day:\nE = P (kW) × t (hours)\nSavings = Old energy − New energy",
+      "opts": ["0.4 kWh", "0.6 kWh", "0.1 kWh", "0.5 kWh"],
+      "ans": 0,
+      "sol": "Old: 0.1 kW × 5 = 0.5 kWh. New: 0.02 kW × 5 = 0.1 kWh. Savings = 0.5 − 0.1 = 0.4 kWh per day."
+    },
+    {
+      "q": "An electricity bill shows 180 kWh used and a total charge of ₱1 980.00. What is the rate per kWh?",
+      "given": "Rearrange:  Cost = Energy × Rate\n→  Rate = Cost / Energy",
+      "opts": ["₱11.00 per kWh", "₱9.00 per kWh", "₱18.00 per kWh", "₱1.10 per kWh"],
+      "ans": 0,
+      "sol": "Rate = ₱1 980.00 / 180 kWh = ₱11.00 per kWh."
+    }
+  ]
+}

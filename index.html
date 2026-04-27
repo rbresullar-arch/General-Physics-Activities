@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examinations — Dashboard</title>
+<style>
+  :root {
+    --bg:     #f7f6f2;
+    --ink:    #1a1a1a;
+    --mid:    #666;
+    --line:   #d0cfc9;
+    --accent: #c0392b;
+    --green:  #27ae60;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 2.5rem 1rem 4rem;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  .top-label {
+    font-size: 0.7rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--mid); margin-bottom: 0.4rem;
+  }
+  h1 {
+    font-size: 1.3rem; border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.55rem; margin-bottom: 0.5rem;
+  }
+  .tagline { font-size: 0.8rem; color: var(--mid); margin-bottom: 2rem; }
+
+  .section-label {
+    font-size: 0.68rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--mid); margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line); padding-bottom: 0.3rem;
+    margin-top: 2rem;
+  }
+  .section-label:first-of-type { margin-top: 0; }
+
+  .activity-list { display: flex; flex-direction: column; gap: 0.55rem; }
+
+  .activity-row {
+    display: flex; align-items: center; gap: 0.9rem;
+    background: #fff; border: 1px solid var(--line); padding: 0.8rem 0.9rem;
+  }
+
+  .activity-info { flex: 1; min-width: 0; }
+  .a-num   { font-size: 0.7rem; color: var(--mid); margin-bottom: 0.1rem; letter-spacing: .06em; }
+  .a-title { font-size: 0.9rem; font-weight: bold; }
+  .a-meta  { font-size: 0.72rem; color: var(--mid); margin-top: 0.15rem; }
+
+  .activity-score {
+    font-size: 1.15rem; font-weight: bold;
+    text-align: right; flex-shrink: 0; min-width: 3.2rem;
+  }
+  .activity-score.high { color: var(--green); }
+  .activity-score.mid  { color: #e67e22; }
+  .activity-score.low  { color: var(--accent); }
+  .activity-score.terminated { color: var(--accent); font-size: 0.7rem; font-weight: normal; text-transform: uppercase; letter-spacing: .05em; }
+  .activity-score.none { color: var(--line); font-size: 0.8rem; font-weight: normal; }
+
+  .open-btn {
+    flex-shrink: 0;
+    padding: 0.45rem 1rem;
+    background: var(--ink); color: var(--bg);
+    border: none; font-family: inherit; font-size: 0.8rem;
+    letter-spacing: .05em; cursor: pointer;
+    transition: background .15s; white-space: nowrap;
+  }
+  .open-btn:hover { background: #444; }
+  .open-btn.submitted {
+    background: var(--bg); color: var(--mid);
+    border: 1px solid var(--line); cursor: default;
+  }
+  .open-btn.submitted:hover { background: var(--bg); }
+  .open-btn.terminated-btn {
+    background: var(--bg); color: var(--accent);
+    border: 1px solid var(--accent); cursor: default; font-size: 0.72rem;
+  }
+  .open-btn.terminated-btn:hover { background: var(--bg); }
+
+  .summary-bar {
+    display: flex; gap: 2rem;
+    margin-top: 2.5rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.78rem; color: var(--mid);
+  }
+  .summary-bar span strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="top-label">Mathematics &amp; Physics · Examination Portal</p>
+  <h1>Activity Dashboard</h1>
+  <p class="tagline">Select an examination to begin. Each test can only be taken once.</p>
+
+  <div id="dashboard"></div>
+
+  <div class="summary-bar" id="summary-bar"></div>
+
+</div>
+
+<script>
+/* ══════════════════════════════════════════
+   ACTIVITY REGISTRY
+   file: the JSON data file for that quiz
+   lock: must match the lock_key in each JSON
+══════════════════════════════════════════ */
+const SECTIONS = [
+  {
+    label: 'Mathematics',
+    activities: [
+      {
+        title: 'Scientific Notation',
+        meta:  'Mathematics · Number Sense  ·  10 questions · 5 min each · scaled to 100',
+        file:  'scientific_notation.json',
+        lock:  'quiz_scientific_notation_done'
+      },
+      {
+        title: 'Units & Conversion of Units',
+        meta:  'Mathematics · Measurement  ·  10 questions · 5 min each · scaled to 100',
+        file:  'units_conversion.json',
+        lock:  'quiz_units_conversion_done'
+      },
+      {
+        title: 'Trigonometry: Pythagorean Theorem & SOH-CAH-TOA',
+        meta:  'Mathematics · Trigonometry  ·  10 questions · 5 min each · scaled to 100',
+        file:  'trigonometry.json',
+        lock:  'quiz_trigonometry_done'
+      }
+    ]
+  },
+  {
+    label: 'Physics — Mechanics',
+    activities: [
+      {
+        title: 'Vector Addition',
+        meta:  'Physics · Vectors  ·  10 questions · 5 min each · scaled to 100',
+        file:  'vector_addition.json',
+        lock:  'quiz_vector_addition_done'
+      },
+      {
+        title: 'Forces: Types of Forces',
+        meta:  'Physics · Dynamics  ·  10 questions · 5 min each · scaled to 100',
+        file:  'forces.json',
+        lock:  'quiz_forces_done'
+      },
+      {
+        title: 'Linear Displacement, Velocity & Constant Acceleration',
+        meta:  'Physics · Kinematics  ·  10 questions · 5 min each · scaled to 100',
+        file:  'kinematics.json',
+        lock:  'quiz_kinematics_done'
+      },
+      {
+        title: 'Centripetal Force & Acceleration',
+        meta:  'Physics · Circular Motion  ·  10 questions · 5 min each · scaled to 100',
+        file:  'centripetal.json',
+        lock:  'quiz_centripetal_done'
+      },
+      {
+        title: 'Torque',
+        meta:  'Physics · Rotational Motion  ·  10 questions · 5 min each · scaled to 100',
+        file:  'torque.json',
+        lock:  'quiz_torque_done'
+      },
+      {
+        title: 'Linear Momentum & Impulse',
+        meta:  'Physics · Momentum  ·  10 questions · 5 min each · scaled to 100',
+        file:  'momentum.json',
+        lock:  'quiz_momentum_done'
+      }
+    ]
+  },
+  {
+    label: 'Physics — Energy & Power',
+    activities: [
+      {
+        title: 'Work, Gravitational Potential Energy & Kinetic Energy',
+        meta:  'Physics · Energy  ·  10 questions · 5 min each · scaled to 100',
+        file:  'energy.json',
+        lock:  'quiz_energy_done'
+      },
+      {
+        title: 'Power',
+        meta:  'Physics · Energy & Power  ·  10 questions · 5 min each · scaled to 100',
+        file:  'power.json',
+        lock:  'quiz_power_done'
+      },
+      {
+        title: 'Cost of Electrical Energy',
+        meta:  'Physics · Electricity  ·  10 questions · 5 min each · scaled to 100',
+        file:  'cost_of_energy.json',
+        lock:  'quiz_cost_of_energy_done'
+      }
+    ]
+  },
+  {
+    label: 'Physics — Fluid Mechanics',
+    activities: [
+      {
+        title: "Pascal's Principle",
+        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
+        file:  'pascals_principle.json',
+        lock:  'quiz_pascals_principle_done'
+      },
+      {
+        title: 'Volumetric Flow Rate',
+        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
+        file:  'flow_rate.json',
+        lock:  'quiz_flow_rate_done'
+      },
+      {
+        title: 'Hydrostatic Pressure',
+        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
+        file:  'hydrostatic.json',
+        lock:  'quiz_hydrostatic_done'
+      }
+    ]
+  }
+];
+
+/* ── helpers ── */
+function getRecord(key) {
+  try { return JSON.parse(localStorage.getItem(key)); } catch(e) { return null; }
+}
+
+function scoreClass(rec) {
+  if (!rec)              return 'none';
+  if (rec.terminated)    return 'terminated';
+  if (rec.score >= 80)   return 'high';
+  if (rec.score >= 50)   return 'mid';
+  return 'low';
+}
+
+function scoreDisplay(rec) {
+  if (!rec)           return '—';
+  if (rec.terminated) return 'TERM.';
+  return `${rec.score}`;
+}
+
+/* ── render ── */
+function render() {
+  const dash = document.getElementById('dashboard');
+  dash.innerHTML = '';
+
+  let globalIndex = 1;
+  let totalDone = 0;
+  let totalScore = 0;
+
+  SECTIONS.forEach(section => {
+    const secLabel = document.createElement('p');
+    secLabel.className = 'section-label';
+    secLabel.textContent = section.label;
+    dash.appendChild(secLabel);
+
+    const list = document.createElement('div');
+    list.className = 'activity-list';
+
+    section.activities.forEach(act => {
+      const rec  = getRecord(act.lock);
+      const done = !!rec;
+
+      if (done) {
+        totalDone++;
+        if (!rec.terminated) totalScore += rec.score;
+      }
+
+      const row = document.createElement('div');
+      row.className = 'activity-row';
+
+      /* info */
+      const info = document.createElement('div');
+      info.className = 'activity-info';
+      info.innerHTML = `
+        <div class="a-num">Activity ${globalIndex}</div>
+        <div class="a-title">${act.title}</div>
+        <div class="a-meta">${act.meta}</div>
+      `;
+      row.appendChild(info);
+
+      /* score */
+      const sc = document.createElement('div');
+      sc.className = `activity-score ${scoreClass(rec)}`;
+      sc.textContent = scoreDisplay(rec);
+      row.appendChild(sc);
+
+      /* button */
+      const btn = document.createElement('button');
+      if (done && rec.terminated) {
+        btn.className   = 'open-btn terminated-btn';
+        btn.textContent = 'Terminated';
+        btn.disabled    = true;
+      } else if (done) {
+        btn.className   = 'open-btn submitted';
+        btn.textContent = 'Submitted';
+        btn.disabled    = true;
+      } else {
+        btn.className   = 'open-btn';
+        btn.textContent = 'Open →';
+        btn.onclick     = () => { window.location.href = `quiz.html?data=${act.file}`; };
+      }
+      row.appendChild(btn);
+
+      list.appendChild(row);
+      globalIndex++;
+    });
+
+    dash.appendChild(list);
+  });
+
+  /* summary bar */
+  const total = SECTIONS.reduce((n, s) => n + s.activities.length, 0);
+  const avg   = totalDone > 0
+    ? Math.round(totalScore / SECTIONS.reduce((n, s) => {
+        return n + s.activities.filter(a => {
+          const r = getRecord(a.lock);
+          return r && !r.terminated;
+        }).length;
+      }, 0))
+    : null;
+
+  document.getElementById('summary-bar').innerHTML = `
+    <span>Completed: <strong>${totalDone} / ${total}</strong></span>
+    ${avg !== null ? `<span>Average Score: <strong>${avg} / 100</strong></span>` : ''}
+    <span style="margin-left:auto; font-size:0.7rem;">Scores read from local browser storage</span>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>

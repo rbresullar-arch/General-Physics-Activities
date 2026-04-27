@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Vector Addition",
+    "subject": "Physics · Vectors",
+    "lock_key": "quiz_vector_addition_done"
+  },
+  "examples": [
+    {
+      "q": "Two forces act on an object in the SAME direction: 30 N east and 20 N east. What is the resultant vector?",
+      "solution": "When vectors point in the SAME direction,\nyou simply ADD their magnitudes.\n\nThe resultant keeps the same direction.\n\nStep 1 — Add the magnitudes:\n    30 N + 20 N = 50 N\n\nStep 2 — Keep the direction:\n    Direction = East\n\nAnswer:  Resultant = 50 N, East\n\nThis is called finding the NET vector.\nSame direction → magnitudes add up.",
+      "opts": [
+        "50 N, East",
+        "10 N, East",
+        "50 N, West",
+        "600 N, East"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "Two forces act on an object in OPPOSITE directions: 40 N east and 15 N west. What is the resultant vector?",
+      "solution": "When vectors point in OPPOSITE directions,\nyou SUBTRACT the smaller from the larger.\nThe resultant points in the direction of the larger vector.\n\nStep 1 — Assign signs (East = positive, West = negative):\n    +40 N  and  −15 N\n\nStep 2 — Add algebraically:\n    +40 + (−15) = +25 N\n\nStep 3 — Interpret the sign:\n    Positive → East\n\nAnswer:  Resultant = 25 N, East",
+      "opts": [
+        "25 N, East",
+        "55 N, East",
+        "25 N, West",
+        "55 N, West"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "Two vectors act at RIGHT ANGLES: 3 N north and 4 N east. Find the magnitude and direction of the resultant.",
+      "solution": "When vectors are PERPENDICULAR, use the\nPythagorean Theorem to find the magnitude,\nand tan⁻¹ for the direction.\n\nStep 1 — Find the magnitude:\n    R² = 3² + 4² = 9 + 16 = 25\n    R = √25 = 5 N\n\nStep 2 — Find the direction angle from East:\n    tan θ = opposite / adjacent\n    tan θ = 3 (North) / 4 (East) = 0.75\n    θ = tan⁻¹(0.75) ≈ 37°\n\nAnswer:  5 N at 37° North of East",
+      "opts": [
+        "5 N at 37° North of East",
+        "7 N at 45° North of East",
+        "5 N at 53° North of East",
+        "5 N due North"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "Two vectors point in the same direction: 14 N north and 11 N north. What is the resultant?",
+      "given": "Same direction → add magnitudes, keep direction.",
+      "opts": ["25 N, North", "3 N, North", "25 N, South", "14 N, North"],
+      "ans": 0,
+      "sol": "14 + 11 = 25 N, North."
+    },
+    {
+      "q": "Two forces act in opposite directions: 60 N right and 25 N left. What is the resultant?",
+      "given": "Opposite directions → subtract smaller from larger.\nResultant points in the direction of the larger vector.",
+      "opts": ["35 N, Right", "85 N, Right", "35 N, Left", "85 N, Left"],
+      "ans": 0,
+      "sol": "60 − 25 = 35 N in the direction of the larger force (Right)."
+    },
+    {
+      "q": "A vector of 50 N East and a vector of 50 N West are added. What is the resultant?",
+      "given": "When two equal vectors oppose each other, they cancel out.\nAssign East = positive, West = negative.",
+      "opts": ["0 N", "100 N, East", "100 N, West", "50 N, East"],
+      "ans": 0,
+      "sol": "+50 + (−50) = 0 N. The vectors cancel — the object is in equilibrium."
+    },
+    {
+      "q": "Two perpendicular vectors have magnitudes 6 N and 8 N. What is the magnitude of the resultant?",
+      "given": "For perpendicular vectors:\n    R² = A² + B²\n    R = √(A² + B²)",
+      "opts": ["10 N", "14 N", "√28 N", "48 N"],
+      "ans": 0,
+      "sol": "R = √(6² + 8²) = √(36 + 64) = √100 = 10 N."
+    },
+    {
+      "q": "Which of the following correctly describes a vector quantity?",
+      "given": "A vector has both MAGNITUDE and DIRECTION.\nA scalar has magnitude only.",
+      "opts": [
+        "40 N applied eastward",
+        "40 N of force",
+        "A temperature of 30°C",
+        "A mass of 5 kg"
+      ],
+      "ans": 0,
+      "sol": "Vectors require both magnitude and direction. '40 N eastward' specifies both."
+    },
+    {
+      "q": "A person walks 10 m East then 10 m West. What is their total displacement?",
+      "given": "Displacement is a vector — it has direction.\nEast = positive, West = negative.\nAdd algebraically.",
+      "opts": ["0 m", "20 m, East", "20 m, West", "10 m, East"],
+      "ans": 0,
+      "sol": "+10 + (−10) = 0 m. The person returns to the starting point. Displacement = 0."
+    },
+    {
+      "q": "Two perpendicular vectors measure 5 N and 12 N. What is the resultant magnitude?",
+      "given": "Pythagorean Theorem for perpendicular vectors:\n    R = √(A² + B²)",
+      "opts": ["13 N", "17 N", "7 N", "60 N"],
+      "ans": 0,
+      "sol": "R = √(5² + 12²) = √(25 + 144) = √169 = 13 N."
+    },
+    {
+      "q": "A resultant vector of 10 N is formed by two perpendicular components. One component is 6 N. What is the other?",
+      "given": "Rearrange the Pythagorean Theorem:\n    B = √(R² − A²)",
+      "opts": ["8 N", "4 N", "√136 N", "16 N"],
+      "ans": 0,
+      "sol": "B = √(10² − 6²) = √(100 − 36) = √64 = 8 N."
+    },
+    {
+      "q": "Three forces act on an object in a straight line: 20 N right, 30 N right, and 10 N left. What is the net force?",
+      "given": "Assign right = positive, left = negative.\nAdd all vectors algebraically.",
+      "opts": ["40 N, Right", "60 N, Right", "40 N, Left", "20 N, Right"],
+      "ans": 0,
+      "sol": "+20 + 30 + (−10) = +40 N. Net force = 40 N, Right."
+    },
+    {
+      "q": "A vector pointing at 37° above the horizontal has a magnitude of 10 N. What is its vertical component?",
+      "given": "Vertical component = R × sin θ\nsin 37° ≈ 0.6",
+      "opts": ["6 N", "8 N", "10 N", "4 N"],
+      "ans": 0,
+      "sol": "Vertical = 10 × sin 37° = 10 × 0.6 = 6 N."
+    }
+  ]
+}

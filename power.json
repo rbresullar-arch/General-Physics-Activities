@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Power",
+    "subject": "Physics · Energy & Power",
+    "lock_key": "quiz_power_done"
+  },
+  "examples": [
+    {
+      "q": "A machine does 500 J of work in 10 seconds. What is its power output?",
+      "solution": "Power is the RATE at which work is done —\nhow much energy is transferred per second.\n\nFormula:\n    P = W / t\n\nwhere  P = power   (W — Watts)\n       W = work    (J — Joules)\n       t = time    (s — seconds)\n\nStep 1 — Identify the values:\n    W = 500 J\n    t  = 10 s\n\nStep 2 — Substitute and solve:\n    P = 500 / 10\n    P = 50 W\n\nAnswer:  P = 50 W (50 Watts)\n\nNote: 1 Watt = 1 Joule per second (1 W = 1 J/s).",
+      "opts": [
+        "50 W",
+        "5 000 W",
+        "5 W",
+        "500 W"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 60 kg person climbs a 4 m staircase in 8 seconds. What is their power output? (g = 10 m/s²)",
+      "solution": "First, find the work done against gravity.\nThen, divide by time to get power.\n\nStep 1 — Calculate work done (= GPE gained):\n    W = m × g × h\n    W = 60 × 10 × 4\n    W = 2 400 J\n\nStep 2 — Calculate power:\n    P = W / t\n    P = 2 400 / 8\n    P = 300 W\n\nAnswer:  P = 300 W\n\nNote: The person's power is the rate at which\nthey convert chemical energy into GPE.",
+      "opts": [
+        "300 W",
+        "30 W",
+        "2 400 W",
+        "19 200 W"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A motor exerts a constant force of 400 N on a vehicle moving at 5 m/s. What is the motor's power output?",
+      "solution": "When a constant force acts on an object moving\nat constant velocity, use the alternative formula:\n\n    P = F × v\n\nwhere  F = force    (N)\n       v = velocity  (m/s)\n       P = power     (W)\n\nThis formula comes from:\n    P = W/t = (F × d)/t = F × (d/t) = F × v\n\nStep 1 — Identify the values:\n    F = 400 N\n    v = 5 m/s\n\nStep 2 — Substitute and solve:\n    P = 400 × 5\n    P = 2 000 W\n\nAnswer:  P = 2 000 W  (or 2 kW)",
+      "opts": [
+        "2 000 W",
+        "80 W",
+        "405 W",
+        "395 W"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "A lamp uses 1 200 J of energy in 60 seconds. What is its power rating?",
+      "given": "Formula:  P = W / t",
+      "opts": ["20 W", "72 000 W", "0.05 W", "1 260 W"],
+      "ans": 0,
+      "sol": "P = 1 200 / 60 = 20 W."
+    },
+    {
+      "q": "What is the unit of power?",
+      "given": "Power = Work / Time = Joules / seconds.\nThis unit is named after a famous engineer.",
+      "opts": ["Watt (W)", "Joule (J)", "Newton (N)", "Pascal (Pa)"],
+      "ans": 0,
+      "sol": "The Watt (W) is the unit of power. 1 W = 1 J/s."
+    },
+    {
+      "q": "A 40 W motor runs for 30 seconds. How much work does it do?",
+      "given": "Rearrange:  P = W / t\n→  W = P × t",
+      "opts": ["1 200 J", "0.75 J", "70 J", "10 J"],
+      "ans": 0,
+      "sol": "W = P × t = 40 × 30 = 1 200 J."
+    },
+    {
+      "q": "A person does 900 J of work. If their power output is 150 W, how long did it take?",
+      "given": "Rearrange:  P = W / t\n→  t = W / P",
+      "opts": ["6 s", "135 000 s", "750 s", "0.17 s"],
+      "ans": 0,
+      "sol": "t = W / P = 900 / 150 = 6 s."
+    },
+    {
+      "q": "A car engine exerts 3 000 N of force while moving at 20 m/s. What is its power output?",
+      "given": "Formula:  P = F × v",
+      "opts": ["60 000 W", "150 W", "3 020 W", "6 000 W"],
+      "ans": 0,
+      "sol": "P = F × v = 3 000 × 20 = 60 000 W (60 kW)."
+    },
+    {
+      "q": "Two machines each do 1 000 J of work. Machine A takes 5 s; Machine B takes 20 s. Which is more powerful?",
+      "given": "Formula:  P = W / t\nCalculate and compare the power of each machine.",
+      "opts": [
+        "Machine A — P = 200 W vs Machine B — P = 50 W",
+        "Machine B — it takes longer",
+        "They are equally powerful",
+        "Cannot be determined"
+      ],
+      "ans": 0,
+      "sol": "P_A = 1000/5 = 200 W. P_B = 1000/20 = 50 W. Machine A is 4× more powerful."
+    },
+    {
+      "q": "A 500 W motor lifts a 10 kg load. How fast does it lift the load? (g = 10 m/s²)",
+      "given": "Force needed to lift = m × g.\nThen use:  P = F × v\n→  v = P / F",
+      "opts": ["5 m/s", "50 m/s", "0.2 m/s", "500 m/s"],
+      "ans": 0,
+      "sol": "F = 10 × 10 = 100 N.  v = P / F = 500 / 100 = 5 m/s."
+    },
+    {
+      "q": "How many watts are in 3 kilowatts?",
+      "given": "Kilo = 1 000.\n1 kW = 1 000 W.",
+      "opts": ["3 000 W", "300 W", "0.003 W", "30 W"],
+      "ans": 0,
+      "sol": "3 kW = 3 × 1 000 = 3 000 W."
+    },
+    {
+      "q": "A person runs up stairs, gaining 2 000 J of GPE in 5 seconds. What is their power output?",
+      "given": "Work done against gravity = GPE gained.\nFormula:  P = W / t",
+      "opts": ["400 W", "10 000 W", "40 W", "2 005 W"],
+      "ans": 0,
+      "sol": "P = 2 000 / 5 = 400 W."
+    },
+    {
+      "q": "A 100 W bulb and a 60 W bulb are both left on for 1 hour. Which uses more energy?",
+      "given": "Rearrange:  P = W / t\n→  W = P × t\nCompare energy used by each bulb.",
+      "opts": [
+        "100 W bulb — it uses 360 000 J vs 216 000 J",
+        "60 W bulb — lower wattage means less power draw",
+        "They use the same energy",
+        "Cannot be determined without voltage"
+      ],
+      "ans": 0,
+      "sol": "W₁ = 100 × 3600 = 360 000 J. W₂ = 60 × 3600 = 216 000 J. The 100 W bulb uses more energy."
+    }
+  ]
+}

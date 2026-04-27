@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Torque",
+    "subject": "Physics · Rotational Motion",
+    "lock_key": "quiz_torque_done"
+  },
+  "examples": [
+    {
+      "q": "A force of 20 N is applied perpendicular to a wrench 0.3 m from the pivot. What is the torque produced?",
+      "solution": "Torque is the rotational effect of a force.\nIt depends on the force AND where it is applied.\n\nFormula:\n    τ = F × d\n\nwhere  τ = torque             (N·m)\n       F = applied force      (N)\n       d = moment arm (lever arm) — the perpendicular\n           distance from the pivot to the line of force (m)\n\nStep 1 — Identify the values:\n    F = 20 N\n    d = 0.3 m\n\nStep 2 — Substitute and solve:\n    τ = 20 × 0.3\n    τ = 6 N·m\n\nAnswer:  τ = 6 N·m\n\nNote: The force is already perpendicular,\nso no angle adjustment is needed.",
+      "opts": [
+        "6 N·m",
+        "66.7 N·m",
+        "0.6 N·m",
+        "60 N·m"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 50 N force is applied at 30° to a lever arm of 0.8 m. What is the torque?",
+      "solution": "When the force is NOT perpendicular to the lever arm,\nonly the perpendicular component creates torque.\n\nFormula:\n    τ = F × d × sin θ\n\nwhere  θ = angle between the force and the lever arm\n\nStep 1 — Identify the values:\n    F = 50 N\n    d = 0.8 m\n    θ = 30°\n\nStep 2 — Substitute and solve:\n    τ = 50 × 0.8 × sin 30°\n    τ = 50 × 0.8 × 0.5\n    τ = 20 N·m\n\nAnswer:  τ = 20 N·m\n\nNote: Maximum torque occurs at θ = 90°\n(force fully perpendicular to lever arm).",
+      "opts": [
+        "20 N·m",
+        "40 N·m",
+        "34.6 N·m",
+        "25 N·m"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A seesaw is balanced. A 40 N weight sits 2 m from the pivot on the left. Where must a 80 N weight be placed on the right to keep it balanced?",
+      "solution": "For a seesaw to be balanced (in rotational equilibrium),\nthe total clockwise torque must equal the total\ncounterclockwise torque:\n\n    τ_left = τ_right\n    F₁ × d₁ = F₂ × d₂\n\nStep 1 — Identify the values:\n    F₁ = 40 N,  d₁ = 2 m  (left side)\n    F₂ = 80 N,  d₂ = ?    (right side)\n\nStep 2 — Substitute and solve:\n    40 × 2 = 80 × d₂\n    80 = 80 × d₂\n    d₂ = 80 / 80\n    d₂ = 1 m\n\nAnswer:  The 80 N weight must be placed  1 m\nfrom the pivot on the right side.",
+      "opts": [
+        "1 m",
+        "2 m",
+        "4 m",
+        "0.5 m"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "A 15 N force is applied perpendicular to a lever 0.5 m from the pivot. What is the torque?",
+      "given": "Formula:  τ = F × d\nForce is perpendicular — no angle needed.",
+      "opts": ["7.5 N·m", "30 N·m", "0.033 N·m", "15.5 N·m"],
+      "ans": 0,
+      "sol": "τ = 15 × 0.5 = 7.5 N·m."
+    },
+    {
+      "q": "What is the unit of torque?",
+      "given": "Torque = Force × distance.\nForce is in Newtons (N); distance is in meters (m).",
+      "opts": ["N·m (Newton-meter)", "N/m", "kg·m/s²", "J/s"],
+      "ans": 0,
+      "sol": "Torque = F × d = N × m = N·m (Newton-meter)."
+    },
+    {
+      "q": "A force of 30 N is applied at 90° to a lever arm of 0.6 m. What is the torque?",
+      "given": "Formula:  τ = F × d × sin θ\nsin 90° = 1",
+      "opts": ["18 N·m", "9 N·m", "30 N·m", "0.6 N·m"],
+      "ans": 0,
+      "sol": "τ = 30 × 0.6 × sin 90° = 30 × 0.6 × 1 = 18 N·m."
+    },
+    {
+      "q": "A 60 N force is applied at 0° to a lever arm (parallel to it). What is the torque produced?",
+      "given": "Formula:  τ = F × d × sin θ\nsin 0° = 0",
+      "opts": ["0 N·m", "60 N·m", "Depends on length", "30 N·m"],
+      "ans": 0,
+      "sol": "τ = F × d × sin 0° = F × d × 0 = 0 N·m. A force parallel to the lever arm produces no torque."
+    },
+    {
+      "q": "At what angle should a force be applied to a lever arm to produce maximum torque?",
+      "given": "Formula:  τ = F × d × sin θ\nConsider which angle maximizes sin θ.",
+      "opts": ["90°", "45°", "0°", "180°"],
+      "ans": 0,
+      "sol": "sin 90° = 1, which is the maximum value of sin θ. Maximum torque is produced when force is perpendicular to the lever arm."
+    },
+    {
+      "q": "A torque of 24 N·m is produced by a perpendicular force applied 0.4 m from the pivot. What is the force?",
+      "given": "Rearrange:  τ = F × d\n→  F = τ / d",
+      "opts": ["60 N", "9.6 N", "24.4 N", "96 N"],
+      "ans": 0,
+      "sol": "F = τ / d = 24 / 0.4 = 60 N."
+    },
+    {
+      "q": "A 100 N weight sits 3 m from the pivot on one side of a seesaw. What force must be applied 5 m from the pivot on the other side to balance it?",
+      "given": "Rotational equilibrium:  F₁ × d₁ = F₂ × d₂\nSolve for F₂.",
+      "opts": ["60 N", "300 N", "167 N", "40 N"],
+      "ans": 0,
+      "sol": "100 × 3 = F₂ × 5  →  F₂ = 300 / 5 = 60 N."
+    },
+    {
+      "q": "Which of the following changes would NOT increase the torque on a bolt being turned by a wrench?",
+      "given": "τ = F × d × sin θ\nConsider each factor that affects torque.",
+      "opts": [
+        "Applying the force closer to the pivot",
+        "Increasing the applied force",
+        "Using a longer wrench",
+        "Applying the force at 90° to the wrench"
+      ],
+      "ans": 0,
+      "sol": "Applying force closer to the pivot reduces the moment arm (d), which decreases torque. All other options increase torque."
+    },
+    {
+      "q": "A force of 40 N is applied at 30° to a 1.5 m lever arm. What is the torque?",
+      "given": "Formula:  τ = F × d × sin θ\nsin 30° = 0.5",
+      "opts": ["30 N·m", "60 N·m", "52 N·m", "20 N·m"],
+      "ans": 0,
+      "sol": "τ = 40 × 1.5 × sin 30° = 40 × 1.5 × 0.5 = 30 N·m."
+    },
+    {
+      "q": "Two forces act on opposite sides of a pivot. Force A = 25 N at 2 m. Force B = 50 N at 1 m. Is the system in rotational equilibrium?",
+      "given": "Equilibrium requires:  τ_A = τ_B\nCompare torques on each side.",
+      "opts": [
+        "Yes — both torques equal 50 N·m",
+        "No — torque A is greater",
+        "No — torque B is greater",
+        "Cannot be determined"
+      ],
+      "ans": 0,
+      "sol": "τ_A = 25 × 2 = 50 N·m. τ_B = 50 × 1 = 50 N·m. Equal torques → rotational equilibrium."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Forces: Types of Forces",
+    "subject": "Physics · Dynamics",
+    "lock_key": "quiz_forces_done"
+  },
+  "examples": [
+    {
+      "q": "A book rests on a table. The table pushes upward on the book with a force equal to the book's weight. What type of force is this?",
+      "solution": "This is the NORMAL FORCE.\n\nDefinition:\n  The normal force (FN) is the contact force exerted\n  by a surface on an object resting on it.\n  It acts PERPENDICULAR to the surface.\n\nKey facts:\n  → It is a reaction force — it only exists when\n    an object is in contact with a surface.\n  → It balances the component of weight pushing\n    into the surface.\n  → On a flat surface, FN = weight of the object.\n\nIn this case:\n  Weight of book pushes DOWN on table.\n  Table pushes UP on book with equal force.\n  That upward push is the Normal Force.",
+      "opts": [
+        "Normal Force",
+        "Friction",
+        "Tension",
+        "Applied Force"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A box is being pulled across a rough floor with a rope. The floor resists the motion of the box. What force does the floor exert on the box?",
+      "solution": "This is FRICTION.\n\nDefinition:\n  Friction is a contact force that opposes the\n  relative motion (or tendency of motion) between\n  two surfaces in contact.\n\nTwo main types:\n  → Static friction: prevents an object from starting\n    to move. Acts when the object is at rest.\n  → Kinetic friction: acts on a moving object,\n    opposing its motion.\n\nIn this case:\n  The box is moving → kinetic friction applies.\n  The floor exerts a friction force OPPOSITE to\n  the direction of the box's motion.",
+      "opts": [
+        "Friction (Kinetic)",
+        "Normal Force",
+        "Tension",
+        "Gravity"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A chandelier hangs from the ceiling by a wire. What force does the wire exert on the chandelier?",
+      "solution": "This is TENSION.\n\nDefinition:\n  Tension is the pulling force transmitted through\n  a string, rope, cable, or wire when it is pulled\n  tight by forces acting from opposite ends.\n\nKey facts:\n  → Tension acts ALONG the rope or string.\n  → It pulls the object toward the attachment point.\n  → The rope pulls the chandelier UP and pulls\n    the ceiling DOWN with equal magnitude.\n\nIn this case:\n  The wire is taut because the chandelier's weight\n  pulls it down. The wire pulls the chandelier UP —\n  this upward pull is the tension force.",
+      "opts": [
+        "Tension",
+        "Normal Force",
+        "Friction",
+        "Applied Force"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which force always acts downward toward the center of the Earth on any object with mass?",
+      "given": "This force acts on ALL objects with mass.\nIt is always directed downward (toward Earth's center).\nFormula: Fg = mg",
+      "opts": ["Gravity (Weight)", "Normal Force", "Friction", "Tension"],
+      "ans": 0,
+      "sol": "Gravity (weight) is the force of Earth's gravitational pull on any mass. Fg = mg, always downward."
+    },
+    {
+      "q": "A book is sitting still on a table. The table pushes up on the book. What is this force called?",
+      "given": "This force is a contact force.\nIt acts perpendicular to the surface.\nIt balances the weight of the object on flat ground.",
+      "opts": ["Normal Force", "Friction", "Gravity", "Applied Force"],
+      "ans": 0,
+      "sol": "The normal force is the perpendicular contact force a surface exerts on an object resting on it."
+    },
+    {
+      "q": "You push a heavy crate across the floor. The floor resists your push and slows the crate. What force is acting against the motion?",
+      "given": "This force opposes motion between two surfaces.\nIt acts in the OPPOSITE direction of movement.",
+      "opts": ["Kinetic Friction", "Static Friction", "Normal Force", "Tension"],
+      "ans": 0,
+      "sol": "Kinetic friction opposes the motion of a sliding object. Since the crate is moving, kinetic friction applies."
+    },
+    {
+      "q": "A person tries to push a heavy refrigerator but it does not move. What force prevents the refrigerator from moving?",
+      "given": "This type of friction acts when an object is at REST.\nIt prevents the object from beginning to move.",
+      "opts": ["Static Friction", "Kinetic Friction", "Normal Force", "Applied Force"],
+      "ans": 0,
+      "sol": "Static friction acts when an object is at rest and prevents it from starting to move."
+    },
+    {
+      "q": "A bucket is lifted by a rope. What is the force that the rope exerts on the bucket called?",
+      "given": "This force is transmitted through a rope, cable, or string.\nIt acts along the rope, pulling the object toward the attachment point.",
+      "opts": ["Tension", "Normal Force", "Friction", "Gravity"],
+      "ans": 0,
+      "sol": "Tension is the pulling force transmitted through a rope or string. It acts upward along the rope on the bucket."
+    },
+    {
+      "q": "Which of the following best defines 'applied force'?",
+      "given": "An applied force is one that a person or object directly\nexerts on another object.",
+      "opts": [
+        "A force directly exerted on an object by a person or another object",
+        "The force of gravity on an object",
+        "The force a surface exerts perpendicular to an object",
+        "The resistance force between two surfaces"
+      ],
+      "ans": 0,
+      "sol": "Applied force is a force directly exerted on an object by a person or another object, such as a push or pull."
+    },
+    {
+      "q": "A spring is compressed and then pushes a toy car forward. What type of force does the spring exert?",
+      "given": "This force is stored in elastic objects (springs, rubber bands).\nIt acts to restore the object to its natural shape.\nFormula: F = kx  (Hooke's Law)",
+      "opts": ["Spring (Elastic) Force", "Tension", "Normal Force", "Friction"],
+      "ans": 0,
+      "sol": "The spring force (elastic force) is stored energy in a compressed or stretched spring, described by Hooke's Law: F = kx."
+    },
+    {
+      "q": "An object is falling through the air and a force opposes its downward motion. What is this force?",
+      "given": "This force acts on objects moving through a fluid (air or liquid).\nIt opposes the direction of motion.",
+      "opts": ["Air Resistance (Drag)", "Friction", "Normal Force", "Gravity"],
+      "ans": 0,
+      "sol": "Air resistance (drag) is a force that opposes the motion of an object moving through air or any fluid."
+    },
+    {
+      "q": "Two magnets attract each other without touching. What type of force is this an example of?",
+      "given": "This force acts between objects without direct contact.\nIt can be attractive or repulsive.\nIt is a non-contact force.",
+      "opts": ["Magnetic Force", "Friction", "Normal Force", "Tension"],
+      "ans": 0,
+      "sol": "Magnetic force is a non-contact force that acts between magnets or magnetic materials. No physical contact is needed."
+    },
+    {
+      "q": "Which pair correctly matches the force type with its definition?",
+      "given": "Review all force definitions:\nNormal = perpendicular contact force from a surface\nFriction = opposes motion between surfaces\nTension = pull through a rope\nGravity = pull toward Earth's center",
+      "opts": [
+        "Friction — opposes motion between two surfaces in contact",
+        "Normal Force — pulls objects toward Earth's center",
+        "Tension — pushes objects apart",
+        "Gravity — acts perpendicular to a surface"
+      ],
+      "ans": 0,
+      "sol": "Friction opposes relative motion between surfaces. The other options describe the wrong forces."
+    }
+  ]
+}

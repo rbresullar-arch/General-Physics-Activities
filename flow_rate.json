@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Volumetric Flow Rate",
+    "subject": "Physics · Fluid Mechanics",
+    "lock_key": "quiz_flow_rate_done"
+  },
+  "examples": [
+    {
+      "q": "Water flows through a pipe and fills a 0.6 m³ tank in 20 seconds. What is the volumetric flow rate?",
+      "solution": "Volumetric Flow Rate is the volume of fluid\npassing a point per unit time.\n\nFormula:\n    Q = V / t\n\nwhere  Q = volumetric flow rate  (m³/s)\n       V = volume of fluid       (m³)\n       t = time                  (s)\n\nStep 1 — Identify the values:\n    V = 0.6 m³\n    t = 20 s\n\nStep 2 — Substitute and solve:\n    Q = 0.6 / 20\n    Q = 0.03 m³/s\n\nAnswer:  Q = 0.03 m³/s\n\nNote: Flow rate can also be expressed in\nliters per second (L/s) or liters per minute (L/min).",
+      "opts": [
+        "0.03 m³/s",
+        "12 m³/s",
+        "0.3 m³/s",
+        "0.003 m³/s"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "Water flows through a pipe with a cross-sectional area of 0.05 m² at a velocity of 4 m/s. What is the volumetric flow rate?",
+      "solution": "Flow rate can also be calculated from the\ncross-sectional area and the flow velocity:\n\n    Q = A × v\n\nwhere  Q = volumetric flow rate      (m³/s)\n       A = cross-sectional area of pipe  (m²)\n       v = velocity of fluid          (m/s)\n\nStep 1 — Identify the values:\n    A = 0.05 m²\n    v = 4 m/s\n\nStep 2 — Substitute and solve:\n    Q = 0.05 × 4\n    Q = 0.2 m³/s\n\nAnswer:  Q = 0.2 m³/s\n\nNote: This formula comes from imagining a\ncylinder of fluid moving through the pipe.",
+      "opts": [
+        "0.2 m³/s",
+        "0.0125 m³/s",
+        "2 m³/s",
+        "0.02 m³/s"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "Water flows from a wide pipe (A₁ = 0.1 m²) into a narrow pipe (A₂ = 0.02 m²). If the velocity in the wide pipe is 3 m/s, what is the velocity in the narrow pipe?",
+      "solution": "By the Continuity Equation, flow rate is\nconserved — fluid does not accumulate:\n\n    Q₁ = Q₂\n    A₁ × v₁ = A₂ × v₂\n\nRearranging to find v₂:\n    v₂ = (A₁ × v₁) / A₂\n\nStep 1 — Identify the values:\n    A₁ = 0.1 m²,  v₁ = 3 m/s\n    A₂ = 0.02 m²\n\nStep 2 — Substitute and solve:\n    v₂ = (0.1 × 3) / 0.02\n    v₂ = 0.3 / 0.02\n    v₂ = 15 m/s\n\nAnswer:  v₂ = 15 m/s\n\nThe fluid speeds up in the narrower pipe.\nSmaller area → higher velocity.",
+      "opts": [
+        "15 m/s",
+        "0.6 m/s",
+        "0.3 m/s",
+        "30 m/s"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "A pipe fills a 3 m³ tank in 60 seconds. What is the volumetric flow rate?",
+      "given": "Formula:  Q = V / t",
+      "opts": ["0.05 m³/s", "180 m³/s", "0.5 m³/s", "20 m³/s"],
+      "ans": 0,
+      "sol": "Q = 3 / 60 = 0.05 m³/s."
+    },
+    {
+      "q": "A pipe has a cross-sectional area of 0.08 m² and fluid flows at 2.5 m/s. What is the flow rate?",
+      "given": "Formula:  Q = A × v",
+      "opts": ["0.2 m³/s", "0.032 m³/s", "2 m³/s", "32 m³/s"],
+      "ans": 0,
+      "sol": "Q = 0.08 × 2.5 = 0.2 m³/s."
+    },
+    {
+      "q": "What is the unit of volumetric flow rate in the SI system?",
+      "given": "Flow rate = Volume / Time.\nVolume in m³, time in seconds.",
+      "opts": ["m³/s", "m/s", "m³", "kg/s"],
+      "ans": 0,
+      "sol": "The SI unit of volumetric flow rate is cubic meters per second (m³/s)."
+    },
+    {
+      "q": "A flow rate of 0.04 m³/s passes through a pipe of area 0.008 m². What is the fluid velocity?",
+      "given": "Rearrange:  Q = A × v\n→  v = Q / A",
+      "opts": ["5 m/s", "0.2 m/s", "0.00032 m/s", "32 m/s"],
+      "ans": 0,
+      "sol": "v = Q / A = 0.04 / 0.008 = 5 m/s."
+    },
+    {
+      "q": "How long does it take a pipe with flow rate 0.025 m³/s to fill a 0.5 m³ tank?",
+      "given": "Rearrange:  Q = V / t\n→  t = V / Q",
+      "opts": ["20 s", "0.05 s", "0.5 s", "12.5 s"],
+      "ans": 0,
+      "sol": "t = V / Q = 0.5 / 0.025 = 20 s."
+    },
+    {
+      "q": "Fluid flows from pipe A (area = 0.06 m², v = 2 m/s) into pipe B (area = 0.03 m²). What is the velocity in pipe B?",
+      "given": "Continuity Equation:  A₁ × v₁ = A₂ × v₂\n→  v₂ = (A₁ × v₁) / A₂",
+      "opts": ["4 m/s", "1 m/s", "0.5 m/s", "8 m/s"],
+      "ans": 0,
+      "sol": "v₂ = (0.06 × 2) / 0.03 = 0.12 / 0.03 = 4 m/s."
+    },
+    {
+      "q": "What happens to fluid velocity when it flows from a wide pipe into a narrow pipe?",
+      "given": "Continuity Equation:  A₁v₁ = A₂v₂\nIf area decreases, what must happen to velocity?",
+      "opts": [
+        "Velocity increases",
+        "Velocity decreases",
+        "Velocity stays the same",
+        "Flow rate increases"
+      ],
+      "ans": 0,
+      "sol": "By the Continuity Equation, if area decreases, velocity must increase to keep Q = Av constant."
+    },
+    {
+      "q": "A flow rate of 0.1 m³/s flows through a pipe for 30 seconds. What volume of fluid passes through?",
+      "given": "Rearrange:  Q = V / t\n→  V = Q × t",
+      "opts": ["3 m³", "0.33 m³", "0.003 m³", "300 m³"],
+      "ans": 0,
+      "sol": "V = Q × t = 0.1 × 30 = 3 m³."
+    },
+    {
+      "q": "Pipe 1 (A = 0.2 m², v = 5 m/s) splits into two identical pipes. What is the flow rate in each branch?",
+      "given": "Total flow rate Q = A × v.\nFlow is shared equally between the two branches.\nQ_each = Q_total / 2",
+      "opts": ["0.5 m³/s", "1 m³/s", "0.25 m³/s", "2 m³/s"],
+      "ans": 0,
+      "sol": "Q_total = 0.2 × 5 = 1 m³/s. Each branch gets 1 / 2 = 0.5 m³/s."
+    },
+    {
+      "q": "Which of the following correctly states the Continuity Equation for fluid flow?",
+      "given": "This equation is based on the conservation of mass\nfor an incompressible fluid in a pipe.",
+      "opts": [
+        "A₁v₁ = A₂v₂  (flow rate is constant throughout the pipe)",
+        "A₁v₁ = A₂v₂² (flow rate depends on velocity squared)",
+        "P₁ + ½ρv₁² = P₂ + ½ρv₂² (Bernoulli's equation)",
+        "v₁ / A₁ = v₂ / A₂ (velocity divided by area is constant)"
+      ],
+      "ans": 0,
+      "sol": "The Continuity Equation is A₁v₁ = A₂v₂ — the volumetric flow rate Q = Av is constant throughout an incompressible fluid flow."
+    }
+  ]
+}

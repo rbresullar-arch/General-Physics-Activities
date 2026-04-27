@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Units & Conversion of Units",
+    "subject": "Mathematics · Measurement",
+    "lock_key": "quiz_units_conversion_done"
+  },
+  "examples": [
+    {
+      "q": "Convert 5.2 kilometers to meters. How many meters is that?",
+      "solution": "The relationship between kilometers and meters is:\n    1 km = 1 000 m\n\nTo convert from a LARGER unit to a SMALLER unit,\nyou MULTIPLY by the conversion factor.\n\nStep 1 — Identify the conversion factor:\n    1 km = 1 000 m\n\nStep 2 — Multiply:\n    5.2 × 1 000 = 5 200\n\nAnswer:  5.2 km  =  5 200 m\n\nTip: km → m means ×1 000 (move decimal 3 places right).",
+      "opts": [
+        "5 200 m",
+        "520 m",
+        "52 000 m",
+        "0.0052 m"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A bottle contains 2 500 mL of water. How many liters is that?",
+      "solution": "The relationship between milliliters and liters is:\n    1 L = 1 000 mL\n\nTo convert from a SMALLER unit to a LARGER unit,\nyou DIVIDE by the conversion factor.\n\nStep 1 — Identify the conversion factor:\n    1 L = 1 000 mL\n\nStep 2 — Divide:\n    2 500 ÷ 1 000 = 2.5\n\nAnswer:  2 500 mL  =  2.5 L\n\nTip: mL → L means ÷1 000 (move decimal 3 places left).",
+      "opts": [
+        "2.5 L",
+        "25 L",
+        "0.25 L",
+        "250 L"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A runner completes a race in 2 hours and 15 minutes. How many minutes is the total time?",
+      "solution": "We need to convert hours to minutes, then add the remaining minutes.\n\nConversion factor:\n    1 hour = 60 minutes\n\nStep 1 — Convert 2 hours to minutes:\n    2 × 60 = 120 minutes\n\nStep 2 — Add the remaining 15 minutes:\n    120 + 15 = 135 minutes\n\nAnswer:  2 hours 15 minutes  =  135 minutes\n\nTip: Always convert all values to the same unit\nbefore adding or comparing.",
+      "opts": [
+        "135 minutes",
+        "125 minutes",
+        "215 minutes",
+        "75 minutes"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "Convert 3.5 km to meters.",
+      "given": "1 km = 1 000 m\nLarger → smaller unit: multiply by the conversion factor.",
+      "opts": ["3 500 m", "350 m", "35 000 m", "0.0035 m"],
+      "ans": 0,
+      "sol": "3.5 × 1 000 = 3 500 m."
+    },
+    {
+      "q": "Convert 4 200 g to kilograms.",
+      "given": "1 kg = 1 000 g\nSmaller → larger unit: divide by the conversion factor.",
+      "opts": ["4.2 kg", "42 kg", "0.42 kg", "420 kg"],
+      "ans": 0,
+      "sol": "4 200 ÷ 1 000 = 4.2 kg."
+    },
+    {
+      "q": "How many centimeters are in 2.8 meters?",
+      "given": "1 m = 100 cm\nLarger → smaller unit: multiply by the conversion factor.",
+      "opts": ["280 cm", "28 cm", "2 800 cm", "0.028 cm"],
+      "ans": 0,
+      "sol": "2.8 × 100 = 280 cm."
+    },
+    {
+      "q": "Convert 90 minutes to hours.",
+      "given": "1 hour = 60 minutes\nSmaller → larger unit: divide by the conversion factor.",
+      "opts": ["1.5 hours", "0.5 hours", "150 hours", "9 hours"],
+      "ans": 0,
+      "sol": "90 ÷ 60 = 1.5 hours."
+    },
+    {
+      "q": "A carton holds 1.5 L of juice. How many milliliters is that?",
+      "given": "1 L = 1 000 mL\nLarger → smaller unit: multiply by the conversion factor.",
+      "opts": ["1 500 mL", "150 mL", "15 000 mL", "0.0015 mL"],
+      "ans": 0,
+      "sol": "1.5 × 1 000 = 1 500 mL."
+    },
+    {
+      "q": "Convert 5 280 m to kilometers.",
+      "given": "1 km = 1 000 m\nSmaller → larger unit: divide by the conversion factor.",
+      "opts": ["5.28 km", "52.8 km", "528 km", "0.528 km"],
+      "ans": 0,
+      "sol": "5 280 ÷ 1 000 = 5.28 km."
+    },
+    {
+      "q": "A bag of rice weighs 2.25 kg. What is this in grams?",
+      "given": "1 kg = 1 000 g\nLarger → smaller unit: multiply by the conversion factor.",
+      "opts": ["2 250 g", "225 g", "22 500 g", "0.00225 g"],
+      "ans": 0,
+      "sol": "2.25 × 1 000 = 2 250 g."
+    },
+    {
+      "q": "Convert 45 mm to centimeters.",
+      "given": "1 cm = 10 mm\nSmaller → larger unit: divide by the conversion factor.",
+      "opts": ["4.5 cm", "450 cm", "0.45 cm", "45 cm"],
+      "ans": 0,
+      "sol": "45 ÷ 10 = 4.5 cm."
+    },
+    {
+      "q": "A trip takes 3 hours 30 minutes. How many minutes is this in total?",
+      "given": "1 hour = 60 minutes\nConvert hours to minutes, then add any remaining minutes.",
+      "opts": ["210 minutes", "330 minutes", "180 minutes", "200 minutes"],
+      "ans": 0,
+      "sol": "3 × 60 = 180 minutes, then 180 + 30 = 210 minutes."
+    },
+    {
+      "q": "Which conversion is correct?",
+      "given": "Review the standard metric conversion factors:\n1 km = 1 000 m  |  1 m = 100 cm  |  1 kg = 1 000 g  |  1 L = 1 000 mL",
+      "opts": [
+        "750 cm = 7.5 m",
+        "750 cm = 75 m",
+        "750 cm = 0.75 m",
+        "750 cm = 7 500 m"
+      ],
+      "ans": 0,
+      "sol": "750 ÷ 100 = 7.5 m. Dividing by 100 converts cm to m correctly."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Linear Momentum & Impulse",
+    "subject": "Physics · Momentum",
+    "lock_key": "quiz_momentum_done"
+  },
+  "examples": [
+    {
+      "q": "A 5 kg ball moves at 8 m/s to the right. What is its linear momentum?",
+      "solution": "Linear momentum is the product of an object's\nmass and velocity.\n\nFormula:\n    p = m × v\n\nwhere  p = momentum  (kg·m/s)\n       m = mass       (kg)\n       v = velocity   (m/s)\n\nMomentum is a VECTOR — it has direction.\n\nStep 1 — Identify the values:\n    m = 5 kg\n    v = 8 m/s (right)\n\nStep 2 — Substitute and solve:\n    p = 5 × 8\n    p = 40 kg·m/s\n\nAnswer:  p = 40 kg·m/s, to the right.",
+      "opts": [
+        "40 kg·m/s, right",
+        "1.6 kg·m/s, right",
+        "13 kg·m/s, right",
+        "40 kg·m/s (no direction)"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 3 kg object is moving at 2 m/s. A force of 6 N is applied for 4 seconds in the same direction. What is the final velocity?",
+      "solution": "Impulse is the change in momentum caused by a force\nacting over time.\n\nFormula:\n    J = F × t = Δp = m × (vf − vi)\n\nStep 1 — Calculate the impulse:\n    J = F × t = 6 × 4 = 24 N·s\n\nStep 2 — Apply the impulse-momentum theorem:\n    J = m × (vf − vi)\n    24 = 3 × (vf − 2)\n    24 / 3 = vf − 2\n    8 = vf − 2\n    vf = 10 m/s\n\nAnswer:  vf = 10 m/s",
+      "opts": [
+        "10 m/s",
+        "8 m/s",
+        "14 m/s",
+        "4 m/s"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 4 kg ball moving right at 6 m/s collides with a stationary 4 kg ball. After the collision they move together. What is their combined velocity?",
+      "solution": "This is a perfectly inelastic collision.\nUse Conservation of Momentum:\n\n    Total momentum before = Total momentum after\n    m₁v₁ + m₂v₂ = (m₁ + m₂) × vf\n\nStep 1 — Identify values:\n    m₁ = 4 kg,  v₁ = 6 m/s\n    m₂ = 4 kg,  v₂ = 0 m/s (stationary)\n\nStep 2 — Substitute:\n    (4 × 6) + (4 × 0) = (4 + 4) × vf\n    24 + 0 = 8 × vf\n    vf = 24 / 8\n    vf = 3 m/s\n\nAnswer:  vf = 3 m/s, to the right.",
+      "opts": [
+        "3 m/s",
+        "6 m/s",
+        "12 m/s",
+        "1.5 m/s"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the momentum of a 10 kg object moving at 5 m/s?",
+      "given": "Formula:  p = m × v",
+      "opts": ["50 kg·m/s", "2 kg·m/s", "15 kg·m/s", "500 kg·m/s"],
+      "ans": 0,
+      "sol": "p = 10 × 5 = 50 kg·m/s."
+    },
+    {
+      "q": "A force of 10 N acts on an object for 3 seconds. What is the impulse?",
+      "given": "Formula:  J = F × t\nUnit of impulse: N·s (Newton-second)",
+      "opts": ["30 N·s", "3.33 N·s", "13 N·s", "0.33 N·s"],
+      "ans": 0,
+      "sol": "J = F × t = 10 × 3 = 30 N·s."
+    },
+    {
+      "q": "A 2 kg object at rest is hit with an impulse of 16 N·s. What is its final velocity?",
+      "given": "Impulse-Momentum Theorem:  J = m × (vf − vi)\nObject starts at rest: vi = 0.",
+      "opts": ["8 m/s", "32 m/s", "14 m/s", "18 m/s"],
+      "ans": 0,
+      "sol": "16 = 2 × (vf − 0)  →  vf = 16 / 2 = 8 m/s."
+    },
+    {
+      "q": "Which of the following has greater momentum: a 2 kg object at 10 m/s or a 5 kg object at 3 m/s?",
+      "given": "Formula:  p = m × v\nCalculate each momentum and compare.",
+      "opts": [
+        "2 kg object — momentum = 20 kg·m/s",
+        "5 kg object — momentum = 15 kg·m/s",
+        "They are equal",
+        "Cannot be determined"
+      ],
+      "ans": 0,
+      "sol": "p₁ = 2 × 10 = 20 kg·m/s. p₂ = 5 × 3 = 15 kg·m/s. The 2 kg object has greater momentum."
+    },
+    {
+      "q": "A 6 kg object moves from 4 m/s to 10 m/s. What impulse caused this change?",
+      "given": "Impulse = change in momentum\n    J = m × (vf − vi)",
+      "opts": ["36 N·s", "24 N·s", "60 N·s", "6 N·s"],
+      "ans": 0,
+      "sol": "J = 6 × (10 − 4) = 6 × 6 = 36 N·s."
+    },
+    {
+      "q": "A 1 500 kg car moves at 20 m/s. What is its momentum?",
+      "given": "Formula:  p = m × v",
+      "opts": ["30 000 kg·m/s", "1 520 kg·m/s", "75 kg·m/s", "3 000 kg·m/s"],
+      "ans": 0,
+      "sol": "p = 1 500 × 20 = 30 000 kg·m/s."
+    },
+    {
+      "q": "According to the Law of Conservation of Momentum, what is true in a closed system with no external forces?",
+      "given": "A 'closed system' means no forces act from outside.\nThis is one of the most fundamental laws in physics.",
+      "opts": [
+        "Total momentum before = Total momentum after",
+        "Total momentum always increases",
+        "Total momentum always decreases",
+        "Momentum only conserved in elastic collisions"
+      ],
+      "ans": 0,
+      "sol": "The Law of Conservation of Momentum states: in a closed system, total momentum before any collision equals total momentum after."
+    },
+    {
+      "q": "A 3 kg ball at 10 m/s collides with a 7 kg stationary ball and they stick together. What is the combined velocity?",
+      "given": "Conservation of Momentum:\n    m₁v₁ + m₂v₂ = (m₁ + m₂) × vf",
+      "opts": ["3 m/s", "5 m/s", "7 m/s", "10 m/s"],
+      "ans": 0,
+      "sol": "(3 × 10) + (7 × 0) = (3 + 7) × vf  →  30 = 10 × vf  →  vf = 3 m/s."
+    },
+    {
+      "q": "Why does a longer contact time reduce the force of an impact (e.g., an airbag)?",
+      "given": "Impulse:  J = F × t = Δp\nIf Δp (change in momentum) is fixed, what happens to F as t increases?",
+      "opts": [
+        "F decreases because F = Δp / t — same impulse over more time",
+        "F increases because more time means more force",
+        "F is unchanged — only momentum changes",
+        "F increases because the object decelerates faster"
+      ],
+      "ans": 0,
+      "sol": "J = F × t is fixed (same Δp). So F = J / t — if t increases, F must decrease. This is why airbags save lives."
+    },
+    {
+      "q": "A 5 kg object moving at 4 m/s right collides head-on with a 5 kg object at 4 m/s left. They stick together. What is the final velocity?",
+      "given": "Assign right = positive, left = negative.\nConservation of Momentum:  m₁v₁ + m₂v₂ = (m₁ + m₂) × vf",
+      "opts": ["0 m/s", "4 m/s, right", "8 m/s, right", "2 m/s, right"],
+      "ans": 0,
+      "sol": "(5 × 4) + (5 × −4) = (10) × vf  →  20 − 20 = 10vf  →  vf = 0 m/s. They cancel out."
+    }
+  ]
+}

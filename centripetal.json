@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Centripetal Force & Acceleration",
+    "subject": "Physics · Circular Motion",
+    "lock_key": "quiz_centripetal_done"
+  },
+  "examples": [
+    {
+      "q": "A car moves in a circle of radius 50 m at a constant speed of 10 m/s. What is its centripetal acceleration?",
+      "solution": "Centripetal acceleration is the acceleration directed\ntoward the CENTER of a circular path.\n\nFormula:\n    ac = v² / r\n\nwhere  v  = speed (m/s)\n       r  = radius of circular path (m)\n       ac = centripetal acceleration (m/s²)\n\nStep 1 — Identify the values:\n    v = 10 m/s\n    r = 50 m\n\nStep 2 — Substitute and solve:\n    ac = (10)² / 50\n    ac = 100 / 50\n    ac = 2 m/s²\n\nAnswer:  ac = 2 m/s², directed toward the center.",
+      "opts": [
+        "2 m/s²",
+        "0.2 m/s²",
+        "5 m/s²",
+        "20 m/s²"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 0.5 kg ball on a string moves in a horizontal circle of radius 1.5 m at a speed of 3 m/s. What is the centripetal force acting on the ball?",
+      "solution": "Centripetal force is the net force directed toward\nthe center, keeping the object in circular motion.\n\nFormula:\n    Fc = m × ac = m × v² / r\n\nwhere  m  = mass (kg)\n       v  = speed (m/s)\n       r  = radius (m)\n       Fc = centripetal force (N)\n\nStep 1 — Identify the values:\n    m = 0.5 kg\n    v = 3 m/s\n    r = 1.5 m\n\nStep 2 — Substitute and solve:\n    Fc = 0.5 × (3)² / 1.5\n    Fc = 0.5 × 9 / 1.5\n    Fc = 4.5 / 1.5\n    Fc = 3 N\n\nAnswer:  Fc = 3 N, directed toward the center.",
+      "opts": [
+        "3 N",
+        "1 N",
+        "9 N",
+        "4.5 N"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 2 kg object moves in a circle. Its centripetal acceleration is 8 m/s². What centripetal force is required?",
+      "solution": "By Newton's Second Law, force equals mass\ntimes acceleration:\n\n    F = m × a\n\nFor circular motion, the acceleration IS the\ncentripetal acceleration:\n\n    Fc = m × ac\n\nStep 1 — Identify the values:\n    m  = 2 kg\n    ac = 8 m/s²\n\nStep 2 — Substitute and solve:\n    Fc = 2 × 8\n    Fc = 16 N\n\nAnswer:  Fc = 16 N\n\nNote: This is just Newton's 2nd Law (F = ma)\napplied to circular motion.",
+      "opts": [
+        "16 N",
+        "4 N",
+        "10 N",
+        "0.25 N"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the centripetal acceleration of an object moving at 6 m/s in a circle of radius 9 m?",
+      "given": "Formula:  ac = v² / r",
+      "opts": ["4 m/s²", "0.67 m/s²", "54 m/s²", "1.5 m/s²"],
+      "ans": 0,
+      "sol": "ac = 6² / 9 = 36 / 9 = 4 m/s²."
+    },
+    {
+      "q": "A 3 kg object moves in a circle of radius 2 m at 4 m/s. What is the centripetal force?",
+      "given": "Formula:  Fc = m × v² / r",
+      "opts": ["24 N", "6 N", "48 N", "8 N"],
+      "ans": 0,
+      "sol": "Fc = 3 × (4)² / 2 = 3 × 16 / 2 = 48 / 2 = 24 N."
+    },
+    {
+      "q": "In which direction does centripetal acceleration always point?",
+      "given": "Centripetal means 'center-seeking'.\nThe acceleration is responsible for changing the direction of velocity.",
+      "opts": [
+        "Toward the center of the circle",
+        "Away from the center of the circle",
+        "Tangent to the circle",
+        "In the direction of motion"
+      ],
+      "ans": 0,
+      "sol": "Centripetal acceleration always points toward the center of the circular path — it is center-seeking."
+    },
+    {
+      "q": "If the speed of an object in circular motion is doubled (radius unchanged), what happens to the centripetal acceleration?",
+      "given": "Formula:  ac = v² / r\nAnalyze how doubling v affects ac.",
+      "opts": ["It quadruples (×4)", "It doubles (×2)", "It halves (÷2)", "It stays the same"],
+      "ans": 0,
+      "sol": "ac = v²/r. If v doubles, v² becomes 4× larger. So ac quadruples."
+    },
+    {
+      "q": "A 1.5 kg object has a centripetal acceleration of 10 m/s². What is the centripetal force?",
+      "given": "Formula:  Fc = m × ac",
+      "opts": ["15 N", "6.67 N", "10 N", "11.5 N"],
+      "ans": 0,
+      "sol": "Fc = 1.5 × 10 = 15 N."
+    },
+    {
+      "q": "An object moves in a circle of radius 4 m with a centripetal force of 50 N and mass 2 kg. What is its speed?",
+      "given": "Rearrange:  Fc = m × v² / r\n→  v² = Fc × r / m\n→  v = √(Fc × r / m)",
+      "opts": ["10 m/s", "100 m/s", "5 m/s", "25 m/s"],
+      "ans": 0,
+      "sol": "v² = (50 × 4) / 2 = 200 / 2 = 100.  v = √100 = 10 m/s."
+    },
+    {
+      "q": "What provides the centripetal force for a car making a turn on a flat road?",
+      "given": "Centripetal force must be provided by some physical force.\nThink about what acts between the car tires and the road horizontally.",
+      "opts": ["Friction between tires and road", "The normal force", "Gravity", "Air resistance"],
+      "ans": 0,
+      "sol": "Friction between the tires and the road provides the centripetal force that keeps the car turning."
+    },
+    {
+      "q": "If the radius of circular motion is halved (speed unchanged), what happens to centripetal acceleration?",
+      "given": "Formula:  ac = v² / r\nAnalyze how halving r affects ac.",
+      "opts": ["It doubles (×2)", "It halves (÷2)", "It quadruples (×4)", "It stays the same"],
+      "ans": 0,
+      "sol": "ac = v²/r. If r is halved, ac = v²/(r/2) = 2v²/r. The acceleration doubles."
+    },
+    {
+      "q": "A satellite orbits Earth in a circular path. What force provides the centripetal force?",
+      "given": "The satellite stays in orbit because a force pulls it\nconstantly toward Earth's center.",
+      "opts": ["Gravity", "Friction", "Tension", "Normal Force"],
+      "ans": 0,
+      "sol": "Gravity provides the centripetal force that keeps the satellite in circular orbit around Earth."
+    },
+    {
+      "q": "An object moves in a circle at 5 m/s. Its centripetal acceleration is 25 m/s². What is the radius of the circle?",
+      "given": "Rearrange:  ac = v² / r\n→  r = v² / ac",
+      "opts": ["1 m", "5 m", "0.2 m", "125 m"],
+      "ans": 0,
+      "sol": "r = v² / ac = 5² / 25 = 25 / 25 = 1 m."
+    }
+  ]
+}

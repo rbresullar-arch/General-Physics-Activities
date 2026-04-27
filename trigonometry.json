@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Trigonometry: Pythagorean Theorem & SOH-CAH-TOA",
+    "subject": "Mathematics · Trigonometry",
+    "lock_key": "quiz_trigonometry_done"
+  },
+  "examples": [
+    {
+      "q": "A right triangle has legs of length 3 cm and 4 cm. What is the length of the hypotenuse?",
+      "solution": "The Pythagorean Theorem states:\n    c² = a² + b²\n\nwhere  c  is the hypotenuse (side opposite the right angle)\nand    a, b  are the two legs.\n\nStep 1 — Substitute the known values:\n    c² = 3² + 4²\n    c² = 9 + 16\n    c² = 25\n\nStep 2 — Take the square root:\n    c = √25 = 5\n\nAnswer:  The hypotenuse is  5 cm.\n\nNote: 3-4-5 is a classic Pythagorean triple.",
+      "opts": [
+        "5 cm",
+        "7 cm",
+        "√7 cm",
+        "25 cm"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "In a right triangle, the angle θ = 30°, and the hypotenuse = 10 cm. Find the side opposite to θ.",
+      "solution": "We are given the hypotenuse and need the OPPOSITE side.\nUse the SOH part of SOH-CAH-TOA:\n\n    sin θ = Opposite / Hypotenuse\n\nStep 1 — Write the equation:\n    sin 30° = Opposite / 10\n\nStep 2 — Recall that sin 30° = 0.5:\n    0.5 = Opposite / 10\n\nStep 3 — Solve for Opposite:\n    Opposite = 0.5 × 10 = 5\n\nAnswer:  The opposite side is  5 cm.",
+      "opts": [
+        "5 cm",
+        "8.66 cm",
+        "10 cm",
+        "2.5 cm"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "In a right triangle, the adjacent side = 6 cm and the opposite side = 6 cm. What is angle θ?",
+      "solution": "We have the OPPOSITE and ADJACENT sides.\nUse the TOA part of SOH-CAH-TOA:\n\n    tan θ = Opposite / Adjacent\n\nStep 1 — Substitute:\n    tan θ = 6 / 6 = 1\n\nStep 2 — Find θ using the inverse tangent:\n    θ = tan⁻¹(1)\n    θ = 45°\n\nAnswer:  θ = 45°\n\nNote: When opposite = adjacent, the angle is always 45°\nbecause tan 45° = 1.",
+      "opts": [
+        "45°",
+        "30°",
+        "60°",
+        "90°"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "A right triangle has legs of 5 cm and 12 cm. What is the hypotenuse?",
+      "given": "Pythagorean Theorem:  c² = a² + b²\nc is the hypotenuse; a and b are the legs.",
+      "opts": ["13 cm", "17 cm", "√17 cm", "60 cm"],
+      "ans": 0,
+      "sol": "c² = 5² + 12² = 25 + 144 = 169.  c = √169 = 13 cm."
+    },
+    {
+      "q": "The hypotenuse of a right triangle is 15 cm and one leg is 9 cm. Find the other leg.",
+      "given": "Rearrange the Pythagorean Theorem:\n    b² = c² − a²",
+      "opts": ["12 cm", "10 cm", "6 cm", "√306 cm"],
+      "ans": 0,
+      "sol": "b² = 15² − 9² = 225 − 81 = 144.  b = √144 = 12 cm."
+    },
+    {
+      "q": "In a right triangle, θ = 60° and hypotenuse = 8 cm. Find the side adjacent to θ.",
+      "given": "SOH-CAH-TOA\nCAH → cos θ = Adjacent / Hypotenuse\ncos 60° = 0.5",
+      "opts": ["4 cm", "6.93 cm", "9.24 cm", "5 cm"],
+      "ans": 0,
+      "sol": "cos 60° = Adjacent / 8  →  0.5 × 8 = 4 cm."
+    },
+    {
+      "q": "In a right triangle, θ = 45° and the adjacent side = 7 cm. Find the opposite side.",
+      "given": "SOH-CAH-TOA\nTOA → tan θ = Opposite / Adjacent\ntan 45° = 1",
+      "opts": ["7 cm", "4.95 cm", "9.90 cm", "14 cm"],
+      "ans": 0,
+      "sol": "tan 45° = Opposite / 7  →  1 × 7 = 7 cm."
+    },
+    {
+      "q": "Which ratio defines sin θ in a right triangle?",
+      "given": "SOH-CAH-TOA refers to the three main trig ratios.\nAll ratios are relative to the angle θ.",
+      "opts": [
+        "Opposite / Hypotenuse",
+        "Adjacent / Hypotenuse",
+        "Opposite / Adjacent",
+        "Hypotenuse / Opposite"
+      ],
+      "ans": 0,
+      "sol": "SOH: sin θ = Opposite / Hypotenuse."
+    },
+    {
+      "q": "In a right triangle, θ = 30° and the opposite side = 4 cm. Find the hypotenuse.",
+      "given": "SOH → sin θ = Opposite / Hypotenuse\nRearrange: Hypotenuse = Opposite / sin θ\nsin 30° = 0.5",
+      "opts": ["8 cm", "4 cm", "6.93 cm", "2 cm"],
+      "ans": 0,
+      "sol": "Hypotenuse = 4 / sin 30° = 4 / 0.5 = 8 cm."
+    },
+    {
+      "q": "A ladder 10 m long leans against a wall. It makes a 60° angle with the ground. How high up the wall does it reach?",
+      "given": "The ladder is the hypotenuse.\nThe height is the side OPPOSITE the 60° angle.\nSOH: sin 60° = Opposite / Hypotenuse\nsin 60° ≈ 0.866",
+      "opts": ["8.66 m", "5 m", "10 m", "6.67 m"],
+      "ans": 0,
+      "sol": "sin 60° = height / 10  →  height = 0.866 × 10 = 8.66 m."
+    },
+    {
+      "q": "In a right triangle, the opposite side = 9 cm and hypotenuse = 15 cm. Find angle θ.",
+      "given": "SOH: sin θ = Opposite / Hypotenuse\nUse inverse sine to find θ:\n    θ = sin⁻¹(Opposite / Hypotenuse)\nsin 37° ≈ 0.6",
+      "opts": ["37°", "45°", "53°", "30°"],
+      "ans": 0,
+      "sol": "sin θ = 9 / 15 = 0.6  →  θ = sin⁻¹(0.6) ≈ 37°."
+    },
+    {
+      "q": "Which theorem relates the three sides of a right triangle?",
+      "given": "This theorem applies ONLY to right triangles.\nIt uses the hypotenuse and the two legs.",
+      "opts": [
+        "Pythagorean Theorem: c² = a² + b²",
+        "SOH-CAH-TOA: sin θ = opp/hyp",
+        "Law of Sines: a/sin A = b/sin B",
+        "Law of Cosines: c² = a² + b² − 2ab cos C"
+      ],
+      "ans": 0,
+      "sol": "The Pythagorean Theorem c² = a² + b² relates all three sides of a right triangle."
+    },
+    {
+      "q": "In a right triangle, the adjacent side = 5 cm and the hypotenuse = 13 cm. Find the opposite side.",
+      "given": "Use the Pythagorean Theorem:\n    opposite² = hypotenuse² − adjacent²",
+      "opts": ["12 cm", "8 cm", "10 cm", "√194 cm"],
+      "ans": 0,
+      "sol": "opposite² = 13² − 5² = 169 − 25 = 144.  opposite = 12 cm."
+    }
+  ]
+}

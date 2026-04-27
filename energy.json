@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Work, Gravitational Potential Energy & Kinetic Energy",
+    "subject": "Physics · Energy",
+    "lock_key": "quiz_energy_done"
+  },
+  "examples": [
+    {
+      "q": "A force of 25 N pushes a box 4 m along the floor in the same direction as the force. How much work is done?",
+      "solution": "Work is done when a force moves an object\nthrough a displacement.\n\nFormula:\n    W = F × d × cos θ\n\nwhere  W = work done     (J — Joules)\n       F = applied force  (N)\n       d = displacement   (m)\n       θ = angle between force and displacement\n\nWhen force and displacement are in the SAME direction,\nθ = 0° and cos 0° = 1, so:\n    W = F × d\n\nStep 1 — Identify the values:\n    F = 25 N\n    d = 4 m\n\nStep 2 — Substitute and solve:\n    W = 25 × 4\n    W = 100 J\n\nAnswer:  W = 100 J",
+      "opts": [
+        "100 J",
+        "29 J",
+        "6.25 J",
+        "400 J"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 3 kg book is placed on a shelf 2 m above the ground. What is its gravitational potential energy? (g = 10 m/s²)",
+      "solution": "Gravitational Potential Energy (GPE) is the energy\nstored in an object due to its height above\na reference point (usually the ground).\n\nFormula:\n    GPE = m × g × h\n\nwhere  m = mass                   (kg)\n       g = gravitational field strength  (10 m/s² on Earth)\n       h = height above reference point  (m)\n\nStep 1 — Identify the values:\n    m = 3 kg\n    g = 10 m/s²\n    h = 2 m\n\nStep 2 — Substitute and solve:\n    GPE = 3 × 10 × 2\n    GPE = 60 J\n\nAnswer:  GPE = 60 J",
+      "opts": [
+        "60 J",
+        "6 J",
+        "15 J",
+        "600 J"
+      ],
+      "ans": 0
+    },
+    {
+      "q": "A 2 kg ball moves at 5 m/s. What is its kinetic energy?",
+      "solution": "Kinetic Energy (KE) is the energy an object has\nbecause of its motion.\n\nFormula:\n    KE = ½ × m × v²\n\nwhere  m = mass   (kg)\n       v = speed  (m/s)\n\nStep 1 — Identify the values:\n    m = 2 kg\n    v = 5 m/s\n\nStep 2 — Substitute and solve:\n    KE = ½ × 2 × (5)²\n    KE = ½ × 2 × 25\n    KE = 25 J\n\nAnswer:  KE = 25 J\n\nNote: KE depends on v² — doubling speed\nquadruples kinetic energy.",
+      "opts": [
+        "25 J",
+        "10 J",
+        "50 J",
+        "5 J"
+      ],
+      "ans": 0
+    }
+  ],
+  "questions": [
+    {
+      "q": "A 10 N force pushes a cart 5 m in the direction of the force. How much work is done?",
+      "given": "Formula:  W = F × d  (when force and displacement are parallel)",
+      "opts": ["50 J", "2 J", "15 J", "500 J"],
+      "ans": 0,
+      "sol": "W = 10 × 5 = 50 J."
+    },
+    {
+      "q": "A 4 kg object is lifted to a height of 3 m. What is its gravitational potential energy? (g = 10 m/s²)",
+      "given": "Formula:  GPE = m × g × h",
+      "opts": ["120 J", "12 J", "40 J", "1 200 J"],
+      "ans": 0,
+      "sol": "GPE = 4 × 10 × 3 = 120 J."
+    },
+    {
+      "q": "A 5 kg object moves at 6 m/s. What is its kinetic energy?",
+      "given": "Formula:  KE = ½ × m × v²",
+      "opts": ["90 J", "30 J", "180 J", "15 J"],
+      "ans": 0,
+      "sol": "KE = ½ × 5 × 6² = ½ × 5 × 36 = 90 J."
+    },
+    {
+      "q": "No work is done on an object when the force applied is perpendicular to displacement. Why?",
+      "given": "Formula:  W = F × d × cos θ\nConsider what happens when θ = 90°.",
+      "opts": [
+        "cos 90° = 0, so W = 0 regardless of F or d",
+        "The force cancels out",
+        "Displacement becomes zero",
+        "The object moves in a circle"
+      ],
+      "ans": 0,
+      "sol": "W = F × d × cos 90° = F × d × 0 = 0 J. A perpendicular force (like normal force) does no work."
+    },
+    {
+      "q": "A ball is dropped from a height of 5 m. What was its GPE just before dropping? (m = 2 kg, g = 10 m/s²)",
+      "given": "Formula:  GPE = m × g × h",
+      "opts": ["100 J", "10 J", "50 J", "1 000 J"],
+      "ans": 0,
+      "sol": "GPE = 2 × 10 × 5 = 100 J."
+    },
+    {
+      "q": "If an object's speed doubles, what happens to its kinetic energy?",
+      "given": "Formula:  KE = ½ × m × v²\nAnalyze the effect of doubling v.",
+      "opts": ["It quadruples (×4)", "It doubles (×2)", "It halves (÷2)", "It stays the same"],
+      "ans": 0,
+      "sol": "KE = ½mv². If v doubles, v² becomes 4× larger. KE quadruples."
+    },
+    {
+      "q": "A 3 kg object falls from rest at a height of 10 m. What is its KE just before hitting the ground? (g = 10 m/s²)",
+      "given": "By conservation of energy:\n    GPE lost = KE gained\n    mgh = KE",
+      "opts": ["300 J", "30 J", "150 J", "600 J"],
+      "ans": 0,
+      "sol": "KE = GPE = mgh = 3 × 10 × 10 = 300 J."
+    },
+    {
+      "q": "What is the unit of work and energy?",
+      "given": "Work = Force × distance = N × m.\nThis unit has a special name in physics.",
+      "opts": ["Joule (J)", "Watt (W)", "Newton (N)", "Pascal (Pa)"],
+      "ans": 0,
+      "sol": "The Joule (J) is the unit of work and energy. 1 J = 1 N·m."
+    },
+    {
+      "q": "A force of 20 N is applied at 60° to the direction of motion over 5 m. How much work is done?",
+      "given": "Formula:  W = F × d × cos θ\ncos 60° = 0.5",
+      "opts": ["50 J", "100 J", "86.6 J", "0 J"],
+      "ans": 0,
+      "sol": "W = 20 × 5 × cos 60° = 20 × 5 × 0.5 = 50 J."
+    },
+    {
+      "q": "An object has KE = 200 J and mass = 8 kg. What is its speed?",
+      "given": "Rearrange:  KE = ½ × m × v²\n→  v² = 2 × KE / m\n→  v = √(2 × KE / m)",
+      "opts": ["√50 ≈ 7.07 m/s", "5 m/s", "25 m/s", "50 m/s"],
+      "ans": 0,
+      "sol": "v² = 2 × 200 / 8 = 400 / 8 = 50.  v = √50 ≈ 7.07 m/s."
+    }
+  ]
+}
