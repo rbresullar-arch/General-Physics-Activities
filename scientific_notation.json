@@ -1,114 +1,599 @@
 {
   "meta": {
     "title": "Scientific Notation",
-    "subject": "Mathematics · Number Sense",
+    "subject": "Mathematics \u00b7 Number Sense",
     "lock_key": "quiz_scientific_notation_done"
   },
-  "examples": [
-    {
-      "q": "What is the base and exponent of the number 3.47 × 10⁵ written in scientific notation?",
-      "solution": "A number in scientific notation has the form:\n    a × 10ⁿ\nwhere  1 ≤ |a| < 10  (the base / coefficient)\nand    n is an integer (the exponent / power of 10).\n\nFor  3.47 × 10⁵:\n  → Base (coefficient) = 3.47\n  → Exponent           = 5\n\nThe exponent tells us to move the decimal 5 places\nto the right:  3.47 × 10⁵  =  347 000",
-      "opts": [
-        "Base = 3.47,  Exponent = 5",
-        "Base = 347,  Exponent = 3",
-        "Base = 3.47,  Exponent = 6",
-        "Base = 34.7,  Exponent = 4"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Convert 0.000085 into scientific notation. Identify the base and exponent.",
-      "solution": "To convert a small number to scientific notation:\n  1. Move the decimal right until you get a number\n     between 1 and 10.\n  2. Count the steps moved — that count (negative)\n     is your exponent.\n\n0.000085\n→ Move decimal 5 places right  →  8.5\n→ Each right move = ×10⁻¹ per step\n\nResult:  8.5 × 10⁻⁵\n  → Base     =  8.5\n  → Exponent = −5",
-      "opts": [
-        "8.5 × 10⁻⁵  (Base = 8.5, Exp = −5)",
-        "8.5 × 10⁵   (Base = 8.5, Exp = 5)",
-        "0.85 × 10⁻⁴  (Base = 0.85, Exp = −4)",
-        "85 × 10⁻⁶   (Base = 85, Exp = −6)"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Calculate:  (4.0 × 10³) × (2.0 × 10⁴). Express the answer in scientific notation.",
-      "solution": "To multiply numbers in scientific notation:\n  Step 1 — Multiply the bases:\n      4.0 × 2.0  =  8.0\n\n  Step 2 — Add the exponents:\n      10³ × 10⁴  =  10^(3+4)  =  10⁷\n\n  Step 3 — Combine:\n      8.0 × 10⁷\n\nCheck: is the base between 1 and 10? ✓ Yes (8.0).\nFinal answer:  8.0 × 10⁷",
-      "opts": [
-        "8.0 × 10⁷",
-        "8.0 × 10¹²",
-        "8.0 × 10⁶",
-        "16 × 10⁶"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "What is the base (coefficient) of 6.02 × 10²³?",
-      "given": "Form:  a × 10ⁿ   where  1 ≤ |a| < 10",
-      "opts": ["6.02", "23", "10", "6.02 × 10"],
-      "ans": 0,
-      "sol": "In  6.02 × 10²³, the base (coefficient) is 6.02. The exponent is 23."
+      "sets": [
+        {
+          "q": "What is the base (coefficient) of 6.02 \u00d7 10\u00b2\u00b3?",
+          "given": "Form: a \u00d7 10\u207f where 1 \u2264 |a| < 10",
+          "opts": [
+            "6.02",
+            "23",
+            "10",
+            "6.02 \u00d7 10"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the base (coefficient) of 3.14 \u00d7 10\u2075?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "3.14",
+            "5",
+            "10",
+            "3.14 \u00d7 10"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the coefficient of 9.11 \u00d7 10\u207b\u00b3\u00b9?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "9.11",
+            "\u221231",
+            "31",
+            "9.11 \u00d7 10"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In 2.998 \u00d7 10\u2078, what is the base?",
+          "given": "Form: a \u00d7 10\u207f where 1 \u2264 |a| < 10",
+          "opts": [
+            "2.998",
+            "8",
+            "10",
+            "2.998 \u00d7 10"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the coefficient of 1.60 \u00d7 10\u207b\u00b9\u2079?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "1.60",
+            "\u221219",
+            "19",
+            "1.60 \u00d7 10"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "What is the exponent of 9.1 × 10⁻³¹?",
-      "given": "Form:  a × 10ⁿ — the exponent n is the power of 10.",
-      "opts": ["−31", "31", "9.1", "−3.1"],
-      "ans": 0,
-      "sol": "The exponent (power of 10) is −31. This is the mass of an electron in kg."
+      "sets": [
+        {
+          "q": "What is the exponent of 9.1 \u00d7 10\u207b\u00b3\u00b9?",
+          "given": "Form: a \u00d7 10\u207f \u2014 the exponent n is the power of 10.",
+          "opts": [
+            "\u221231",
+            "31",
+            "9.1",
+            "\u22123.1"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the exponent of 6.67 \u00d7 10\u207b\u00b9\u00b9?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "\u221211",
+            "11",
+            "6.67",
+            "\u22126.67"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the exponent in 1.38 \u00d7 10\u207b\u00b2\u00b3?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "\u221223",
+            "23",
+            "1.38",
+            "\u22121.38"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What is the power of 10 in 5.97 \u00d7 10\u00b2\u2074?",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "24",
+            "\u221224",
+            "5.97",
+            "2.4"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The exponent in 8.85 \u00d7 10\u207b\u00b9\u00b2 is:",
+          "given": "Form: a \u00d7 10\u207f",
+          "opts": [
+            "\u221212",
+            "12",
+            "8.85",
+            "\u22128.85"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Convert 450 000 000 into scientific notation.",
-      "given": "Move the decimal left until you have a number between 1 and 10.\nCount the moves — that is your positive exponent.",
-      "opts": ["4.5 × 10⁸", "4.5 × 10⁷", "45 × 10⁷", "4.5 × 10⁹"],
-      "ans": 0,
-      "sol": "450 000 000 → move decimal 8 places left → 4.5. Exponent = 8.  Answer: 4.5 × 10⁸"
+      "sets": [
+        {
+          "q": "Convert 450 000 000 to scientific notation.",
+          "given": "Move decimal left until 1 \u2264 coefficient < 10. Count moves = exponent.",
+          "opts": [
+            "4.5 \u00d7 10\u2078",
+            "4.5 \u00d7 10\u2077",
+            "45 \u00d7 10\u2077",
+            "4.5 \u00d7 10\u2079"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 3 700 000 to scientific notation.",
+          "given": "Move decimal left to get coefficient between 1 and 10.",
+          "opts": [
+            "3.7 \u00d7 10\u2076",
+            "3.7 \u00d7 10\u2075",
+            "37 \u00d7 10\u2075",
+            "3.7 \u00d7 10\u2077"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 58 000 to scientific notation.",
+          "given": "Move decimal left until coefficient is between 1 and 10.",
+          "opts": [
+            "5.8 \u00d7 10\u2074",
+            "5.8 \u00d7 10\u00b3",
+            "58 \u00d7 10\u00b3",
+            "5.8 \u00d7 10\u2075"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 1 200 000 000 to scientific notation.",
+          "given": "Count decimal moves to the left.",
+          "opts": [
+            "1.2 \u00d7 10\u2079",
+            "1.2 \u00d7 10\u2078",
+            "12 \u00d7 10\u2078",
+            "1.2 \u00d7 10\u00b9\u2070"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 670 000 to scientific notation.",
+          "given": "Move decimal left until 1 \u2264 a < 10.",
+          "opts": [
+            "6.7 \u00d7 10\u2075",
+            "6.7 \u00d7 10\u2074",
+            "67 \u00d7 10\u2074",
+            "6.7 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Convert 0.00000307 into scientific notation.",
-      "given": "Move the decimal right until you have a number between 1 and 10.\nCount the moves — that is your negative exponent.",
-      "opts": ["3.07 × 10⁻⁶", "3.07 × 10⁻⁵", "3.07 × 10⁶", "30.7 × 10⁻⁷"],
-      "ans": 0,
-      "sol": "0.00000307 → move decimal 6 places right → 3.07. Exponent = −6.  Answer: 3.07 × 10⁻⁶"
+      "sets": [
+        {
+          "q": "Convert 0.00000307 to scientific notation.",
+          "given": "Move decimal right until coefficient is between 1 and 10. Count moves = negative exponent.",
+          "opts": [
+            "3.07 \u00d7 10\u207b\u2076",
+            "3.07 \u00d7 10\u207b\u2075",
+            "3.07 \u00d7 10\u2076",
+            "30.7 \u00d7 10\u207b\u2077"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 0.0042 to scientific notation.",
+          "given": "Move decimal right; count moves = negative exponent.",
+          "opts": [
+            "4.2 \u00d7 10\u207b\u00b3",
+            "4.2 \u00d7 10\u207b\u00b2",
+            "42 \u00d7 10\u207b\u2074",
+            "4.2 \u00d7 10\u00b3"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 0.000000891 to scientific notation.",
+          "given": "Move decimal right until 1 \u2264 coefficient < 10.",
+          "opts": [
+            "8.91 \u00d7 10\u207b\u2077",
+            "8.91 \u00d7 10\u207b\u2076",
+            "89.1 \u00d7 10\u207b\u2078",
+            "8.91 \u00d7 10\u2077"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 0.000055 to scientific notation.",
+          "given": "Move decimal right; count moves.",
+          "opts": [
+            "5.5 \u00d7 10\u207b\u2075",
+            "5.5 \u00d7 10\u207b\u2074",
+            "55 \u00d7 10\u207b\u2076",
+            "5.5 \u00d7 10\u2075"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 0.0000008 to scientific notation.",
+          "given": "Count decimal moves to the right.",
+          "opts": [
+            "8 \u00d7 10\u207b\u2077",
+            "8 \u00d7 10\u207b\u2076",
+            "0.8 \u00d7 10\u207b\u2076",
+            "8 \u00d7 10\u2077"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Convert 2.5 × 10⁴ into standard (decimal) notation.",
-      "given": "Positive exponent → move decimal to the RIGHT by the exponent value.",
-      "opts": ["25 000", "2 500", "250 000", "0.00025"],
-      "ans": 0,
-      "sol": "2.5 × 10⁴ → move decimal 4 places right → 25 000."
+      "sets": [
+        {
+          "q": "Convert 2.5 \u00d7 10\u2074 to standard (decimal) notation.",
+          "given": "Positive exponent \u2192 move decimal to the RIGHT.",
+          "opts": [
+            "25 000",
+            "2 500",
+            "250 000",
+            "0.00025"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 3.6 \u00d7 10\u00b3 to standard notation.",
+          "given": "Positive exponent: move decimal right.",
+          "opts": [
+            "3 600",
+            "360",
+            "36 000",
+            "0.0036"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 1.8 \u00d7 10\u2077 to standard notation.",
+          "given": "Positive exponent: move decimal 7 places right.",
+          "opts": [
+            "18 000 000",
+            "1 800 000",
+            "180 000 000",
+            "0.00000018"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 4.4 \u00d7 10\u00b2 to standard notation.",
+          "given": "Move decimal 2 places right.",
+          "opts": [
+            "440",
+            "44",
+            "4 400",
+            "0.044"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 7.5 \u00d7 10\u2075 to standard notation.",
+          "given": "Move decimal 5 places to the right.",
+          "opts": [
+            "750 000",
+            "75 000",
+            "7 500 000",
+            "0.000075"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Convert 7.1 × 10⁻³ into standard (decimal) notation.",
-      "given": "Negative exponent → move decimal to the LEFT by the exponent value.",
-      "opts": ["0.0071", "0.071", "7100", "0.00071"],
-      "ans": 0,
-      "sol": "7.1 × 10⁻³ → move decimal 3 places left → 0.0071."
+      "sets": [
+        {
+          "q": "Convert 7.1 \u00d7 10\u207b\u00b3 to standard (decimal) notation.",
+          "given": "Negative exponent \u2192 move decimal to the LEFT.",
+          "opts": [
+            "0.0071",
+            "0.071",
+            "7100",
+            "0.00071"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 3.5 \u00d7 10\u207b\u00b2 to standard notation.",
+          "given": "Negative exponent: move decimal left.",
+          "opts": [
+            "0.035",
+            "0.35",
+            "350",
+            "0.0035"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 2.0 \u00d7 10\u207b\u2075 to standard notation.",
+          "given": "Move decimal 5 places left.",
+          "opts": [
+            "0.00002",
+            "0.0002",
+            "0.000002",
+            "20000"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 6.8 \u00d7 10\u207b\u2074 to standard notation.",
+          "given": "Move decimal 4 places to the left.",
+          "opts": [
+            "0.00068",
+            "0.0068",
+            "0.068",
+            "6800"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Convert 9.9 \u00d7 10\u207b\u00b9 to standard notation.",
+          "given": "Move decimal 1 place to the left.",
+          "opts": [
+            "0.99",
+            "9.9",
+            "99",
+            "0.099"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Multiply: (3.0 × 10²) × (3.0 × 10³)",
-      "given": "Multiply bases → add exponents\n(a × 10ᵐ) × (b × 10ⁿ) = (a×b) × 10^(m+n)",
-      "opts": ["9.0 × 10⁵", "9.0 × 10⁶", "6.0 × 10⁵", "9.0 × 10⁴"],
-      "ans": 0,
-      "sol": "3.0 × 3.0 = 9.0.  10² × 10³ = 10⁵.  Answer: 9.0 × 10⁵"
+      "sets": [
+        {
+          "q": "Multiply: (3.0 \u00d7 10\u00b2) \u00d7 (3.0 \u00d7 10\u00b3)",
+          "given": "Multiply bases, add exponents: (a\u00d7b) \u00d7 10^(m+n)",
+          "opts": [
+            "9.0 \u00d7 10\u2075",
+            "9.0 \u00d7 10\u2076",
+            "6.0 \u00d7 10\u2075",
+            "9.0 \u00d7 10\u2074"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Multiply: (2.0 \u00d7 10\u00b3) \u00d7 (4.0 \u00d7 10\u00b2)",
+          "given": "Multiply bases, add exponents.",
+          "opts": [
+            "8.0 \u00d7 10\u2075",
+            "8.0 \u00d7 10\u2076",
+            "6.0 \u00d7 10\u2075",
+            "8.0 \u00d7 10\u2074"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Multiply: (5.0 \u00d7 10\u2074) \u00d7 (2.0 \u00d7 10\u00b3)",
+          "given": "Multiply bases, add exponents.",
+          "opts": [
+            "1.0 \u00d7 10\u2078",
+            "1.0 \u00d7 10\u2077",
+            "7.0 \u00d7 10\u2077",
+            "1.0 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Multiply: (1.5 \u00d7 10\u2075) \u00d7 (2.0 \u00d7 10\u00b2)",
+          "given": "Multiply bases, add exponents.",
+          "opts": [
+            "3.0 \u00d7 10\u2077",
+            "3.0 \u00d7 10\u2076",
+            "3.5 \u00d7 10\u2077",
+            "3.0 \u00d7 10\u2078"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Multiply: (4.0 \u00d7 10\u207b\u00b2) \u00d7 (2.0 \u00d7 10\u00b3)",
+          "given": "Multiply bases, add exponents (watch signs).",
+          "opts": [
+            "8.0 \u00d7 10\u00b9",
+            "8.0 \u00d7 10\u00b2",
+            "8.0 \u00d7 10\u207b\u2076",
+            "8.0 \u00d7 10\u2070"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Divide: (8.0 × 10⁶) ÷ (2.0 × 10²)",
-      "given": "Divide bases → subtract exponents\n(a × 10ᵐ) ÷ (b × 10ⁿ) = (a÷b) × 10^(m−n)",
-      "opts": ["4.0 × 10⁴", "4.0 × 10³", "4.0 × 10⁸", "6.0 × 10⁴"],
-      "ans": 0,
-      "sol": "8.0 ÷ 2.0 = 4.0.  10⁶ ÷ 10² = 10^(6−2) = 10⁴.  Answer: 4.0 × 10⁴"
+      "sets": [
+        {
+          "q": "Divide: (8.0 \u00d7 10\u2076) \u00f7 (2.0 \u00d7 10\u00b2)",
+          "given": "Divide bases, subtract exponents: (a\u00f7b) \u00d7 10^(m\u2212n)",
+          "opts": [
+            "4.0 \u00d7 10\u2074",
+            "4.0 \u00d7 10\u00b3",
+            "4.0 \u00d7 10\u2078",
+            "6.0 \u00d7 10\u2074"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Divide: (9.0 \u00d7 10\u2078) \u00f7 (3.0 \u00d7 10\u00b3)",
+          "given": "Divide bases, subtract exponents.",
+          "opts": [
+            "3.0 \u00d7 10\u2075",
+            "3.0 \u00d7 10\u2074",
+            "6.0 \u00d7 10\u2075",
+            "3.0 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Divide: (6.0 \u00d7 10\u2077) \u00f7 (2.0 \u00d7 10\u2074)",
+          "given": "Divide bases, subtract exponents.",
+          "opts": [
+            "3.0 \u00d7 10\u00b3",
+            "3.0 \u00d7 10\u00b2",
+            "3.0 \u00d7 10\u2074",
+            "4.0 \u00d7 10\u00b3"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Divide: (5.0 \u00d7 10\u207b\u00b3) \u00f7 (2.5 \u00d7 10\u207b\u2075)",
+          "given": "Divide bases, subtract exponents (watch signs).",
+          "opts": [
+            "2.0 \u00d7 10\u00b2",
+            "2.0 \u00d7 10\u00b9",
+            "2.0 \u00d7 10\u00b3",
+            "2.0 \u00d7 10\u207b\u2078"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Divide: (1.2 \u00d7 10\u2076) \u00f7 (4.0 \u00d7 10\u00b2)",
+          "given": "Divide bases, subtract exponents.",
+          "opts": [
+            "3.0 \u00d7 10\u00b3",
+            "3.0 \u00d7 10\u00b2",
+            "3.0 \u00d7 10\u2074",
+            "0.3 \u00d7 10\u2074"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Which of the following is correctly written in scientific notation?",
-      "given": "Rule: the base (coefficient) must satisfy  1 ≤ |a| < 10",
-      "opts": ["5.6 × 10³", "56 × 10²", "0.56 × 10⁴", "560 × 10⁰"],
-      "ans": 0,
-      "sol": "Only 5.6 × 10³ has a base between 1 and 10. The others (56, 0.56, 560) violate the rule."
+      "sets": [
+        {
+          "q": "Which is correctly written in scientific notation?",
+          "given": "Rule: 1 \u2264 |a| < 10",
+          "opts": [
+            "5.6 \u00d7 10\u00b3",
+            "56 \u00d7 10\u00b2",
+            "0.56 \u00d7 10\u2074",
+            "560 \u00d7 10\u2070"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which is correctly written in scientific notation?",
+          "given": "Rule: coefficient must be between 1 and 10.",
+          "opts": [
+            "2.34 \u00d7 10\u2075",
+            "23.4 \u00d7 10\u2074",
+            "0.234 \u00d7 10\u2076",
+            "234 \u00d7 10\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which of the following violates scientific notation rules?",
+          "given": "The coefficient must satisfy 1 \u2264 |a| < 10.",
+          "opts": [
+            "0.45 \u00d7 10\u00b3 (coefficient is less than 1)",
+            "4.5 \u00d7 10\u00b2 (correct)",
+            "1.0 \u00d7 10\u2070 (correct)",
+            "9.9 \u00d7 10\u207b\u00b3 (correct)"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which is NOT in proper scientific notation?",
+          "given": "Coefficient must be \u2265 1 and < 10.",
+          "opts": [
+            "11.5 \u00d7 10\u00b2",
+            "1.15 \u00d7 10\u00b3",
+            "1.15 \u00d7 10\u207b\u00b2",
+            "1.15 \u00d7 10\u2070"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A student writes 80.0 \u00d7 10\u2074. In proper scientific notation, this is:",
+          "given": "Adjust coefficient to be between 1 and 10, and adjust the exponent accordingly.",
+          "opts": [
+            "8.00 \u00d7 10\u2075",
+            "8.00 \u00d7 10\u00b3",
+            "8.00 \u00d7 10\u2074",
+            "0.800 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Add: (3.0 × 10⁴) + (2.0 × 10⁴)",
-      "given": "To add, the exponents must be the same.\nThen add the bases and keep the exponent.",
-      "opts": ["5.0 × 10⁴", "5.0 × 10⁸", "5.0 × 10⁵", "6.0 × 10⁴"],
-      "ans": 0,
-      "sol": "Same exponent (10⁴) → just add bases: 3.0 + 2.0 = 5.0.  Answer: 5.0 × 10⁴"
+      "sets": [
+        {
+          "q": "Add: (3.0 \u00d7 10\u2074) + (2.0 \u00d7 10\u2074)",
+          "given": "Same exponent \u2192 add bases, keep exponent.",
+          "opts": [
+            "5.0 \u00d7 10\u2074",
+            "5.0 \u00d7 10\u2078",
+            "5.0 \u00d7 10\u2075",
+            "6.0 \u00d7 10\u2074"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Add: (1.5 \u00d7 10\u00b3) + (2.5 \u00d7 10\u00b3)",
+          "given": "Same exponent \u2192 add coefficients.",
+          "opts": [
+            "4.0 \u00d7 10\u00b3",
+            "4.0 \u00d7 10\u2076",
+            "4.0 \u00d7 10\u2074",
+            "4.0 \u00d7 10\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Subtract: (7.0 \u00d7 10\u2075) \u2212 (3.0 \u00d7 10\u2075)",
+          "given": "Same exponent \u2192 subtract coefficients.",
+          "opts": [
+            "4.0 \u00d7 10\u2075",
+            "4.0 \u00d7 10\u2070",
+            "4.0 \u00d7 10\u2074",
+            "4.0 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Add: (4.2 \u00d7 10\u2076) + (1.8 \u00d7 10\u2076)",
+          "given": "Same exponent \u2192 add coefficients.",
+          "opts": [
+            "6.0 \u00d7 10\u2076",
+            "6.0 \u00d7 10\u2077",
+            "6.0 \u00d7 10\u00b9\u00b2",
+            "2.4 \u00d7 10\u2076"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Add: (6.5 \u00d7 10\u207b\u2074) + (1.5 \u00d7 10\u207b\u2074)",
+          "given": "Same exponent \u2192 add coefficients.",
+          "opts": [
+            "8.0 \u00d7 10\u207b\u2074",
+            "8.0 \u00d7 10\u207b\u2078",
+            "8.0 \u00d7 10\u207b\u00b3",
+            "8.0 \u00d7 10\u207b\u2075"
+          ],
+          "ans": 0
+        }
+      ]
     }
   ]
 }
