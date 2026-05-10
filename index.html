@@ -604,15 +604,19 @@ function populateActivityFilter() {
 }
 
 function renderStats() {
-  var total   = allRecords.length;
-  var flagged = allRecords.filter(function(r) { return r.tabSwitches > 0 || r.fastAnswerCount > 0; }).length;
-  var avgPct  = total > 0 ? Math.round(allRecords.reduce(function(s,r) { return s+r.score; }, 0) / total) : 0;
-  var passing = allRecords.filter(function(r) { return r.score >= 75; }).length;
+  var total     = allRecords.length;
+  var flagged   = allRecords.filter(function(r) { return r.tabSwitches > 0 || r.fastAnswerCount > 0; }).length;
+  var avgPct    = total > 0 ? Math.round(allRecords.reduce(function(s,r) { return s+r.score; }, 0) / total) : 0;
+  var passing   = allRecords.filter(function(r) { return r.score >= 75; }).length;
+  var totalTabs = allRecords.reduce(function(s,r) { return s + (r.tabSwitches || 0); }, 0);
+  var totalFast = allRecords.reduce(function(s,r) { return s + (r.fastAnswerCount || 0); }, 0);
   document.getElementById('stats-bar').innerHTML =
     '<span><strong>'+total+'</strong> submission(s)</span>' +
     '<span><strong>'+passing+'</strong> passing (≥75%)</span>' +
     '<span>Avg: <strong>'+avgPct+'%</strong></span>' +
-    '<span style="color:'+(flagged>0?'var(--bad)':'var(--dimmer)')+'"><strong>'+flagged+'</strong> flagged</span>';
+    '<span style="color:'+(flagged>0?'var(--bad)':'var(--dimmer)')+'"><strong>'+flagged+'</strong> flagged</span>' +
+    '<span style="color:'+(totalTabs>0?'var(--bad)':'var(--dimmer)')+'">Tabs: <strong>'+totalTabs+'</strong></span>' +
+    '<span style="color:'+(totalFast>0?'var(--bad)':'var(--dimmer)')+'">Fast: <strong>'+totalFast+'</strong></span>';
 }
 
 function renderTable() {
@@ -676,10 +680,14 @@ function sortBy(key) {
 }
 
 function renderSummaryBar() {
-  var total    = allRecords.length;
-  var avgPct   = total > 0 ? Math.round(allRecords.reduce(function(s,r){return s+r.score;},0)/total) : 0;
+  var total     = allRecords.length;
+  var avgPct    = total > 0 ? Math.round(allRecords.reduce(function(s,r){return s+r.score;},0)/total) : 0;
+  var totalTabs = allRecords.reduce(function(s,r){return s+(r.tabSwitches||0);},0);
+  var totalFast = allRecords.reduce(function(s,r){return s+(r.fastAnswerCount||0);},0);
   document.getElementById('summary-v').textContent =
-    total > 0 ? total+' submission(s)  ·  '+avgPct+'% avg' : 'No submissions yet';
+    total > 0
+      ? total+' submission(s)  ·  '+avgPct+'% avg  ·  '+totalTabs+' tab switch(es)  ·  '+totalFast+' fast answer(s)'
+      : 'No submissions yet';
   document.getElementById('dl-btn').disabled = total === 0;
 }
 
@@ -742,6 +750,9 @@ function openCert(recKey, name) {
       '<div class="cert-sect-title">Score</div>' +
       '<div class="cert-score-big">'+scoreStr+'</div>' +
       '<div class="cert-score-sub">'+pct+'%  —  '+gradeLabel(pct)+'</div>' +
+      '<div class="cert-score-sub" style="margin-top:6px;color:'+(hasBad?'var(--bad)':'var(--dimmer)')+'">'+
+        (hasBad?'⚑':'✓')+' &nbsp;'+tabCount+' tab switch(es)  ·  '+fastCount+' fast answer(s)'+
+      '</div>' +
     '</div>' +
 
     '<div class="cert-integrity">' +
