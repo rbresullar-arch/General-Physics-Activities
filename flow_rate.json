@@ -4,121 +4,96 @@
     "subject": "Physics · Fluid Mechanics",
     "lock_key": "quiz_flow_rate_done"
   },
-  "examples": [
-    {
-      "q": "Water flows through a pipe and fills a 0.6 m³ tank in 20 seconds. What is the volumetric flow rate?",
-      "solution": "Volumetric Flow Rate is the volume of fluid\npassing a point per unit time.\n\nFormula:\n    Q = V / t\n\nwhere  Q = volumetric flow rate  (m³/s)\n       V = volume of fluid       (m³)\n       t = time                  (s)\n\nStep 1 — Identify the values:\n    V = 0.6 m³\n    t = 20 s\n\nStep 2 — Substitute and solve:\n    Q = 0.6 / 20\n    Q = 0.03 m³/s\n\nAnswer:  Q = 0.03 m³/s\n\nNote: Flow rate can also be expressed in\nliters per second (L/s) or liters per minute (L/min).",
-      "opts": [
-        "0.03 m³/s",
-        "12 m³/s",
-        "0.3 m³/s",
-        "0.003 m³/s"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Water flows through a pipe with a cross-sectional area of 0.05 m² at a velocity of 4 m/s. What is the volumetric flow rate?",
-      "solution": "Flow rate can also be calculated from the\ncross-sectional area and the flow velocity:\n\n    Q = A × v\n\nwhere  Q = volumetric flow rate      (m³/s)\n       A = cross-sectional area of pipe  (m²)\n       v = velocity of fluid          (m/s)\n\nStep 1 — Identify the values:\n    A = 0.05 m²\n    v = 4 m/s\n\nStep 2 — Substitute and solve:\n    Q = 0.05 × 4\n    Q = 0.2 m³/s\n\nAnswer:  Q = 0.2 m³/s\n\nNote: This formula comes from imagining a\ncylinder of fluid moving through the pipe.",
-      "opts": [
-        "0.2 m³/s",
-        "0.0125 m³/s",
-        "2 m³/s",
-        "0.02 m³/s"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Water flows from a wide pipe (A₁ = 0.1 m²) into a narrow pipe (A₂ = 0.02 m²). If the velocity in the wide pipe is 3 m/s, what is the velocity in the narrow pipe?",
-      "solution": "By the Continuity Equation, flow rate is\nconserved — fluid does not accumulate:\n\n    Q₁ = Q₂\n    A₁ × v₁ = A₂ × v₂\n\nRearranging to find v₂:\n    v₂ = (A₁ × v₁) / A₂\n\nStep 1 — Identify the values:\n    A₁ = 0.1 m²,  v₁ = 3 m/s\n    A₂ = 0.02 m²\n\nStep 2 — Substitute and solve:\n    v₂ = (0.1 × 3) / 0.02\n    v₂ = 0.3 / 0.02\n    v₂ = 15 m/s\n\nAnswer:  v₂ = 15 m/s\n\nThe fluid speeds up in the narrower pipe.\nSmaller area → higher velocity.",
-      "opts": [
-        "15 m/s",
-        "0.6 m/s",
-        "0.3 m/s",
-        "30 m/s"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "A pipe fills a 3 m³ tank in 60 seconds. What is the volumetric flow rate?",
-      "given": "Formula:  Q = V / t",
-      "opts": ["0.05 m³/s", "180 m³/s", "0.5 m³/s", "20 m³/s"],
-      "ans": 0,
-      "sol": "Q = 3 / 60 = 0.05 m³/s."
+      "sets": [
+        { "q": "A pipe delivers 0.6 m³ of water in 3 seconds. What is the volumetric flow rate?", "given": "Formula: Q = V / t", "opts": ["0.2 m³/s", "1.8 m³/s", "0.6 m³/s", "0.02 m³/s"], "ans": 0 },
+        { "q": "A faucet releases 1.5 m³ of water in 5 seconds. What is the flow rate?", "given": "Q = V / t", "opts": ["0.3 m³/s", "7.5 m³/s", "1.5 m³/s", "0.03 m³/s"], "ans": 0 },
+        { "q": "A hose discharges 2.4 m³ in 6 seconds. What is the volumetric flow rate?", "given": "Q = V / t", "opts": ["0.4 m³/s", "14.4 m³/s", "2.4 m³/s", "0.04 m³/s"], "ans": 0 },
+        { "q": "A pump moves 0.9 m³ of fluid in 3 seconds. Find the flow rate.", "given": "Q = V / t", "opts": ["0.3 m³/s", "2.7 m³/s", "0.9 m³/s", "0.03 m³/s"], "ans": 0 },
+        { "q": "A tank releases 5 m³ of water in 10 seconds. What is the volumetric flow rate?", "given": "Q = V / t", "opts": ["0.5 m³/s", "50 m³/s", "5 m³/s", "0.05 m³/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "A pipe has a cross-sectional area of 0.08 m² and fluid flows at 2.5 m/s. What is the flow rate?",
-      "given": "Formula:  Q = A × v",
-      "opts": ["0.2 m³/s", "0.032 m³/s", "2 m³/s", "32 m³/s"],
-      "ans": 0,
-      "sol": "Q = 0.08 × 2.5 = 0.2 m³/s."
+      "sets": [
+        { "q": "Water flows through a pipe of cross-sectional area 0.005 m² at a velocity of 4 m/s. What is the flow rate?", "given": "Formula: Q = A × v", "opts": ["0.02 m³/s", "0.8 m³/s", "0.005 m³/s", "4.005 m³/s"], "ans": 0 },
+        { "q": "Fluid flows at 3 m/s through a pipe with cross-section 0.008 m². What is the flow rate?", "given": "Q = A × v", "opts": ["0.024 m³/s", "0.375 m³/s", "0.008 m³/s", "3.008 m³/s"], "ans": 0 },
+        { "q": "A pipe with cross-section 0.01 m² carries water at 5 m/s. What is the volumetric flow rate?", "given": "Q = A × v", "opts": ["0.05 m³/s", "0.002 m³/s", "0.01 m³/s", "5.01 m³/s"], "ans": 0 },
+        { "q": "Water flows at 6 m/s through a pipe of area 0.002 m². Find Q.", "given": "Q = A × v", "opts": ["0.012 m³/s", "3 m³/s", "0.002 m³/s", "6.002 m³/s"], "ans": 0 },
+        { "q": "A nozzle with area 0.003 m² ejects water at 10 m/s. What is the flow rate?", "given": "Q = A × v", "opts": ["0.03 m³/s", "0.0003 m³/s", "0.003 m³/s", "10.003 m³/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "What is the unit of volumetric flow rate in the SI system?",
-      "given": "Flow rate = Volume / Time.\nVolume in m³, time in seconds.",
-      "opts": ["m³/s", "m/s", "m³", "kg/s"],
-      "ans": 0,
-      "sol": "The SI unit of volumetric flow rate is cubic meters per second (m³/s)."
+      "sets": [
+        { "q": "The Continuity Equation states that for an incompressible fluid in a pipe:", "given": "This is the principle of conservation of mass in fluid flow.", "opts": ["A₁v₁ = A₂v₂ (flow rate is constant throughout)", "A₁v₁ > A₂v₂ (flow rate increases in wider sections)", "Velocity is the same everywhere in the pipe", "Pressure is the same everywhere in the pipe"], "ans": 0 },
+        { "q": "What does the Continuity Equation (A₁v₁ = A₂v₂) express?", "given": "Think about what is conserved in fluid flow.", "opts": ["Conservation of mass (volume flow rate is constant)", "Conservation of energy", "Conservation of momentum", "Conservation of pressure"], "ans": 0 },
+        { "q": "In which type of pipe does fluid flow faster according to the Continuity Equation?", "given": "A₁v₁ = A₂v₂. If A₂ < A₁, then v₂ = ?", "opts": ["Narrower pipe (smaller cross-section)", "Wider pipe (larger cross-section)", "Pipe at higher elevation", "Pipe with rougher walls"], "ans": 0 },
+        { "q": "Water enters a wide pipe section and flows into a narrow section. What happens to the speed?", "given": "Continuity: A₁v₁ = A₂v₂. Smaller A means ?", "opts": ["Speed increases in the narrow section", "Speed decreases in the narrow section", "Speed stays the same", "Speed becomes zero in the narrow section"], "ans": 0 },
+        { "q": "The Continuity Equation assumes the fluid is:", "given": "The equation A₁v₁ = A₂v₂ is derived assuming no gaps or compressions.", "opts": ["Incompressible (constant density)", "Compressible", "At rest", "Moving at constant pressure"], "ans": 0 }
+      ]
     },
     {
-      "q": "A flow rate of 0.04 m³/s passes through a pipe of area 0.008 m². What is the fluid velocity?",
-      "given": "Rearrange:  Q = A × v\n→  v = Q / A",
-      "opts": ["5 m/s", "0.2 m/s", "0.00032 m/s", "32 m/s"],
-      "ans": 0,
-      "sol": "v = Q / A = 0.04 / 0.008 = 5 m/s."
+      "sets": [
+        { "q": "Water flows at 2 m/s through a pipe of area 0.1 m². It narrows to 0.02 m². What is the velocity in the narrow section?", "given": "Continuity: A₁v₁ = A₂v₂\nSolve: v₂ = A₁v₁ / A₂", "opts": ["10 m/s", "0.4 m/s", "2 m/s", "0.02 m/s"], "ans": 0 },
+        { "q": "Water flows at 3 m/s in a pipe of area 0.06 m². It narrows to 0.03 m². Find the velocity in the narrow section.", "given": "v₂ = A₁v₁ / A₂", "opts": ["6 m/s", "1.5 m/s", "3 m/s", "0.06 m/s"], "ans": 0 },
+        { "q": "A pipe narrows from area 0.08 m² (where v = 1.5 m/s) to 0.04 m². What is the velocity in the narrow section?", "given": "v₂ = A₁v₁ / A₂", "opts": ["3 m/s", "0.75 m/s", "1.5 m/s", "0.04 m/s"], "ans": 0 },
+        { "q": "Water moves at 4 m/s through a pipe of area 0.05 m². The pipe widens to 0.1 m². Find the new velocity.", "given": "v₂ = A₁v₁ / A₂", "opts": ["2 m/s", "8 m/s", "4 m/s", "0.5 m/s"], "ans": 0 },
+        { "q": "A pipe with area 0.03 m² carries water at 5 m/s. It expands to 0.15 m². What is the velocity in the wider section?", "given": "v₂ = A₁v₁ / A₂", "opts": ["1 m/s", "25 m/s", "5 m/s", "0.15 m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "How long does it take a pipe with flow rate 0.025 m³/s to fill a 0.5 m³ tank?",
-      "given": "Rearrange:  Q = V / t\n→  t = V / Q",
-      "opts": ["20 s", "0.05 s", "0.5 s", "12.5 s"],
-      "ans": 0,
-      "sol": "t = V / Q = 0.5 / 0.025 = 20 s."
+      "sets": [
+        { "q": "How much volume of water flows per second through a pipe of area 0.04 m² at a velocity of 3 m/s?", "given": "Q = A × v", "opts": ["0.12 m³/s", "0.013 m³/s", "0.04 m³/s", "12 m³/s"], "ans": 0 },
+        { "q": "A fire hose with cross-section 0.007 m² sprays water at 8 m/s. What is the flow rate?", "given": "Q = A × v", "opts": ["0.056 m³/s", "1.143 m³/s", "0.007 m³/s", "8.007 m³/s"], "ans": 0 },
+        { "q": "A river cross-section is 5 m² and the current flows at 2 m/s. What is the volumetric flow rate?", "given": "Q = A × v", "opts": ["10 m³/s", "2.5 m³/s", "5 m³/s", "0.4 m³/s"], "ans": 0 },
+        { "q": "A water pipe (area 0.015 m²) delivers water at 4 m/s. What is the flow rate in m³/s?", "given": "Q = A × v", "opts": ["0.06 m³/s", "0.267 m³/s", "0.015 m³/s", "4.015 m³/s"], "ans": 0 },
+        { "q": "An irrigation channel is 0.5 m wide and 0.4 m deep, flowing at 1.5 m/s. What is the volumetric flow rate?", "given": "A = width × depth; Q = A × v", "opts": ["0.3 m³/s", "0.375 m³/s", "0.2 m³/s", "1.5 m³/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "Fluid flows from pipe A (area = 0.06 m², v = 2 m/s) into pipe B (area = 0.03 m²). What is the velocity in pipe B?",
-      "given": "Continuity Equation:  A₁ × v₁ = A₂ × v₂\n→  v₂ = (A₁ × v₁) / A₂",
-      "opts": ["4 m/s", "1 m/s", "0.5 m/s", "8 m/s"],
-      "ans": 0,
-      "sol": "v₂ = (0.06 × 2) / 0.03 = 0.12 / 0.03 = 4 m/s."
+      "sets": [
+        { "q": "A flow rate of 0.05 m³/s enters a pipe of area 0.01 m². What is the fluid velocity?", "given": "Rearrange: v = Q / A", "opts": ["5 m/s", "0.0005 m/s", "0.5 m/s", "50 m/s"], "ans": 0 },
+        { "q": "Q = 0.09 m³/s and A = 0.03 m². Find the velocity.", "given": "v = Q / A", "opts": ["3 m/s", "0.0027 m/s", "0.3 m/s", "30 m/s"], "ans": 0 },
+        { "q": "A pump delivers Q = 0.04 m³/s through a pipe of cross-sectional area 0.008 m². What is the flow velocity?", "given": "v = Q / A", "opts": ["5 m/s", "0.0003 m/s", "0.5 m/s", "50 m/s"], "ans": 0 },
+        { "q": "Water flows at Q = 0.12 m³/s through a pipe of area 0.04 m². What is the velocity?", "given": "v = Q / A", "opts": ["3 m/s", "0.0048 m/s", "0.3 m/s", "30 m/s"], "ans": 0 },
+        { "q": "A flow rate of 0.025 m³/s enters a 0.005 m² nozzle. What is the exit velocity?", "given": "v = Q / A", "opts": ["5 m/s", "0.000125 m/s", "0.5 m/s", "50 m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "What happens to fluid velocity when it flows from a wide pipe into a narrow pipe?",
-      "given": "Continuity Equation:  A₁v₁ = A₂v₂\nIf area decreases, what must happen to velocity?",
-      "opts": [
-        "Velocity increases",
-        "Velocity decreases",
-        "Velocity stays the same",
-        "Flow rate increases"
-      ],
-      "ans": 0,
-      "sol": "By the Continuity Equation, if area decreases, velocity must increase to keep Q = Av constant."
+      "sets": [
+        { "q": "What area pipe is needed to carry Q = 0.06 m³/s at a velocity of 3 m/s?", "given": "Rearrange Q = A × v: A = Q / v", "opts": ["0.02 m²", "0.18 m²", "0.06 m²", "0.003 m²"], "ans": 0 },
+        { "q": "Q = 0.10 m³/s, v = 5 m/s. What cross-sectional area is required?", "given": "A = Q / v", "opts": ["0.02 m²", "0.5 m²", "0.10 m²", "0.005 m²"], "ans": 0 },
+        { "q": "A system requires Q = 0.12 m³/s at v = 4 m/s. Find the pipe cross-section.", "given": "A = Q / v", "opts": ["0.03 m²", "0.48 m²", "0.12 m²", "0.004 m²"], "ans": 0 },
+        { "q": "Q = 0.08 m³/s, v = 8 m/s. What is the required pipe area?", "given": "A = Q / v", "opts": ["0.01 m²", "0.64 m²", "0.08 m²", "0.001 m²"], "ans": 0 },
+        { "q": "To deliver Q = 0.15 m³/s at v = 3 m/s, what pipe area is required?", "given": "A = Q / v", "opts": ["0.05 m²", "0.45 m²", "0.15 m²", "0.005 m²"], "ans": 0 }
+      ]
     },
     {
-      "q": "A flow rate of 0.1 m³/s flows through a pipe for 30 seconds. What volume of fluid passes through?",
-      "given": "Rearrange:  Q = V / t\n→  V = Q × t",
-      "opts": ["3 m³", "0.33 m³", "0.003 m³", "300 m³"],
-      "ans": 0,
-      "sol": "V = Q × t = 0.1 × 30 = 3 m³."
+      "sets": [
+        { "q": "What volume of water flows through a pipe of area 0.02 m² at 6 m/s in 10 seconds?", "given": "Q = A × v\nV = Q × t", "opts": ["1.2 m³", "12 m³", "0.12 m³", "120 m³"], "ans": 0 },
+        { "q": "A pipe of area 0.005 m² carries water at 4 m/s. How much water flows in 30 seconds?", "given": "Q = A × v; V = Q × t", "opts": ["0.6 m³", "6 m³", "0.06 m³", "60 m³"], "ans": 0 },
+        { "q": "A nozzle with area 0.001 m² sprays water at 10 m/s. How much water is delivered in 60 seconds?", "given": "Q = A × v; V = Q × t", "opts": ["0.6 m³", "6 m³", "0.06 m³", "60 m³"], "ans": 0 },
+        { "q": "A river (cross-section 10 m²) flows at 0.5 m/s. How much water passes a point in 1 minute?", "given": "Q = A × v; V = Q × t (t = 60 s)", "opts": ["300 m³", "30 m³", "3 000 m³", "3 m³"], "ans": 0 },
+        { "q": "A pipe (area 0.025 m²) carries water at 8 m/s. How much water is delivered in 5 seconds?", "given": "Q = A × v; V = Q × t", "opts": ["1 m³", "10 m³", "0.1 m³", "100 m³"], "ans": 0 }
+      ]
     },
     {
-      "q": "Pipe 1 (A = 0.2 m², v = 5 m/s) splits into two identical pipes. What is the flow rate in each branch?",
-      "given": "Total flow rate Q = A × v.\nFlow is shared equally between the two branches.\nQ_each = Q_total / 2",
-      "opts": ["0.5 m³/s", "1 m³/s", "0.25 m³/s", "2 m³/s"],
-      "ans": 0,
-      "sol": "Q_total = 0.2 × 5 = 1 m³/s. Each branch gets 1 / 2 = 0.5 m³/s."
+      "sets": [
+        { "q": "Pipe A has area 0.1 m² and velocity 2 m/s. It connects to Pipe B with area 0.05 m². What is the velocity in Pipe B?", "given": "Continuity: A₁v₁ = A₂v₂", "opts": ["4 m/s", "1 m/s", "2 m/s", "0.1 m/s"], "ans": 0 },
+        { "q": "A₁ = 0.08 m², v₁ = 3 m/s. Pipe narrows to A₂ = 0.04 m². Find v₂.", "given": "A₁v₁ = A₂v₂", "opts": ["6 m/s", "1.5 m/s", "3 m/s", "0.08 m/s"], "ans": 0 },
+        { "q": "A₁ = 0.04 m², v₁ = 5 m/s. Pipe widens to A₂ = 0.20 m². Find v₂.", "given": "A₁v₁ = A₂v₂", "opts": ["1 m/s", "25 m/s", "5 m/s", "0.2 m/s"], "ans": 0 },
+        { "q": "A river narrows from 10 m² to 2 m². If the wide section flows at 0.5 m/s, what is the speed in the narrow section?", "given": "A₁v₁ = A₂v₂", "opts": ["2.5 m/s", "0.1 m/s", "0.5 m/s", "10 m/s"], "ans": 0 },
+        { "q": "Water enters a junction pipe at A₁ = 0.06 m², v₁ = 4 m/s. The outlet area is A₂ = 0.12 m². Find the outlet velocity.", "given": "A₁v₁ = A₂v₂", "opts": ["2 m/s", "8 m/s", "4 m/s", "0.5 m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "Which of the following correctly states the Continuity Equation for fluid flow?",
-      "given": "This equation is based on the conservation of mass\nfor an incompressible fluid in a pipe.",
-      "opts": [
-        "A₁v₁ = A₂v₂  (flow rate is constant throughout the pipe)",
-        "A₁v₁ = A₂v₂² (flow rate depends on velocity squared)",
-        "P₁ + ½ρv₁² = P₂ + ½ρv₂² (Bernoulli's equation)",
-        "v₁ / A₁ = v₂ / A₂ (velocity divided by area is constant)"
-      ],
-      "ans": 0,
-      "sol": "The Continuity Equation is A₁v₁ = A₂v₂ — the volumetric flow rate Q = Av is constant throughout an incompressible fluid flow."
+      "sets": [
+        { "q": "How long does it take to fill a 3 m³ tank at a flow rate of 0.5 m³/s?", "given": "Rearrange Q = V / t: t = V / Q", "opts": ["6 s", "1.5 s", "0.17 s", "60 s"], "ans": 0 },
+        { "q": "A tank of volume 12 m³ is filled at Q = 0.4 m³/s. How long does it take?", "given": "t = V / Q", "opts": ["30 s", "4.8 s", "0.033 s", "300 s"], "ans": 0 },
+        { "q": "A swimming pool holds 200 m³. A pipe delivers Q = 0.02 m³/s. How long to fill it?", "given": "t = V / Q", "opts": ["10 000 s", "4 s", "0.0001 s", "1 000 s"], "ans": 0 },
+        { "q": "A 0.6 m³ aquarium is filled at Q = 0.003 m³/s. How long does it take?", "given": "t = V / Q", "opts": ["200 s", "0.005 s", "0.0018 s", "2 000 s"], "ans": 0 },
+        { "q": "A 5 m³ water tank drains at Q = 0.25 m³/s. How long does it take to empty?", "given": "t = V / Q", "opts": ["20 s", "1.25 s", "0.05 s", "200 s"], "ans": 0 }
+      ]
     }
   ]
 }
