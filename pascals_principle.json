@@ -4,126 +4,96 @@
     "subject": "Physics · Fluid Mechanics",
     "lock_key": "quiz_pascals_principle_done"
   },
-  "examples": [
-    {
-      "q": "A force of 50 N is applied to a small piston with an area of 0.01 m². What is the pressure transmitted through the fluid?",
-      "solution": "Pascal's Principle states that pressure applied to\nan enclosed fluid is transmitted equally and\nundiminished in all directions throughout the fluid.\n\nFirst, calculate the pressure using:\n    P = F / A\n\nwhere  P = pressure  (Pa — Pascals)\n       F = force     (N)\n       A = area      (m²)\n\nStep 1 — Identify the values:\n    F = 50 N\n    A = 0.01 m²\n\nStep 2 — Substitute and solve:\n    P = 50 / 0.01\n    P = 5 000 Pa\n\nAnswer:  P = 5 000 Pa\n\nThis pressure is transmitted equally throughout\nthe entire enclosed fluid.",
-      "opts": [
-        "5 000 Pa",
-        "500 Pa",
-        "0.5 Pa",
-        "50 000 Pa"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A hydraulic lift has a small piston of area 0.02 m² and a large piston of area 0.20 m². A force of 100 N is applied to the small piston. What force does the large piston exert?",
-      "solution": "By Pascal's Principle, the pressure is the same\nat both pistons in a hydraulic system:\n\n    P₁ = P₂\n    F₁ / A₁ = F₂ / A₂\n\nRearranging to find F₂:\n    F₂ = F₁ × (A₂ / A₁)\n\nStep 1 — Identify the values:\n    F₁ = 100 N\n    A₁ = 0.02 m²\n    A₂ = 0.20 m²\n\nStep 2 — Substitute and solve:\n    F₂ = 100 × (0.20 / 0.02)\n    F₂ = 100 × 10\n    F₂ = 1 000 N\n\nAnswer:  F₂ = 1 000 N\n\nThe hydraulic system multiplies the force by 10×\nbecause the area ratio is 10:1.",
-      "opts": [
-        "1 000 N",
-        "10 N",
-        "200 N",
-        "100 N"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "In a hydraulic system, piston A has area 0.05 m² and piston B has area 0.5 m². If piston A moves down 10 cm, how far does piston B move up?",
-      "solution": "In a hydraulic system, the volume of fluid\ndisplaced is the same on both sides:\n\n    V₁ = V₂\n    A₁ × d₁ = A₂ × d₂\n\nRearranging to find d₂:\n    d₂ = (A₁ × d₁) / A₂\n\nStep 1 — Identify the values:\n    A₁ = 0.05 m²\n    d₁ = 10 cm = 0.10 m\n    A₂ = 0.5 m²\n\nStep 2 — Substitute and solve:\n    d₂ = (0.05 × 0.10) / 0.5\n    d₂ = 0.005 / 0.5\n    d₂ = 0.01 m  =  1 cm\n\nAnswer:  Piston B rises  1 cm\n\nNote: The large piston moves a SMALLER distance.\nForce is gained but distance is sacrificed.",
-      "opts": [
-        "1 cm",
-        "10 cm",
-        "100 cm",
-        "0.1 cm"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "What does Pascal's Principle state?",
-      "given": "This principle applies to enclosed, incompressible fluids.\nIt is the basis of all hydraulic systems.",
-      "opts": [
-        "Pressure applied to an enclosed fluid is transmitted equally in all directions",
-        "Pressure decreases with depth in a fluid",
-        "A fluid in motion exerts less pressure than a fluid at rest",
-        "The buoyant force equals the weight of fluid displaced"
-      ],
-      "ans": 0,
-      "sol": "Pascal's Principle: pressure applied to an enclosed fluid is transmitted equally and undiminished throughout the fluid in all directions."
+      "sets": [
+        { "q": "A force of 50 N is applied to a piston with an area of 0.01 m². What pressure is generated?", "given": "Formula: P = F / A", "opts": ["5 000 Pa", "0.5 Pa", "50 Pa", "500 Pa"], "ans": 0 },
+        { "q": "A 200 N force is applied to a piston of area 0.04 m². What is the pressure?", "given": "P = F / A", "opts": ["5 000 Pa", "8 Pa", "204 Pa", "500 Pa"], "ans": 0 },
+        { "q": "A 100 N force is applied to a piston of area 0.02 m². What pressure does this produce?", "given": "P = F / A", "opts": ["5 000 Pa", "2 Pa", "102 Pa", "50 Pa"], "ans": 0 },
+        { "q": "A 300 N force acts on a piston with area 0.05 m². What is the pressure?", "given": "P = F / A", "opts": ["6 000 Pa", "15 Pa", "305 Pa", "600 Pa"], "ans": 0 },
+        { "q": "A 450 N force is applied to a 0.09 m² piston. What pressure does it produce?", "given": "P = F / A", "opts": ["5 000 Pa", "40.5 Pa", "459 Pa", "500 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "A force of 200 N acts on a piston with area 0.04 m². What is the pressure transmitted to the fluid?",
-      "given": "Formula:  P = F / A",
-      "opts": ["5 000 Pa", "8 Pa", "800 Pa", "50 000 Pa"],
-      "ans": 0,
-      "sol": "P = 200 / 0.04 = 5 000 Pa."
+      "sets": [
+        { "q": "Which statement best describes Pascal's Principle?", "given": "Pascal's Principle concerns pressure in enclosed fluids.", "opts": ["Pressure applied to an enclosed fluid is transmitted equally in all directions throughout the fluid.", "A fluid exerts pressure only at the bottom of its container.", "Pressure increases only at the point of application.", "Fluids cannot transmit force."], "ans": 0 },
+        { "q": "Pascal's Principle states that when pressure is applied to an enclosed fluid:", "given": "Think about how pressure travels through a hydraulic system.", "opts": ["It is transmitted undiminished to every part of the fluid and walls of the container.", "It remains only at the point of application.", "It decreases with distance from the point of application.", "It is absorbed by the fluid."], "ans": 0 },
+        { "q": "Which of the following is the best real-world application of Pascal's Principle?", "given": "Pascal's Principle is the basis for hydraulic machines.", "opts": ["Hydraulic car brakes", "A siphon tube", "A thermometer", "A barometer"], "ans": 0 },
+        { "q": "A hydraulic press works because:", "given": "The press relies on pressure transmitted through an enclosed fluid.", "opts": ["Pressure applied at a small piston is transmitted equally to a larger piston, multiplying force.", "A larger piston always moves faster than a smaller one.", "Pressure decreases as fluid flows to a larger area.", "The fluid compresses to store energy."], "ans": 0 },
+        { "q": "Pascal's Principle applies to:", "given": "Consider the conditions for Pascal's Principle to hold.", "opts": ["Enclosed (confined) fluids", "Open channels only", "Gases only", "Solids only"], "ans": 0 }
+      ]
     },
     {
-      "q": "A hydraulic system has pistons with areas 0.01 m² and 0.05 m². A 60 N force is applied to the small piston. What force acts on the large piston?",
-      "given": "Pascal's Principle:  F₁ / A₁ = F₂ / A₂\n→  F₂ = F₁ × (A₂ / A₁)",
-      "opts": ["300 N", "12 N", "60 N", "3 000 N"],
-      "ans": 0,
-      "sol": "F₂ = 60 × (0.05 / 0.01) = 60 × 5 = 300 N."
+      "sets": [
+        { "q": "A hydraulic system has a small piston of area 0.002 m² and a large piston of area 0.02 m². A force of 100 N is applied to the small piston. What force does the large piston exert?", "given": "Pascal's Principle: F₁/A₁ = F₂/A₂\nSolve: F₂ = F₁ × (A₂/A₁)", "opts": ["1 000 N", "10 N", "100 N", "200 N"], "ans": 0 },
+        { "q": "Small piston area: 0.005 m², large piston area: 0.05 m². Input force: 80 N. What is the output force?", "given": "F₂ = F₁ × (A₂/A₁)", "opts": ["800 N", "8 N", "80 N", "400 N"], "ans": 0 },
+        { "q": "A hydraulic lift has A₁ = 0.01 m² and A₂ = 0.1 m². An input force of 200 N is applied. What is the output force?", "given": "F₂ = F₁ × (A₂/A₁)", "opts": ["2 000 N", "20 N", "200 N", "100 N"], "ans": 0 },
+        { "q": "Small piston: 0.004 m². Large piston: 0.04 m². Input force: 150 N. Find the output force.", "given": "F₂ = F₁ × (A₂/A₁)", "opts": ["1 500 N", "15 N", "150 N", "750 N"], "ans": 0 },
+        { "q": "A hydraulic press: A₁ = 0.003 m², A₂ = 0.06 m², F₁ = 50 N. What is F₂?", "given": "F₂ = F₁ × (A₂/A₁)", "opts": ["1 000 N", "2.5 N", "50 N", "100 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "In a hydraulic press, the input piston has area 0.1 m² and the output piston has area 1.0 m². What is the mechanical advantage of this system?",
-      "given": "Mechanical Advantage (MA) of a hydraulic system:\n    MA = A₂ / A₁  (output area / input area)",
-      "opts": ["10", "0.1", "1", "100"],
-      "ans": 0,
-      "sol": "MA = A₂ / A₁ = 1.0 / 0.1 = 10. The system multiplies force by 10."
+      "sets": [
+        { "q": "A hydraulic system has a large piston of area 0.5 m² that must exert 5 000 N. The small piston has area 0.05 m². What input force is needed?", "given": "Rearrange: F₁ = F₂ × (A₁/A₂)", "opts": ["500 N", "50 000 N", "50 N", "5 000 N"], "ans": 0 },
+        { "q": "A large piston (A₂ = 0.4 m²) must lift 8 000 N. The small piston has area 0.02 m². What force must be applied?", "given": "F₁ = F₂ × (A₁/A₂)", "opts": ["400 N", "160 000 N", "40 N", "8 000 N"], "ans": 0 },
+        { "q": "An output force of 6 000 N is needed at a large piston (A₂ = 0.6 m²). If A₁ = 0.03 m², what input force is required?", "given": "F₁ = F₂ × (A₁/A₂)", "opts": ["300 N", "120 000 N", "30 N", "600 N"], "ans": 0 },
+        { "q": "A car lift must exert 12 000 N from a large piston (A₂ = 0.8 m²). Small piston area = 0.04 m². Find the input force.", "given": "F₁ = F₂ × (A₁/A₂)", "opts": ["600 N", "240 000 N", "60 N", "1 200 N"], "ans": 0 },
+        { "q": "A hydraulic ram must produce 10 000 N. A₂ = 1 m², A₁ = 0.05 m². What is the input force?", "given": "F₁ = F₂ × (A₁/A₂)", "opts": ["500 N", "200 000 N", "50 N", "1 000 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "A hydraulic lift must support a 9 000 N car using a large piston of area 0.9 m². What pressure must the fluid exert?",
-      "given": "Formula:  P = F / A",
-      "opts": ["10 000 Pa", "8 100 Pa", "900 Pa", "81 000 Pa"],
-      "ans": 0,
-      "sol": "P = 9 000 / 0.9 = 10 000 Pa."
+      "sets": [
+        { "q": "In a hydraulic system, a small piston moves down 10 cm. The area ratio A₁:A₂ = 1:10. How far does the large piston move?", "given": "Volume conservation: A₁ × d₁ = A₂ × d₂\nSolve: d₂ = d₁ × (A₁/A₂)", "opts": ["1 cm", "100 cm", "10 cm", "0.1 cm"], "ans": 0 },
+        { "q": "Small piston (A₁ = 0.002 m²) moves 8 cm. Large piston (A₂ = 0.02 m²) area is 10× larger. How far does the large piston move?", "given": "A₁d₁ = A₂d₂ → d₂ = d₁ × (A₁/A₂)", "opts": ["0.8 cm", "80 cm", "8 cm", "8 m"], "ans": 0 },
+        { "q": "A small piston of area 0.01 m² moves 20 cm. The large piston has area 0.1 m². How far does the large piston move?", "given": "d₂ = d₁ × (A₁/A₂)", "opts": ["2 cm", "200 cm", "20 cm", "0.2 cm"], "ans": 0 },
+        { "q": "Small piston (0.005 m²) moves 12 cm. Large piston (0.06 m²). How far does the large piston travel?", "given": "d₂ = d₁ × (A₁/A₂) = 12 × (0.005/0.06)", "opts": ["1 cm", "144 cm", "12 cm", "0.1 cm"], "ans": 0 },
+        { "q": "A₁ = 0.003 m², d₁ = 30 cm, A₂ = 0.09 m². How far does the large piston move?", "given": "d₂ = d₁ × (A₁/A₂)", "opts": ["1 cm", "900 cm", "30 cm", "0.1 cm"], "ans": 0 }
+      ]
     },
     {
-      "q": "If the pressure in a hydraulic system is 8 000 Pa and the output piston has area 0.25 m², what is the output force?",
-      "given": "Rearrange:  P = F / A\n→  F = P × A",
-      "opts": ["2 000 N", "32 N", "8 000 N", "32 000 N"],
-      "ans": 0,
-      "sol": "F = P × A = 8 000 × 0.25 = 2 000 N."
+      "sets": [
+        { "q": "A hydraulic press has a mechanical advantage of 50. If 100 N is applied to the small piston, what is the output force?", "given": "Mechanical Advantage (MA) = F₂/F₁ = A₂/A₁\nF₂ = MA × F₁", "opts": ["5 000 N", "2 N", "150 N", "50 N"], "ans": 0 },
+        { "q": "A hydraulic system has A₁ = 0.01 m² and A₂ = 0.5 m². What is the mechanical advantage?", "given": "MA = A₂ / A₁", "opts": ["50", "0.02", "0.5", "5"], "ans": 0 },
+        { "q": "A hydraulic jack has MA = 100. What input force is needed to lift a 10 000 N car?", "given": "F₁ = F₂ / MA", "opts": ["100 N", "1 000 000 N", "10 000 N", "10 N"], "ans": 0 },
+        { "q": "A hydraulic brake pedal has A₁ = 0.002 m² and A₂ = 0.02 m². If 60 N is applied, what braking force is delivered?", "given": "MA = A₂/A₁; F₂ = F₁ × MA", "opts": ["600 N", "6 N", "60 N", "120 N"], "ans": 0 },
+        { "q": "A hydraulic system with MA = 20 is used with an input force of 250 N. What is the output force?", "given": "F₂ = F₁ × MA", "opts": ["5 000 N", "12.5 N", "250 N", "270 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "Which of the following is a real-world application of Pascal's Principle?",
-      "given": "Pascal's Principle explains how force is multiplied\nusing an enclosed fluid in pistons of different sizes.",
-      "opts": [
-        "Hydraulic car brakes",
-        "A ball floating in water",
-        "Water flowing through a pipe",
-        "A barometer measuring air pressure"
-      ],
-      "ans": 0,
-      "sol": "Hydraulic car brakes use Pascal's Principle — a small force on the brake pedal creates a large braking force at the wheels."
+      "sets": [
+        { "q": "A hydraulic system conserves energy. If the input force is 100 N over 10 cm, and the output force is 1 000 N, how far does the output piston move?", "given": "Energy conservation: F₁ × d₁ = F₂ × d₂\nSolve for d₂.", "opts": ["1 cm", "10 cm", "100 cm", "0.01 cm"], "ans": 0 },
+        { "q": "A press inputs 200 N over 20 cm and outputs 2 000 N. How far does the output piston move?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["2 cm", "20 cm", "200 cm", "0.2 cm"], "ans": 0 },
+        { "q": "Input: 50 N over 40 cm. Output: 500 N. How far does the output piston move?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["4 cm", "40 cm", "400 cm", "0.4 cm"], "ans": 0 },
+        { "q": "A hydraulic lift: Input 300 N over 15 cm; Output 3 000 N. How far does the output move?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["1.5 cm", "15 cm", "150 cm", "0.15 cm"], "ans": 0 },
+        { "q": "A hydraulic press: Input 80 N over 25 cm; Output 800 N. Output piston displacement?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["2.5 cm", "25 cm", "250 cm", "0.25 cm"], "ans": 0 }
+      ]
     },
     {
-      "q": "Small piston: F₁ = 40 N, A₁ = 0.008 m². Large piston: A₂ = 0.04 m². Find F₂.",
-      "given": "Pascal's Principle:  F₁ / A₁ = F₂ / A₂\n→  F₂ = F₁ × (A₂ / A₁)",
-      "opts": ["200 N", "8 N", "400 N", "20 N"],
-      "ans": 0,
-      "sol": "F₂ = 40 × (0.04 / 0.008) = 40 × 5 = 200 N."
+      "sets": [
+        { "q": "Which of the following is NOT based on Pascal's Principle?", "given": "Pascal's Principle: pressure applied to an enclosed fluid is transmitted equally in all directions.", "opts": ["A siphon tube (uses gravity and atmospheric pressure, not enclosed fluid pressure transfer)", "Hydraulic car brakes", "Hydraulic car jack", "Dentist's hydraulic chair"], "ans": 0 },
+        { "q": "A hydraulic brake system works because:", "given": "Think about how pressure from the brake pedal reaches the brake pads.", "opts": ["Brake fluid transmits the pressure from the pedal to the brake pads equally", "The brake pedal creates heat to stop the car", "Air pressure from the tires is used", "The brake pads are mechanically linked to the pedal"], "ans": 0 },
+        { "q": "Which device most directly demonstrates Pascal's Principle in a hospital?", "given": "Think about hydraulic systems used in medical settings.", "opts": ["Hydraulic patient lift", "Thermometer", "Stethoscope", "X-ray machine"], "ans": 0 },
+        { "q": "A hydraulic jack uses Pascal's Principle to:", "given": "Think about how a small input force becomes a large output force.", "opts": ["Multiply force by transmitting pressure through an enclosed fluid", "Generate electricity to power a motor", "Reduce friction between surfaces", "Store potential energy in a spring"], "ans": 0 },
+        { "q": "The pressure at a small piston of a hydraulic press is 20 000 Pa. What is the pressure at the large piston?", "given": "Pascal's Principle: pressure is transmitted equally throughout an enclosed fluid.", "opts": ["20 000 Pa (same pressure throughout)", "Less than 20 000 Pa", "Greater than 20 000 Pa", "Depends on the size of the pistons"], "ans": 0 }
+      ]
     },
     {
-      "q": "Piston A (area = 0.02 m²) is pushed down 0.5 m. Piston B has area 0.10 m². How far does piston B move?",
-      "given": "Volume conservation:  A₁ × d₁ = A₂ × d₂\n→  d₂ = (A₁ × d₁) / A₂",
-      "opts": ["0.1 m", "2.5 m", "0.01 m", "0.5 m"],
-      "ans": 0,
-      "sol": "d₂ = (0.02 × 0.5) / 0.10 = 0.01 / 0.10 = 0.1 m."
+      "sets": [
+        { "q": "A 5 N force is applied to a 0.001 m² syringe piston. What pressure is created?", "given": "P = F / A", "opts": ["5 000 Pa", "0.0002 Pa", "5.001 Pa", "500 Pa"], "ans": 0 },
+        { "q": "A syringe with piston area 0.002 m² applies 10 N force. What is the fluid pressure?", "given": "P = F / A", "opts": ["5 000 Pa", "0.02 Pa", "12 Pa", "50 Pa"], "ans": 0 },
+        { "q": "A needle at the end of a syringe has area 0.000001 m² (1 mm²). If the fluid pressure is 5 000 Pa, what force does the needle exert?", "given": "F = P × A", "opts": ["0.005 N", "5 000 000 N", "5 001 N", "5 N"], "ans": 0 },
+        { "q": "A dentist's syringe piston (area 0.0005 m²) is pushed with 2.5 N. What is the pressure in the fluid?", "given": "P = F / A", "opts": ["5 000 Pa", "0.0002 Pa", "2.5005 Pa", "500 Pa"], "ans": 0 },
+        { "q": "A hydraulic dental chair applies 5 000 Pa to a piston of area 0.04 m². What force lifts the chair?", "given": "F = P × A", "opts": ["200 N", "125 N", "5 000 N", "0.000008 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "Why can a small force on a hydraulic brake pedal stop a large, heavy vehicle?",
-      "given": "Consider Pascal's Principle and the area ratio\nbetween the brake pedal piston and the brake pad pistons.",
-      "opts": [
-        "The small input piston has much less area than the large output pistons, so pressure is multiplied into a larger force",
-        "Brakes use friction alone — fluid pressure is not involved",
-        "The fluid absorbs the force and stores it",
-        "A small force always stops large objects in hydraulics"
-      ],
-      "ans": 0,
-      "sol": "Pascal's Principle transmits the same pressure to larger output pistons. F₂ = P × A₂ — a larger area means a larger stopping force."
+      "sets": [
+        { "q": "In a hydraulic press, when the area of the output piston is increased (input unchanged), what happens to the output force?", "given": "F₂ = P × A₂. Pressure P stays constant (Pascal's Principle).", "opts": ["Output force increases", "Output force decreases", "Output force stays the same", "Output force becomes zero"], "ans": 0 },
+        { "q": "In a hydraulic system, doubling the input area (with the same input force) does what to the output force at the same output area?", "given": "Pressure P = F₁/A₁. If A₁ doubles with F₁ unchanged, P halves. F₂ = P × A₂.", "opts": ["Output force halves", "Output force doubles", "Output force stays the same", "Output force quadruples"], "ans": 0 },
+        { "q": "A hydraulic system works best (greatest mechanical advantage) when:", "given": "MA = A₂/A₁. For maximum MA, what should the ratio be?", "opts": ["Output piston area is much larger than input piston area", "Input piston area equals output piston area", "Output piston area is smaller than input piston area", "Both pistons are the same height"], "ans": 0 },
+        { "q": "What is the trade-off when using a hydraulic press to get a large output force?", "given": "Energy is conserved: F₁d₁ = F₂d₂. If F₂ is large, what happens to d₂?", "opts": ["The output piston moves a smaller distance", "The output piston moves a greater distance", "No trade-off — both force and distance increase", "Energy is created by the hydraulic fluid"], "ans": 0 },
+        { "q": "A hydraulic system multiplies force by a factor of 100. If the input piston moves 50 cm, how far does the output piston move?", "given": "F₁d₁ = F₂d₂; d₂ = d₁/MA = 50/100", "opts": ["0.5 cm", "50 cm", "5 000 cm", "5 cm"], "ans": 0 }
+      ]
     }
   ]
 }
