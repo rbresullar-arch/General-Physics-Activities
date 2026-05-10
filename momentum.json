@@ -1,129 +1,599 @@
 {
   "meta": {
     "title": "Linear Momentum & Impulse",
-    "subject": "Physics · Momentum",
+    "subject": "Physics \u00b7 Momentum",
     "lock_key": "quiz_momentum_done"
   },
-  "examples": [
-    {
-      "q": "A 5 kg ball moves at 8 m/s to the right. What is its linear momentum?",
-      "solution": "Linear momentum is the product of an object's\nmass and velocity.\n\nFormula:\n    p = m × v\n\nwhere  p = momentum  (kg·m/s)\n       m = mass       (kg)\n       v = velocity   (m/s)\n\nMomentum is a VECTOR — it has direction.\n\nStep 1 — Identify the values:\n    m = 5 kg\n    v = 8 m/s (right)\n\nStep 2 — Substitute and solve:\n    p = 5 × 8\n    p = 40 kg·m/s\n\nAnswer:  p = 40 kg·m/s, to the right.",
-      "opts": [
-        "40 kg·m/s, right",
-        "1.6 kg·m/s, right",
-        "13 kg·m/s, right",
-        "40 kg·m/s (no direction)"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 3 kg object is moving at 2 m/s. A force of 6 N is applied for 4 seconds in the same direction. What is the final velocity?",
-      "solution": "Impulse is the change in momentum caused by a force\nacting over time.\n\nFormula:\n    J = F × t = Δp = m × (vf − vi)\n\nStep 1 — Calculate the impulse:\n    J = F × t = 6 × 4 = 24 N·s\n\nStep 2 — Apply the impulse-momentum theorem:\n    J = m × (vf − vi)\n    24 = 3 × (vf − 2)\n    24 / 3 = vf − 2\n    8 = vf − 2\n    vf = 10 m/s\n\nAnswer:  vf = 10 m/s",
-      "opts": [
-        "10 m/s",
-        "8 m/s",
-        "14 m/s",
-        "4 m/s"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 4 kg ball moving right at 6 m/s collides with a stationary 4 kg ball. After the collision they move together. What is their combined velocity?",
-      "solution": "This is a perfectly inelastic collision.\nUse Conservation of Momentum:\n\n    Total momentum before = Total momentum after\n    m₁v₁ + m₂v₂ = (m₁ + m₂) × vf\n\nStep 1 — Identify values:\n    m₁ = 4 kg,  v₁ = 6 m/s\n    m₂ = 4 kg,  v₂ = 0 m/s (stationary)\n\nStep 2 — Substitute:\n    (4 × 6) + (4 × 0) = (4 + 4) × vf\n    24 + 0 = 8 × vf\n    vf = 24 / 8\n    vf = 3 m/s\n\nAnswer:  vf = 3 m/s, to the right.",
-      "opts": [
-        "3 m/s",
-        "6 m/s",
-        "12 m/s",
-        "1.5 m/s"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "What is the momentum of a 10 kg object moving at 5 m/s?",
-      "given": "Formula:  p = m × v",
-      "opts": ["50 kg·m/s", "2 kg·m/s", "15 kg·m/s", "500 kg·m/s"],
-      "ans": 0,
-      "sol": "p = 10 × 5 = 50 kg·m/s."
+      "sets": [
+        {
+          "q": "What is the momentum of a 10 kg object moving at 5 m/s?",
+          "given": "Formula: p = m \u00d7 v",
+          "opts": [
+            "50 kg\u00b7m/s",
+            "2 kg\u00b7m/s",
+            "15 kg\u00b7m/s",
+            "500 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg ball moves at 8 m/s. What is its momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "32 kg\u00b7m/s",
+            "2 kg\u00b7m/s",
+            "12 kg\u00b7m/s",
+            "0.5 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 15 kg cart rolls at 3 m/s. Find its momentum.",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "45 kg\u00b7m/s",
+            "5 kg\u00b7m/s",
+            "18 kg\u00b7m/s",
+            "0.2 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 0.2 kg tennis ball moves at 25 m/s. What is its momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "5 kg\u00b7m/s",
+            "0.008 kg\u00b7m/s",
+            "25.2 kg\u00b7m/s",
+            "125 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 60 kg person runs at 4 m/s. What is the momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "240 kg\u00b7m/s",
+            "15 kg\u00b7m/s",
+            "64 kg\u00b7m/s",
+            "0.067 kg\u00b7m/s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A force of 10 N acts on an object for 3 seconds. What is the impulse?",
-      "given": "Formula:  J = F × t\nUnit of impulse: N·s (Newton-second)",
-      "opts": ["30 N·s", "3.33 N·s", "13 N·s", "0.33 N·s"],
-      "ans": 0,
-      "sol": "J = F × t = 10 × 3 = 30 N·s."
+      "sets": [
+        {
+          "q": "A force of 10 N acts on an object for 3 seconds. What is the impulse?",
+          "given": "Formula: J = F \u00d7 t",
+          "opts": [
+            "30 N\u00b7s",
+            "3.33 N\u00b7s",
+            "13 N\u00b7s",
+            "0.33 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A force of 25 N acts for 4 seconds. What is the impulse?",
+          "given": "J = F \u00d7 t",
+          "opts": [
+            "100 N\u00b7s",
+            "6.25 N\u00b7s",
+            "29 N\u00b7s",
+            "0.16 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 50 N force is applied for 2 seconds. What impulse is delivered?",
+          "given": "J = F \u00d7 t",
+          "opts": [
+            "100 N\u00b7s",
+            "25 N\u00b7s",
+            "52 N\u00b7s",
+            "0.04 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A net force of 8 N acts on a ball for 5 seconds. What is the impulse?",
+          "given": "J = F \u00d7 t",
+          "opts": [
+            "40 N\u00b7s",
+            "1.6 N\u00b7s",
+            "13 N\u00b7s",
+            "0.625 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A braking force of 600 N acts for 3 seconds. What impulse is applied?",
+          "given": "J = F \u00d7 t",
+          "opts": [
+            "1 800 N\u00b7s",
+            "200 N\u00b7s",
+            "603 N\u00b7s",
+            "0.005 N\u00b7s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 2 kg object at rest is hit with an impulse of 16 N·s. What is its final velocity?",
-      "given": "Impulse-Momentum Theorem:  J = m × (vf − vi)\nObject starts at rest: vi = 0.",
-      "opts": ["8 m/s", "32 m/s", "14 m/s", "18 m/s"],
-      "ans": 0,
-      "sol": "16 = 2 × (vf − 0)  →  vf = 16 / 2 = 8 m/s."
+      "sets": [
+        {
+          "q": "A 2 kg object at rest is hit with an impulse of 16 N\u00b7s. What is its final velocity?",
+          "given": "Impulse-Momentum Theorem: J = m \u00d7 (vf \u2212 vi), vi = 0",
+          "opts": [
+            "8 m/s",
+            "32 m/s",
+            "14 m/s",
+            "18 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 5 kg object at rest receives an impulse of 30 N\u00b7s. What is the final velocity?",
+          "given": "J = m \u00d7 (vf \u2212 vi), vi = 0",
+          "opts": [
+            "6 m/s",
+            "150 m/s",
+            "35 m/s",
+            "0.17 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg object at rest receives impulse 20 N\u00b7s. What is the final speed?",
+          "given": "J = m \u00d7 (vf \u2212 vi), vi = 0",
+          "opts": [
+            "5 m/s",
+            "80 m/s",
+            "24 m/s",
+            "0.2 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 10 kg object at rest receives impulse 50 N\u00b7s. What is the final velocity?",
+          "given": "J = m \u00d7 vf when vi = 0",
+          "opts": [
+            "5 m/s",
+            "500 m/s",
+            "60 m/s",
+            "0.2 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 3 kg ball at rest is struck with impulse 12 N\u00b7s. What is the final speed?",
+          "given": "J = m \u00d7 vf when vi = 0",
+          "opts": [
+            "4 m/s",
+            "36 m/s",
+            "15 m/s",
+            "0.25 m/s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Which of the following has greater momentum: a 2 kg object at 10 m/s or a 5 kg object at 3 m/s?",
-      "given": "Formula:  p = m × v\nCalculate each momentum and compare.",
-      "opts": [
-        "2 kg object — momentum = 20 kg·m/s",
-        "5 kg object — momentum = 15 kg·m/s",
-        "They are equal",
-        "Cannot be determined"
-      ],
-      "ans": 0,
-      "sol": "p₁ = 2 × 10 = 20 kg·m/s. p₂ = 5 × 3 = 15 kg·m/s. The 2 kg object has greater momentum."
+      "sets": [
+        {
+          "q": "Which has greater momentum: 2 kg at 10 m/s or 5 kg at 3 m/s?",
+          "given": "p = m \u00d7 v. Calculate each.",
+          "opts": [
+            "2 kg object \u2014 p = 20 kg\u00b7m/s",
+            "5 kg object \u2014 p = 15 kg\u00b7m/s",
+            "They are equal",
+            "Cannot be determined"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which has greater momentum: a 3 kg ball at 8 m/s or a 6 kg ball at 5 m/s?",
+          "given": "p = m \u00d7 v. Compare.",
+          "opts": [
+            "3 kg ball \u2014 p = 24 kg\u00b7m/s",
+            "6 kg ball \u2014 p = 30 kg\u00b7m/s",
+            "They are equal",
+            "Not enough data"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which has greater momentum: a 0.5 kg baseball at 40 m/s or a 10 kg bowling ball at 2 m/s?",
+          "given": "p = m \u00d7 v for each.",
+          "opts": [
+            "Baseball \u2014 p = 20 kg\u00b7m/s",
+            "Bowling ball \u2014 p = 20 kg\u00b7m/s",
+            "Baseball \u2014 p = 80 kg\u00b7m/s",
+            "Bowling ball \u2014 p = 5 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which has greater momentum: a 1 500 kg car at 10 m/s or a 1 000 kg car at 20 m/s?",
+          "given": "p = m \u00d7 v for each.",
+          "opts": [
+            "They are equal \u2014 both 15 000 kg\u00b7m/s",
+            "1 500 kg car",
+            "1 000 kg car",
+            "Cannot compare"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 0.1 kg bullet at 400 m/s vs a 50 kg person at 1 m/s. Which has greater momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "They are equal \u2014 both 40 kg\u00b7m/s",
+            "The bullet",
+            "The person",
+            "Cannot compare"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 6 kg object moves from 4 m/s to 10 m/s. What impulse caused this change?",
-      "given": "Impulse = change in momentum\n    J = m × (vf − vi)",
-      "opts": ["36 N·s", "24 N·s", "60 N·s", "6 N·s"],
-      "ans": 0,
-      "sol": "J = 6 × (10 − 4) = 6 × 6 = 36 N·s."
+      "sets": [
+        {
+          "q": "A 6 kg object moves from 4 m/s to 10 m/s. What impulse caused this change?",
+          "given": "Impulse = change in momentum: J = m \u00d7 (vf \u2212 vi)",
+          "opts": [
+            "36 N\u00b7s",
+            "24 N\u00b7s",
+            "60 N\u00b7s",
+            "6 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 3 kg ball accelerates from 2 m/s to 8 m/s. What was the impulse?",
+          "given": "J = m \u00d7 (vf \u2212 vi)",
+          "opts": [
+            "18 N\u00b7s",
+            "6 N\u00b7s",
+            "24 N\u00b7s",
+            "30 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 5 kg object changes velocity from 1 m/s to 7 m/s. Find the impulse.",
+          "given": "J = m \u00d7 (vf \u2212 vi)",
+          "opts": [
+            "30 N\u00b7s",
+            "5 N\u00b7s",
+            "35 N\u00b7s",
+            "6 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 2 kg ball changes speed from 5 m/s to 15 m/s. What impulse was applied?",
+          "given": "J = m \u00d7 (vf \u2212 vi)",
+          "opts": [
+            "20 N\u00b7s",
+            "10 N\u00b7s",
+            "30 N\u00b7s",
+            "4 N\u00b7s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 10 kg cart speeds up from 0 m/s to 6 m/s. What impulse acted on it?",
+          "given": "J = m \u00d7 (vf \u2212 vi), vi = 0",
+          "opts": [
+            "60 N\u00b7s",
+            "6 N\u00b7s",
+            "10 N\u00b7s",
+            "600 N\u00b7s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 1 500 kg car moves at 20 m/s. What is its momentum?",
-      "given": "Formula:  p = m × v",
-      "opts": ["30 000 kg·m/s", "1 520 kg·m/s", "75 kg·m/s", "3 000 kg·m/s"],
-      "ans": 0,
-      "sol": "p = 1 500 × 20 = 30 000 kg·m/s."
+      "sets": [
+        {
+          "q": "A 1 500 kg car moves at 20 m/s. What is its momentum?",
+          "given": "Formula: p = m \u00d7 v",
+          "opts": [
+            "30 000 kg\u00b7m/s",
+            "1 520 kg\u00b7m/s",
+            "75 kg\u00b7m/s",
+            "3 000 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 2 000 kg truck moves at 15 m/s. What is the momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "30 000 kg\u00b7m/s",
+            "2 015 kg\u00b7m/s",
+            "133 kg\u00b7m/s",
+            "300 000 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 900 kg car moves at 25 m/s. What is the momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "22 500 kg\u00b7m/s",
+            "925 kg\u00b7m/s",
+            "36 kg\u00b7m/s",
+            "225 000 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 1 200 kg vehicle moves at 18 m/s. Find the momentum.",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "21 600 kg\u00b7m/s",
+            "1 218 kg\u00b7m/s",
+            "66.7 kg\u00b7m/s",
+            "216 000 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 5 000 kg bus moves at 12 m/s. What is its momentum?",
+          "given": "p = m \u00d7 v",
+          "opts": [
+            "60 000 kg\u00b7m/s",
+            "5 012 kg\u00b7m/s",
+            "417 kg\u00b7m/s",
+            "600 000 kg\u00b7m/s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "According to the Law of Conservation of Momentum, what is true in a closed system with no external forces?",
-      "given": "A 'closed system' means no forces act from outside.\nThis is one of the most fundamental laws in physics.",
-      "opts": [
-        "Total momentum before = Total momentum after",
-        "Total momentum always increases",
-        "Total momentum always decreases",
-        "Momentum only conserved in elastic collisions"
-      ],
-      "ans": 0,
-      "sol": "The Law of Conservation of Momentum states: in a closed system, total momentum before any collision equals total momentum after."
+      "sets": [
+        {
+          "q": "In a closed system with no external forces, what is true about total momentum?",
+          "given": "This is one of the most fundamental laws in physics.",
+          "opts": [
+            "Total momentum before = Total momentum after",
+            "Total momentum always increases",
+            "Total momentum always decreases",
+            "Momentum is only conserved in elastic collisions"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The Law of Conservation of Momentum states:",
+          "given": "A 'closed system' means no external forces act.",
+          "opts": [
+            "Total momentum of a closed system is constant",
+            "Momentum increases when speed increases",
+            "Momentum is lost during collisions",
+            "Momentum equals kinetic energy"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Before a collision, two objects have a combined momentum of 80 kg\u00b7m/s. After they stick together, the total momentum is:",
+          "given": "Conservation of momentum: total momentum is conserved.",
+          "opts": [
+            "80 kg\u00b7m/s",
+            "160 kg\u00b7m/s",
+            "40 kg\u00b7m/s",
+            "0 kg\u00b7m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two ice skaters push each other apart from rest. Their total momentum after the push is:",
+          "given": "They start at rest, so total initial momentum = 0.",
+          "opts": [
+            "Zero (they push in opposite directions)",
+            "Twice the mass of one skater",
+            "Equal to one skater's momentum",
+            "Infinite"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which of the following is a consequence of conservation of momentum?",
+          "given": "Consider what happens when a gun fires a bullet.",
+          "opts": [
+            "A gun recoils backward when a bullet is fired forward",
+            "A moving object always stops when it hits a wall",
+            "Heavier objects always have more momentum",
+            "Momentum is always converted to energy"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 3 kg ball at 10 m/s collides with a 7 kg stationary ball and they stick together. What is the combined velocity?",
-      "given": "Conservation of Momentum:\n    m₁v₁ + m₂v₂ = (m₁ + m₂) × vf",
-      "opts": ["3 m/s", "5 m/s", "7 m/s", "10 m/s"],
-      "ans": 0,
-      "sol": "(3 × 10) + (7 × 0) = (3 + 7) × vf  →  30 = 10 × vf  →  vf = 3 m/s."
+      "sets": [
+        {
+          "q": "A 3 kg ball at 10 m/s collides with a 7 kg stationary ball and they stick together. What is the combined velocity?",
+          "given": "m\u2081v\u2081 + m\u2082v\u2082 = (m\u2081 + m\u2082) \u00d7 vf",
+          "opts": [
+            "3 m/s",
+            "5 m/s",
+            "7 m/s",
+            "10 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 5 kg trolley at 6 m/s collides and sticks to a 10 kg trolley at rest. Find the combined velocity.",
+          "given": "m\u2081v\u2081 + m\u2082v\u2082 = (m\u2081 + m\u2082) \u00d7 vf",
+          "opts": [
+            "2 m/s",
+            "3 m/s",
+            "6 m/s",
+            "10 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 2 kg cart at 8 m/s collides and sticks to a 6 kg cart at rest. Find the final velocity.",
+          "given": "m\u2081v\u2081 = (m\u2081 + m\u2082) \u00d7 vf",
+          "opts": [
+            "2 m/s",
+            "4 m/s",
+            "8 m/s",
+            "1 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg ball at 5 m/s sticks to a 6 kg ball at rest. What is the final velocity?",
+          "given": "m\u2081v\u2081 = (m\u2081 + m\u2082) \u00d7 vf",
+          "opts": [
+            "2 m/s",
+            "5 m/s",
+            "3 m/s",
+            "4 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 8 kg object at 3 m/s collides and sticks with a 4 kg stationary object. Find the final velocity.",
+          "given": "m\u2081v\u2081 = (m\u2081 + m\u2082) \u00d7 vf",
+          "opts": [
+            "2 m/s",
+            "3 m/s",
+            "4 m/s",
+            "1.5 m/s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Why does a longer contact time reduce the force of an impact (e.g., an airbag)?",
-      "given": "Impulse:  J = F × t = Δp\nIf Δp (change in momentum) is fixed, what happens to F as t increases?",
-      "opts": [
-        "F decreases because F = Δp / t — same impulse over more time",
-        "F increases because more time means more force",
-        "F is unchanged — only momentum changes",
-        "F increases because the object decelerates faster"
-      ],
-      "ans": 0,
-      "sol": "J = F × t is fixed (same Δp). So F = J / t — if t increases, F must decrease. This is why airbags save lives."
+      "sets": [
+        {
+          "q": "Why does a longer contact time reduce the force of an impact (e.g., an airbag)?",
+          "given": "Impulse: J = F \u00d7 t = \u0394p. If \u0394p is fixed, what happens to F as t increases?",
+          "opts": [
+            "F decreases because F = \u0394p / t \u2014 same impulse over more time",
+            "F increases because more time means more force",
+            "F is unchanged \u2014 only momentum changes",
+            "F increases because the object decelerates faster"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A padding material extends the collision time from 0.01 s to 0.1 s. If the impulse is fixed, what happens to the average force?",
+          "given": "J = F \u00d7 t \u2192 F = J / t",
+          "opts": [
+            "Force decreases by a factor of 10",
+            "Force increases by a factor of 10",
+            "Force is unchanged",
+            "Force doubles"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Why do gymnasts bend their knees when landing?",
+          "given": "Bending knees increases contact time during landing.",
+          "opts": [
+            "To increase contact time and reduce peak force",
+            "To increase the force of impact",
+            "To reduce momentum",
+            "To increase impulse"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A boxer 'rolls with a punch' to reduce injury. This works because:",
+          "given": "Rolling with the punch increases the time of contact.",
+          "opts": [
+            "Longer contact time \u2192 smaller average force (same impulse)",
+            "Shorter contact time \u2192 smaller force",
+            "Rolling changes the momentum entirely",
+            "It reduces the mass of the fist"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Car crumple zones are designed to:",
+          "given": "J = F \u00d7 t. Crumple zones increase t during a crash.",
+          "opts": [
+            "Increase collision time to reduce peak force",
+            "Decrease collision time to reduce force",
+            "Absorb momentum entirely",
+            "Eliminate the impulse"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 5 kg object moving at 4 m/s right collides head-on with a 5 kg object at 4 m/s left. They stick together. What is the final velocity?",
-      "given": "Assign right = positive, left = negative.\nConservation of Momentum:  m₁v₁ + m₂v₂ = (m₁ + m₂) × vf",
-      "opts": ["0 m/s", "4 m/s, right", "8 m/s, right", "2 m/s, right"],
-      "ans": 0,
-      "sol": "(5 × 4) + (5 × −4) = (10) × vf  →  20 − 20 = 10vf  →  vf = 0 m/s. They cancel out."
+      "sets": [
+        {
+          "q": "A 5 kg object at 4 m/s right collides head-on with a 5 kg object at 4 m/s left. They stick. Final velocity?",
+          "given": "Right = positive, left = negative. m\u2081v\u2081 + m\u2082v\u2082 = (m\u2081+m\u2082)vf",
+          "opts": [
+            "0 m/s",
+            "4 m/s, right",
+            "8 m/s, right",
+            "2 m/s, right"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Object A: 3 kg at 6 m/s right. Object B: 3 kg at 6 m/s left. They collide and stick. Final velocity?",
+          "given": "Equal and opposite momenta \u2014 they cancel.",
+          "opts": [
+            "0 m/s",
+            "6 m/s, right",
+            "12 m/s, right",
+            "3 m/s, right"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two identical 2 kg balls move toward each other at 5 m/s each. They collide and stick. Final velocity?",
+          "given": "Equal and opposite momenta in a head-on collision.",
+          "opts": [
+            "0 m/s",
+            "5 m/s",
+            "10 m/s",
+            "2.5 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Object A: 10 kg at 4 m/s right. Object B: 10 kg at 4 m/s left. They collide and stick. Final velocity?",
+          "given": "m\u2081v\u2081 + m\u2082v\u2082 = (m\u2081+m\u2082)vf",
+          "opts": [
+            "0 m/s",
+            "4 m/s, right",
+            "8 m/s, right",
+            "2 m/s, right"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 6 kg ball at 3 m/s east and a 6 kg ball at 3 m/s west collide and stick. What is the final velocity?",
+          "given": "Equal mass, equal speed, opposite directions.",
+          "opts": [
+            "0 m/s",
+            "3 m/s, east",
+            "6 m/s, east",
+            "1.5 m/s, east"
+          ],
+          "ans": 0
+        }
+      ]
     }
   ]
 }
