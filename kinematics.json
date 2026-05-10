@@ -4,116 +4,96 @@
     "subject": "Physics · Kinematics",
     "lock_key": "quiz_kinematics_done"
   },
-  "examples": [
-    {
-      "q": "A car travels 150 m east in 10 seconds. What is the car's average velocity?",
-      "solution": "Velocity is a VECTOR quantity — it has both\nmagnitude (speed) and direction.\n\nFormula:\n    v = Δx / t\n\nwhere  Δx = displacement  (m)\n       t   = time elapsed  (s)\n       v   = velocity      (m/s)\n\nStep 1 — Identify the values:\n    Δx = 150 m (East)\n    t  = 10 s\n\nStep 2 — Substitute and solve:\n    v = 150 / 10\n    v = 15 m/s\n\nAnswer:  v = 15 m/s, East\n\nNote: velocity includes direction; speed does not.",
-      "opts": [
-        "15 m/s, East",
-        "1 500 m/s, East",
-        "15 m/s (no direction)",
-        "1.5 m/s, East"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A bicycle starts from rest and reaches a velocity of 12 m/s in 4 seconds. What is its acceleration?",
-      "solution": "Acceleration is the RATE OF CHANGE of velocity.\n\nFormula:\n    a = (vf − vi) / t\n\nwhere  vf = final velocity    (m/s)\n       vi = initial velocity   (m/s)\n       t  = time elapsed      (s)\n       a  = acceleration      (m/s²)\n\nStep 1 — Identify the values:\n    vf = 12 m/s\n    vi =  0 m/s  (starts from rest)\n    t  =  4 s\n\nStep 2 — Substitute and solve:\n    a = (12 − 0) / 4\n    a = 12 / 4\n    a = 3 m/s²\n\nAnswer:  a = 3 m/s²",
-      "opts": [
-        "3 m/s²",
-        "48 m/s²",
-        "0.33 m/s²",
-        "8 m/s²"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A car starts from rest and accelerates at 4 m/s² for 5 seconds. How far does it travel?",
-      "solution": "Use the kinematic equation for displacement\nunder constant acceleration from rest:\n\n    Δx = vi·t + ½·a·t²\n\nwhere  vi = initial velocity  = 0 (from rest)\n       a  = acceleration      = 4 m/s²\n       t  = time              = 5 s\n\nStep 1 — Substitute (vi = 0, so first term drops):\n    Δx = (0)(5) + ½ × 4 × 5²\n    Δx = 0 + ½ × 4 × 25\n    Δx = 0 + 50\n\nStep 2 — Result:\n    Δx = 50 m\n\nAnswer:  The car travels  50 m.",
-      "opts": [
-        "50 m",
-        "100 m",
-        "20 m",
-        "40 m"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "A runner displaces 200 m north in 25 seconds. What is their average velocity?",
-      "given": "Formula:  v = Δx / t\nVelocity is a vector — include direction in your answer.",
-      "opts": ["8 m/s, North", "0.125 m/s, North", "80 m/s, North", "5 000 m/s, North"],
-      "ans": 0,
-      "sol": "v = 200 / 25 = 8 m/s, North."
+      "sets": [
+        { "q": "A runner displaces 200 m north in 25 seconds. What is their average velocity?", "given": "Formula: v = Δx / t\nVelocity is a vector — include direction.", "opts": ["8 m/s, North", "0.125 m/s, North", "80 m/s, North", "5 000 m/s, North"], "ans": 0 },
+        { "q": "A bicycle travels 150 m east in 30 seconds. What is its average velocity?", "given": "v = Δx / t", "opts": ["5 m/s, East", "0.2 m/s, East", "4 500 m/s, East", "50 m/s, East"], "ans": 0 },
+        { "q": "A boat moves 240 m south in 60 seconds. What is its average velocity?", "given": "v = Δx / t", "opts": ["4 m/s, South", "0.25 m/s, South", "14 400 m/s, South", "40 m/s, South"], "ans": 0 },
+        { "q": "A car travels 360 m west in 40 seconds. What is its average velocity?", "given": "v = Δx / t", "opts": ["9 m/s, West", "0.11 m/s, West", "14 400 m/s, West", "90 m/s, West"], "ans": 0 },
+        { "q": "A swimmer covers 100 m north in 50 seconds. What is the average velocity?", "given": "v = Δx / t", "opts": ["2 m/s, North", "0.5 m/s, North", "5 000 m/s, North", "20 m/s, North"], "ans": 0 }
+      ]
     },
     {
-      "q": "What is the displacement of an object that moves at 5 m/s for 12 seconds?",
-      "given": "Rearrange the velocity formula:\n    Δx = v × t",
-      "opts": ["60 m", "2.4 m", "17 m", "0.42 m"],
-      "ans": 0,
-      "sol": "Δx = 5 × 12 = 60 m."
+      "sets": [
+        { "q": "What is the displacement of an object that moves at 5 m/s for 12 seconds?", "given": "Rearrange: Δx = v × t", "opts": ["60 m", "2.4 m", "17 m", "0.42 m"], "ans": 0 },
+        { "q": "An object moves at 8 m/s for 10 seconds. What is its displacement?", "given": "Δx = v × t", "opts": ["80 m", "1.25 m", "18 m", "800 m"], "ans": 0 },
+        { "q": "A car travels at 12 m/s for 15 seconds. How far does it go?", "given": "Δx = v × t", "opts": ["180 m", "1.25 m", "27 m", "0.8 m"], "ans": 0 },
+        { "q": "A train moves at 20 m/s for 45 seconds. What is the displacement?", "given": "Δx = v × t", "opts": ["900 m", "2.25 m", "65 m", "0.44 m"], "ans": 0 },
+        { "q": "A person jogs at 3 m/s for 8 minutes. How far do they travel?", "given": "Δx = v × t (convert time to seconds: 8 min = 480 s)", "opts": ["1 440 m", "24 m", "0.375 m", "384 m"], "ans": 0 }
+      ]
     },
     {
-      "q": "A train goes from 20 m/s to 80 m/s in 15 seconds. What is its acceleration?",
-      "given": "Formula:  a = (vf − vi) / t",
-      "opts": ["4 m/s²", "6.67 m/s²", "60 m/s²", "1 200 m/s²"],
-      "ans": 0,
-      "sol": "a = (80 − 20) / 15 = 60 / 15 = 4 m/s²."
+      "sets": [
+        { "q": "A train goes from 20 m/s to 80 m/s in 15 seconds. What is its acceleration?", "given": "Formula: a = (vf − vi) / t", "opts": ["4 m/s²", "6.67 m/s²", "60 m/s²", "1 200 m/s²"], "ans": 0 },
+        { "q": "A motorcycle accelerates from 10 m/s to 50 m/s in 8 seconds. What is its acceleration?", "given": "a = (vf − vi) / t", "opts": ["5 m/s²", "7.5 m/s²", "40 m/s²", "400 m/s²"], "ans": 0 },
+        { "q": "A sprinter goes from rest to 9 m/s in 3 seconds. What is the acceleration?", "given": "a = (vf − vi) / t, vi = 0", "opts": ["3 m/s²", "6 m/s²", "27 m/s²", "0.33 m/s²"], "ans": 0 },
+        { "q": "A bus accelerates from 5 m/s to 25 m/s in 10 seconds. What is the acceleration?", "given": "a = (vf − vi) / t", "opts": ["2 m/s²", "3 m/s²", "20 m/s²", "250 m/s²"], "ans": 0 },
+        { "q": "A rocket increases speed from 0 to 120 m/s in 12 seconds. What is the acceleration?", "given": "a = (vf − vi) / t", "opts": ["10 m/s²", "12 m/s²", "120 m/s²", "1 440 m/s²"], "ans": 0 }
+      ]
     },
     {
-      "q": "A car decelerates from 30 m/s to 0 m/s in 6 seconds. What is its acceleration?",
-      "given": "Deceleration = negative acceleration.\nFormula:  a = (vf − vi) / t",
-      "opts": ["−5 m/s²", "5 m/s²", "−30 m/s²", "−0.2 m/s²"],
-      "ans": 0,
-      "sol": "a = (0 − 30) / 6 = −30 / 6 = −5 m/s². Negative means decelerating."
+      "sets": [
+        { "q": "A car decelerates from 30 m/s to 0 m/s in 6 seconds. What is its acceleration?", "given": "Deceleration = negative acceleration.\nFormula: a = (vf − vi) / t", "opts": ["−5 m/s²", "5 m/s²", "−30 m/s²", "−0.2 m/s²"], "ans": 0 },
+        { "q": "A skateboard slows from 12 m/s to 0 m/s in 4 seconds. What is the acceleration?", "given": "a = (vf − vi) / t. Slowing down means negative acceleration.", "opts": ["−3 m/s²", "3 m/s²", "−12 m/s²", "−0.33 m/s²"], "ans": 0 },
+        { "q": "A ball rolling on the floor slows from 8 m/s to 2 m/s in 3 seconds. What is the acceleration?", "given": "a = (vf − vi) / t", "opts": ["−2 m/s²", "2 m/s²", "−6 m/s²", "−0.5 m/s²"], "ans": 0 },
+        { "q": "A truck brakes from 20 m/s to 5 m/s in 5 seconds. What is its acceleration?", "given": "a = (vf − vi) / t", "opts": ["−3 m/s²", "3 m/s²", "−15 m/s²", "−0.25 m/s²"], "ans": 0 },
+        { "q": "A cyclist decelerates from 15 m/s to 3 m/s in 6 seconds. What is the acceleration?", "given": "a = (vf − vi) / t", "opts": ["−2 m/s²", "2 m/s²", "−12 m/s²", "−0.4 m/s²"], "ans": 0 }
+      ]
     },
     {
-      "q": "An object starts from rest and accelerates at 6 m/s² for 3 seconds. What is its final velocity?",
-      "given": "Formula:  vf = vi + a·t\nStarts from rest means vi = 0.",
-      "opts": ["18 m/s", "9 m/s", "2 m/s", "36 m/s"],
-      "ans": 0,
-      "sol": "vf = 0 + (6)(3) = 18 m/s."
+      "sets": [
+        { "q": "An object starts from rest and accelerates at 6 m/s² for 3 seconds. What is its final velocity?", "given": "Formula: vf = vi + a·t\nStarts from rest means vi = 0.", "opts": ["18 m/s", "9 m/s", "2 m/s", "36 m/s"], "ans": 0 },
+        { "q": "A stone is dropped and falls freely. After 4 seconds, what is its velocity? (g = 10 m/s²)", "given": "vf = vi + a·t, vi = 0, a = 10 m/s²", "opts": ["40 m/s", "10 m/s", "160 m/s", "2.5 m/s"], "ans": 0 },
+        { "q": "A car starts from rest and accelerates at 4 m/s² for 5 seconds. What is its final velocity?", "given": "vf = vi + a·t, vi = 0", "opts": ["20 m/s", "9 m/s", "80 m/s", "1.25 m/s"], "ans": 0 },
+        { "q": "A rocket starts from rest and accelerates at 15 m/s² for 6 seconds. What is the final speed?", "given": "vf = vi + a·t, vi = 0", "opts": ["90 m/s", "21 m/s", "2.5 m/s", "540 m/s"], "ans": 0 },
+        { "q": "A ball is released from rest and rolls down a ramp with acceleration 3 m/s² for 7 seconds. What is the final velocity?", "given": "vf = vi + a·t, vi = 0", "opts": ["21 m/s", "10 m/s", "2.33 m/s", "147 m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "An object moving at 10 m/s accelerates at 3 m/s² for 4 seconds. What is its final velocity?",
-      "given": "Formula:  vf = vi + a·t",
-      "opts": ["22 m/s", "12 m/s", "40 m/s", "17 m/s"],
-      "ans": 0,
-      "sol": "vf = 10 + (3)(4) = 10 + 12 = 22 m/s."
+      "sets": [
+        { "q": "An object moving at 10 m/s accelerates at 3 m/s² for 4 seconds. What is its final velocity?", "given": "Formula: vf = vi + a·t", "opts": ["22 m/s", "12 m/s", "40 m/s", "17 m/s"], "ans": 0 },
+        { "q": "A boat moving at 6 m/s accelerates at 2 m/s² for 5 seconds. What is the final velocity?", "given": "vf = vi + a·t", "opts": ["16 m/s", "8 m/s", "30 m/s", "11 m/s"], "ans": 0 },
+        { "q": "A car travelling at 15 m/s accelerates at 4 m/s² for 3 seconds. What is the new speed?", "given": "vf = vi + a·t", "opts": ["27 m/s", "19 m/s", "45 m/s", "12 m/s"], "ans": 0 },
+        { "q": "A train moving at 25 m/s accelerates at 1.5 m/s² for 8 seconds. What is the final velocity?", "given": "vf = vi + a·t", "opts": ["37 m/s", "26.5 m/s", "200 m/s", "12 m/s"], "ans": 0 },
+        { "q": "A plane at 80 m/s accelerates at 5 m/s² for 10 seconds before takeoff. What is the final speed?", "given": "vf = vi + a·t", "opts": ["130 m/s", "85 m/s", "500 m/s", "40 m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "A ball starts from rest and rolls with an acceleration of 2 m/s² for 5 seconds. What distance does it cover?",
-      "given": "Formula:  Δx = vi·t + ½·a·t²\nStarts from rest means vi = 0.",
-      "opts": ["25 m", "50 m", "10 m", "20 m"],
-      "ans": 0,
-      "sol": "Δx = 0 + ½ × 2 × 5² = ½ × 2 × 25 = 25 m."
+      "sets": [
+        { "q": "A ball starts from rest and rolls with an acceleration of 2 m/s² for 5 seconds. What distance does it cover?", "given": "Formula: Δx = vi·t + ½·a·t²\nStarts from rest means vi = 0.", "opts": ["25 m", "50 m", "10 m", "20 m"], "ans": 0 },
+        { "q": "A car starts from rest and accelerates at 3 m/s² for 4 seconds. How far does it travel?", "given": "Δx = vi·t + ½·a·t², vi = 0", "opts": ["24 m", "48 m", "12 m", "36 m"], "ans": 0 },
+        { "q": "A stone is dropped from rest and falls for 3 seconds. How far does it fall? (g = 10 m/s²)", "given": "Δx = vi·t + ½·g·t², vi = 0", "opts": ["45 m", "90 m", "30 m", "15 m"], "ans": 0 },
+        { "q": "An object starts from rest and accelerates at 5 m/s² for 6 seconds. What is the displacement?", "given": "Δx = ½·a·t², vi = 0", "opts": ["90 m", "180 m", "45 m", "30 m"], "ans": 0 },
+        { "q": "A sled starts from rest and accelerates at 1.5 m/s² for 8 seconds. What distance does it cover?", "given": "Δx = ½·a·t², vi = 0", "opts": ["48 m", "96 m", "24 m", "12 m"], "ans": 0 }
+      ]
     },
     {
-      "q": "What is the difference between displacement and distance?",
-      "given": "Distance is a scalar — total path length.\nDisplacement is a vector — straight-line change in position with direction.",
-      "opts": [
-        "Displacement is a vector with direction; distance is a scalar with no direction",
-        "Distance is a vector; displacement is a scalar",
-        "They are the same thing",
-        "Displacement is always larger than distance"
-      ],
-      "ans": 0,
-      "sol": "Displacement is a vector (magnitude + direction). Distance is a scalar (total path length, no direction)."
+      "sets": [
+        { "q": "What is the difference between displacement and distance?", "given": "Distance is a scalar — total path length.\nDisplacement is a vector — straight-line change in position with direction.", "opts": ["Displacement is a vector with direction; distance is a scalar with no direction", "Distance is a vector; displacement is a scalar", "They are the same thing", "Displacement is always larger than distance"], "ans": 0 },
+        { "q": "A student walks 4 m east then 3 m west. What is their distance and displacement?", "given": "Distance = total path length. Displacement = net change in position.", "opts": ["Distance = 7 m; Displacement = 1 m East", "Distance = 1 m; Displacement = 7 m", "Distance = 7 m; Displacement = 7 m", "Distance = 1 m; Displacement = 1 m"], "ans": 0 },
+        { "q": "Which of the following is a scalar quantity in kinematics?", "given": "Scalars have magnitude only. Vectors have magnitude and direction.", "opts": ["Distance travelled", "Velocity", "Displacement", "Acceleration"], "ans": 0 },
+        { "q": "A runner completes a 400 m circular track and returns to the starting line. What is the displacement?", "given": "Displacement = straight-line distance from start to finish.", "opts": ["0 m", "400 m", "200 m", "800 m"], "ans": 0 },
+        { "q": "Which best describes displacement?", "given": "Displacement is a vector quantity in kinematics.", "opts": ["The straight-line distance from start to finish, with direction", "The total path length travelled", "The rate of change of velocity", "The speed of an object"], "ans": 0 }
+      ]
     },
     {
-      "q": "A car travels at constant velocity of 20 m/s for 8 seconds. What is its displacement?",
-      "given": "At constant velocity, acceleration = 0.\nFormula:  Δx = v × t",
-      "opts": ["160 m", "2.5 m", "28 m", "0.4 m"],
-      "ans": 0,
-      "sol": "Δx = 20 × 8 = 160 m."
+      "sets": [
+        { "q": "A car travels at constant velocity of 20 m/s for 8 seconds. What is its displacement?", "given": "At constant velocity, acceleration = 0.\nFormula: Δx = v × t", "opts": ["160 m", "2.5 m", "28 m", "0.4 m"], "ans": 0 },
+        { "q": "A train moves at constant 30 m/s for 12 seconds. What is its displacement?", "given": "Δx = v × t (constant velocity)", "opts": ["360 m", "2.5 m", "42 m", "0.4 m"], "ans": 0 },
+        { "q": "A drone flies at constant velocity 15 m/s for 10 seconds. What distance does it cover?", "given": "Δx = v × t", "opts": ["150 m", "1.5 m", "25 m", "0.67 m"], "ans": 0 },
+        { "q": "A ship steams at a constant 8 m/s for 45 seconds. What is the displacement?", "given": "Δx = v × t", "opts": ["360 m", "5.6 m", "53 m", "0.18 m"], "ans": 0 },
+        { "q": "A conveyor belt moves items at a steady 2 m/s. How far does an item travel in 3 minutes?", "given": "Δx = v × t (convert 3 min = 180 s)", "opts": ["360 m", "6 m", "0.011 m", "600 m"], "ans": 0 }
+      ]
     },
     {
-      "q": "An object has vi = 4 m/s, a = 2 m/s², and t = 3 s. What is its displacement?",
-      "given": "Formula:  Δx = vi·t + ½·a·t²",
-      "opts": ["21 m", "12 m", "27 m", "9 m"],
-      "ans": 0,
-      "sol": "Δx = (4)(3) + ½(2)(3²) = 12 + ½(2)(9) = 12 + 9 = 21 m."
+      "sets": [
+        { "q": "An object has vi = 4 m/s, a = 2 m/s², and t = 3 s. What is its displacement?", "given": "Formula: Δx = vi·t + ½·a·t²", "opts": ["21 m", "12 m", "27 m", "9 m"], "ans": 0 },
+        { "q": "An object has vi = 6 m/s, a = 3 m/s², and t = 4 s. What is the displacement?", "given": "Δx = vi·t + ½·a·t²", "opts": ["48 m", "24 m", "96 m", "36 m"], "ans": 0 },
+        { "q": "An object has vi = 2 m/s, a = 4 m/s², and t = 5 s. What is the displacement?", "given": "Δx = vi·t + ½·a·t²", "opts": ["60 m", "10 m", "110 m", "50 m"], "ans": 0 },
+        { "q": "An object has vi = 10 m/s, a = 1 m/s², and t = 6 s. What is its displacement?", "given": "Δx = vi·t + ½·a·t²", "opts": ["78 m", "60 m", "96 m", "18 m"], "ans": 0 },
+        { "q": "An object has vi = 0 m/s, a = 5 m/s², and t = 4 s. What is the displacement?", "given": "Δx = vi·t + ½·a·t², vi = 0", "opts": ["40 m", "20 m", "80 m", "10 m"], "ans": 0 }
+      ]
     }
   ]
 }
