@@ -2,336 +2,928 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Examinations — Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Activity Dashboard — PHYS 111</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:     #f7f6f2;
-    --ink:    #1a1a1a;
-    --mid:    #666;
-    --line:   #d0cfc9;
-    --accent: #c0392b;
-    --green:  #27ae60;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    background: var(--bg);
-    color: var(--ink);
-    min-height: 100vh;
-    padding: 2.5rem 1rem 4rem;
-  }
-  .wrap { max-width: 680px; margin: 0 auto; }
+:root {
+  --bg:     #ffffff;
+  --bg2:    #f7f7f5;
+  --bg3:    #efefec;
+  --line:   rgba(0,0,0,0.10);
+  --lines:  rgba(0,0,0,0.20);
+  --text:   #0f0f0f;
+  --dim:    #5a5a5a;
+  --dimmer: #9a9a9a;
+  --good:   #2a7a3b;
+  --bad:    #b00020;
+  --grid:   rgba(0,0,0,0.035);
+}
 
-  .top-label {
-    font-size: 0.7rem; letter-spacing: .12em;
-    text-transform: uppercase; color: var(--mid); margin-bottom: 0.4rem;
-  }
-  h1 {
-    font-size: 1.3rem; border-bottom: 2px solid var(--ink);
-    padding-bottom: 0.55rem; margin-bottom: 0.5rem;
-  }
-  .tagline { font-size: 0.8rem; color: var(--mid); margin-bottom: 2rem; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-  .section-label {
-    font-size: 0.68rem; letter-spacing: .12em; text-transform: uppercase;
-    color: var(--mid); margin-bottom: 0.75rem;
-    border-bottom: 1px solid var(--line); padding-bottom: 0.3rem;
-    margin-top: 2rem;
-  }
-  .section-label:first-of-type { margin-top: 0; }
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .activity-list { display: flex; flex-direction: column; gap: 0.55rem; }
+body {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  padding: clamp(16px, 4vw, 36px) clamp(16px, 4vw, 36px) 120px;
+}
 
-  .activity-row {
-    display: flex; align-items: center; gap: 0.9rem;
-    background: #fff; border: 1px solid var(--line); padding: 0.8rem 0.9rem;
-  }
+.wrap { max-width: 860px; margin: 0 auto; }
 
-  .activity-info { flex: 1; min-width: 0; }
-  .a-num   { font-size: 0.7rem; color: var(--mid); margin-bottom: 0.1rem; letter-spacing: .06em; }
-  .a-title { font-size: 0.9rem; font-weight: bold; }
-  .a-meta  { font-size: 0.72rem; color: var(--mid); margin-top: 0.15rem; }
+/* ── Header ── */
+.hub-header {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 20px;
+  margin-bottom: 36px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--dimmer);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.hub-header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: clamp(28px, 7vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.hub-header .sub {
+  color: var(--dim);
+  font-size: clamp(11px, 3vw, 13px);
+  letter-spacing: 0.04em;
+}
 
-  .activity-score {
-    font-size: 1.15rem; font-weight: bold;
-    text-align: right; flex-shrink: 0; min-width: 3.2rem;
-  }
-  .activity-score.high { color: var(--green); }
-  .activity-score.mid  { color: #e67e22; }
-  .activity-score.low  { color: var(--accent); }
-  .activity-score.terminated { color: var(--accent); font-size: 0.7rem; font-weight: normal; text-transform: uppercase; letter-spacing: .05em; }
-  .activity-score.none { color: var(--line); font-size: 0.8rem; font-weight: normal; }
+/* ── Section header ── */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 12px;
+  margin-top: 36px;
+}
+.section-head:first-of-type { margin-top: 0; }
+.section-head .label {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(16px, 4vw, 22px);
+  white-space: nowrap;
+}
+.section-head .meta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--dimmer);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.section-head .ruled {
+  flex: 1;
+  height: 1px;
+  background: var(--lines);
+}
 
-  .open-btn {
-    flex-shrink: 0;
-    padding: 0.45rem 1rem;
-    background: var(--ink); color: var(--bg);
-    border: none; font-family: inherit; font-size: 0.8rem;
-    letter-spacing: .05em; cursor: pointer;
-    transition: background .15s; white-space: nowrap;
-  }
-  .open-btn:hover { background: #444; }
-  .open-btn.submitted {
-    background: var(--bg); color: var(--mid);
-    border: 1px solid var(--line); cursor: default;
-  }
-  .open-btn.submitted:hover { background: var(--bg); }
-  .open-btn.terminated-btn {
-    background: var(--bg); color: var(--accent);
-    border: 1px solid var(--accent); cursor: default; font-size: 0.72rem;
-  }
-  .open-btn.terminated-btn:hover { background: var(--bg); }
+/* ── Activity list ── */
+.activity-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
 
-  .summary-bar {
-    display: flex; gap: 2rem;
-    margin-top: 2.5rem; padding-top: 1.2rem;
-    border-top: 1px solid var(--line);
-    font-size: 0.78rem; color: var(--mid);
-  }
-  .summary-bar span strong { color: var(--ink); }
+.activity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg2);
+  border: 1px solid var(--lines);
+  padding: 14px 16px;
+  min-height: 72px;
+  transition: border-color 0.12s, background 0.12s;
+}
+.activity-row:hover { border-color: var(--text); background: var(--bg3); }
+
+.a-info { flex: 1; min-width: 0; }
+.a-num  { font-size: 9px; color: var(--dimmer); margin-bottom: 2px; letter-spacing: 0.1em; text-transform: uppercase; }
+.a-title { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
+.a-meta  { font-size: 10px; color: var(--dimmer); letter-spacing: 0.04em; }
+
+.a-score {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 52px;
+  color: var(--dimmer);
+}
+.a-score.high { color: var(--good); }
+.a-score.mid  { color: #c07020; }
+.a-score.low  { color: var(--bad); }
+
+.open-btn {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  transition: background 0.12s;
+  border-radius: 0;
+}
+.open-btn:hover { background: #333; }
+.open-btn.submitted {
+  background: transparent;
+  color: var(--dimmer);
+  border: 1px solid var(--lines);
+  cursor: default;
+}
+.open-btn.submitted:hover { background: transparent; }
+
+/* ── Results section ── */
+.results-section { margin-top: 48px; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.toolbar input[type="text"],
+.toolbar select {
+  padding: 8px 12px;
+  border: 1px solid var(--lines);
+  background: var(--bg2);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  outline: none;
+  border-radius: 0;
+}
+.toolbar input[type="text"] { width: 200px; }
+.toolbar input:focus, .toolbar select:focus { border-color: var(--text); }
+
+.btn-small {
+  background: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--lines);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+.btn-small:hover { background: var(--bg3); }
+
+.stats-bar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border: 1px solid var(--lines);
+  background: var(--bg2);
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+.stats-bar span strong { font-weight: 700; }
+
+.table-wrap { overflow-x: auto; margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 11px; min-width: 640px; }
+thead tr { background: var(--text); color: var(--bg); }
+th {
+  padding: 9px 12px;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+th:hover { background: #333; }
+th.sort-asc::after  { content: ' ↑'; font-size: 0.75em; }
+th.sort-desc::after { content: ' ↓'; font-size: 0.75em; }
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+tbody tr:nth-child(even) td { background: var(--bg2); }
+tbody tr:hover td { background: var(--bg3); }
+
+.flagged { color: var(--bad); font-weight: 700; }
+.clean   { color: var(--dimmer); }
+.pass    { font-weight: 700; color: var(--good); }
+.fail    { color: var(--dimmer); }
+
+.btn-cert {
+  background: var(--text); color: var(--bg);
+  border: none; font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; font-size: 9px; letter-spacing: 0.08em;
+  padding: 4px 10px; cursor: pointer; text-transform: uppercase; border-radius: 0;
+}
+.btn-cert:hover { background: #444; }
+
+.empty-state {
+  text-align: center; padding: 48px 20px;
+  color: var(--dimmer); border: 1px dashed var(--lines);
+  font-size: 12px;
+}
+
+/* ── Sticky summary bar ── */
+.summary-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--text);
+  color: var(--bg);
+  padding: 14px clamp(16px,4vw,36px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+  z-index: 100;
+}
+.summary-bar .info { flex: 1; min-width: 0; }
+.summary-bar .k { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.55; margin-bottom: 3px; }
+.summary-bar .v { font-family: 'Fraunces', serif; font-weight: 600; font-size: 17px; }
+.summary-bar button {
+  background: var(--bg); color: var(--text);
+  border: none; font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; font-size: 11px; letter-spacing: 0.1em;
+  padding: 11px 18px; cursor: pointer; text-transform: uppercase; border-radius: 0;
+  white-space: nowrap;
+}
+.summary-bar button:disabled { opacity: 0.35; cursor: not-allowed; }
+.summary-bar button:active:not(:disabled) { transform: scale(0.97); }
+
+/* ── Modal base ── */
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none; align-items: center; justify-content: center;
+  z-index: 200; padding: 16px; overflow-y: auto;
+}
+.modal.show { display: flex; }
+
+/* ── Certificate modal ── */
+.cert-modal-inner {
+  background: var(--bg); border: 1px solid var(--lines);
+  max-width: 520px; width: 100%; padding: 28px 24px; margin: auto; position: relative;
+}
+.cert-modal-inner .close-x {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; font-size: 1.2rem;
+  cursor: pointer; color: var(--text); font-weight: 700; line-height: 1;
+}
+.cert { font-family: 'JetBrains Mono', monospace; }
+.cert-school { text-align: center; font-size: 10px; line-height: 1.7; margin-bottom: 8px; color: var(--dim); }
+.cert-title {
+  text-align: center; font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  border-top: 2px solid var(--text); border-bottom: 2px solid var(--text);
+  padding: 8px 0; margin: 10px 0 6px;
+}
+.cert-subtitle { text-align: center; font-size: 11px; color: var(--dim); margin-bottom: 18px; }
+.cert-sect { margin-bottom: 16px; }
+.cert-sect-title {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  border-bottom: 1px solid var(--text); padding-bottom: 4px; margin-bottom: 8px;
+}
+.cert-row { display: flex; justify-content: space-between; font-size: 11px; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+.cert-row:last-child { border-bottom: none; }
+.cert-row .lbl { color: var(--dim); }
+.cert-row .val { font-weight: 700; text-align: right; }
+.cert-score-big { text-align: center; font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; margin: 10px 0 4px; }
+.cert-score-sub { text-align: center; font-size: 11px; color: var(--dim); margin-bottom: 4px; }
+.cert-integrity { border: 1px solid var(--text); padding: 12px 14px; background: var(--bg2); }
+.cert-int-title { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+.cert-flag-row { display: flex; justify-content: space-between; font-size: 11px; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+.cert-flag-row:last-child { border-bottom: none; }
+.cert-flag-row .lbl { color: var(--dim); }
+.cert-flag-row .vbad  { font-weight: 700; color: var(--bad); }
+.cert-flag-row .vgood { color: var(--dimmer); }
+.cert-footer { margin-top: 16px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 9px; color: var(--dimmer); display: flex; justify-content: space-between; }
+.modal-btns { display: flex; gap: 8px; margin-top: 18px; }
+.modal-btns button {
+  flex: 1; background: var(--text); color: var(--bg); border: none;
+  font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 11px;
+  letter-spacing: 0.1em; padding: 13px; cursor: pointer; text-transform: uppercase; border-radius: 0;
+}
+.modal-btns button.ghost { background: transparent; color: var(--text); border: 1px solid var(--lines); }
+.modal-btns button:active { transform: scale(0.98); }
+
+/* ── Summary PNG modal ── */
+.summary-modal-inner {
+  background: var(--bg); border: 1px solid var(--lines);
+  max-width: 500px; width: 100%; padding: 28px 24px; margin: auto;
+}
+.summary-modal-inner h2 { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+.summary-modal-inner p { font-size: 12px; color: var(--dim); margin-bottom: 14px; }
+.summary-modal-inner img { width: 100%; border: 1px solid var(--lines); margin-bottom: 14px; display: block; }
+
+/* ── Print ── */
+@media print {
+  body * { visibility: hidden; }
+  .modal.show, .modal.show * { visibility: visible; }
+  .modal { position: absolute; inset: 0; padding: 0; background: none; display: block !important; }
+  .cert-modal-inner { box-shadow: none; max-width: 100%; }
+  .close-x, .modal-btns { display: none !important; }
+  @page { margin: 14mm; }
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <p class="top-label">Mathematics &amp; Physics · Examination Portal</p>
-  <h1>Activity Dashboard</h1>
-  <p class="tagline">Select an examination to begin. Each test can only be taken once.</p>
+  <!-- Header -->
+  <div class="hub-header">
+    <div class="eyebrow">Surigao Education Center · PHYS 111</div>
+    <h1>Activity Dashboard</h1>
+    <div class="sub">Mathematics & Physics · One attempt per activity</div>
+  </div>
 
-  <div id="dashboard"></div>
+  <!-- Activity sections rendered by JS -->
+  <div id="activities-mount"></div>
 
-  <div class="summary-bar" id="summary-bar"></div>
+  <!-- Results section -->
+  <div class="results-section">
+    <div class="section-head">
+      <span class="label">Submissions</span>
+      <span class="ruled"></span>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="search-input" placeholder="Search by name…" oninput="renderTable()" />
+      <select id="filter-activity" onchange="renderTable()">
+        <option value="">All Activities</option>
+      </select>
+      <select id="filter-flag" onchange="renderTable()">
+        <option value="">All Records</option>
+        <option value="flagged">Flagged Only</option>
+        <option value="clean">Clean Only</option>
+      </select>
+      <button class="btn-small" onclick="refreshAll()">↺ Refresh</button>
+    </div>
+
+    <div class="stats-bar" id="stats-bar"><span>No submissions yet.</span></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th onclick="sortBy('name')">Name</th>
+            <th onclick="sortBy('quizTitle')">Activity</th>
+            <th onclick="sortBy('setLabel')">Set</th>
+            <th onclick="sortBy('datetime')">Date Taken</th>
+            <th onclick="sortBy('totalElapsed')">Duration</th>
+            <th onclick="sortBy('score')">Score</th>
+            <th onclick="sortBy('score')">%</th>
+            <th onclick="sortBy('tabSwitches')">Tabs</th>
+            <th onclick="sortBy('fastAnswerCount')">Fast</th>
+            <th>Record</th>
+          </tr>
+        </thead>
+        <tbody id="results-tbody"></tbody>
+      </table>
+      <div class="empty-state" id="empty-state" style="display:none;">
+        No submissions yet. Students must complete a quiz on this device and browser.
+      </div>
+    </div>
+  </div>
 
 </div>
 
+<!-- Sticky summary bar -->
+<div class="summary-bar">
+  <div class="info">
+    <div class="k">Class Overview</div>
+    <div class="v" id="summary-v">—</div>
+  </div>
+  <button id="dl-btn" onclick="generateSummary()" disabled>Download Summary</button>
+</div>
+
+<!-- Certificate modal -->
+<div class="modal" id="cert-modal" onclick="closeCertBg(event)">
+  <div class="cert-modal-inner">
+    <button class="close-x" onclick="closeCert()">✕</button>
+    <div class="cert" id="cert-content"></div>
+    <div class="modal-btns">
+      <button onclick="window.print()">Print / Save PDF</button>
+      <button class="ghost" onclick="closeCert()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Summary PNG modal -->
+<div class="modal" id="summary-modal">
+  <div class="summary-modal-inner">
+    <h2>Class Summary</h2>
+    <p>Save the image below as the class record.</p>
+    <img id="preview-img" alt="Summary">
+    <div class="modal-btns">
+      <button class="ghost" onclick="closeSummaryModal()">Close</button>
+      <button onclick="downloadPNG()">Download PNG</button>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ══════════════════════════════════════════
+'use strict';
+
+/* ══════════════════════════════════════════════════════
    ACTIVITY REGISTRY
-   file: the JSON data file for that quiz
-   lock: must match the lock_key in each JSON
-══════════════════════════════════════════ */
-const SECTIONS = [
+   lock: must match lock_key in each JSON's meta
+══════════════════════════════════════════════════════ */
+var SECTIONS = [
   {
     label: 'Mathematics',
     activities: [
-      {
-        title: 'Scientific Notation',
-        meta:  'Mathematics · Number Sense  ·  10 questions · 5 min each · scaled to 100',
-        file:  'scientific_notation.json',
-        lock:  'quiz_scientific_notation_done'
-      },
-      {
-        title: 'Units & Conversion of Units',
-        meta:  'Mathematics · Measurement  ·  10 questions · 5 min each · scaled to 100',
-        file:  'units_conversion.json',
-        lock:  'quiz_units_conversion_done'
-      },
-      {
-        title: 'Trigonometry: Pythagorean Theorem & SOH-CAH-TOA',
-        meta:  'Mathematics · Trigonometry  ·  10 questions · 5 min each · scaled to 100',
-        file:  'trigonometry.json',
-        lock:  'quiz_trigonometry_done'
-      }
+      { title: 'Scientific Notation',                              meta: 'Mathematics · Number Sense',      file: 'scientific_notation.json', lock: 'quiz_scientific_notation_done' },
+      { title: 'Units & Conversion of Units',                      meta: 'Mathematics · Measurement',       file: 'units_conversion.json',    lock: 'quiz_units_conversion_done'    },
+      { title: 'Trigonometry: Pythagorean Theorem & SOH-CAH-TOA', meta: 'Mathematics · Trigonometry',      file: 'trigonometry.json',        lock: 'quiz_trigonometry_done'        }
     ]
   },
   {
     label: 'Physics — Mechanics',
     activities: [
-      {
-        title: 'Vector Addition',
-        meta:  'Physics · Vectors  ·  10 questions · 5 min each · scaled to 100',
-        file:  'vector_addition.json',
-        lock:  'quiz_vector_addition_done'
-      },
-      {
-        title: 'Forces: Types of Forces',
-        meta:  'Physics · Dynamics  ·  10 questions · 5 min each · scaled to 100',
-        file:  'forces.json',
-        lock:  'quiz_forces_done'
-      },
-      {
-        title: 'Linear Displacement, Velocity & Constant Acceleration',
-        meta:  'Physics · Kinematics  ·  10 questions · 5 min each · scaled to 100',
-        file:  'kinematics.json',
-        lock:  'quiz_kinematics_done'
-      },
-      {
-        title: 'Centripetal Force & Acceleration',
-        meta:  'Physics · Circular Motion  ·  10 questions · 5 min each · scaled to 100',
-        file:  'centripetal.json',
-        lock:  'quiz_centripetal_done'
-      },
-      {
-        title: 'Torque',
-        meta:  'Physics · Rotational Motion  ·  10 questions · 5 min each · scaled to 100',
-        file:  'torque.json',
-        lock:  'quiz_torque_done'
-      },
-      {
-        title: 'Linear Momentum & Impulse',
-        meta:  'Physics · Momentum  ·  10 questions · 5 min each · scaled to 100',
-        file:  'momentum.json',
-        lock:  'quiz_momentum_done'
-      }
+      { title: 'Vector Addition',                                            meta: 'Physics · Vectors',         file: 'vector_addition.json', lock: 'quiz_vector_addition_done' },
+      { title: 'Forces: Types of Forces',                                    meta: 'Physics · Dynamics',        file: 'forces.json',          lock: 'quiz_forces_done'          },
+      { title: 'Linear Displacement, Velocity & Constant Acceleration',      meta: 'Physics · Kinematics',      file: 'kinematics.json',      lock: 'quiz_kinematics_done'      },
+      { title: 'Centripetal Force & Acceleration',                           meta: 'Physics · Circular Motion', file: 'centripetal.json',     lock: 'quiz_centripetal_done'     },
+      { title: 'Torque',                                                     meta: 'Physics · Rotational Motion', file: 'torque.json',        lock: 'quiz_torque_done'          },
+      { title: 'Linear Momentum & Impulse',                                  meta: 'Physics · Momentum',        file: 'momentum.json',        lock: 'quiz_momentum_done'        }
     ]
   },
   {
     label: 'Physics — Energy & Power',
     activities: [
-      {
-        title: 'Work, Gravitational Potential Energy & Kinetic Energy',
-        meta:  'Physics · Energy  ·  10 questions · 5 min each · scaled to 100',
-        file:  'energy.json',
-        lock:  'quiz_energy_done'
-      },
-      {
-        title: 'Power',
-        meta:  'Physics · Energy & Power  ·  10 questions · 5 min each · scaled to 100',
-        file:  'power.json',
-        lock:  'quiz_power_done'
-      },
-      {
-        title: 'Cost of Electrical Energy',
-        meta:  'Physics · Electricity  ·  10 questions · 5 min each · scaled to 100',
-        file:  'cost_of_energy.json',
-        lock:  'quiz_cost_of_energy_done'
-      }
+      { title: 'Work, Gravitational Potential Energy & Kinetic Energy', meta: 'Physics · Energy',            file: 'energy.json',          lock: 'quiz_energy_done'          },
+      { title: 'Power',                                                  meta: 'Physics · Energy & Power',   file: 'power.json',           lock: 'quiz_power_done'           },
+      { title: 'Cost of Electrical Energy',                              meta: 'Physics · Electricity',      file: 'cost_of_energy.json',  lock: 'quiz_cost_of_energy_done'  }
     ]
   },
   {
     label: 'Physics — Fluid Mechanics',
     activities: [
-      {
-        title: "Pascal's Principle",
-        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
-        file:  'pascals_principle.json',
-        lock:  'quiz_pascals_principle_done'
-      },
-      {
-        title: 'Volumetric Flow Rate',
-        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
-        file:  'flow_rate.json',
-        lock:  'quiz_flow_rate_done'
-      },
-      {
-        title: 'Hydrostatic Pressure',
-        meta:  'Physics · Fluid Mechanics  ·  10 questions · 5 min each · scaled to 100',
-        file:  'hydrostatic.json',
-        lock:  'quiz_hydrostatic_done'
-      }
+      { title: "Pascal's Principle",    meta: 'Physics · Fluid Mechanics', file: 'pascals_principle.json', lock: 'quiz_pascals_principle_done' },
+      { title: 'Volumetric Flow Rate',  meta: 'Physics · Fluid Mechanics', file: 'flow_rate.json',         lock: 'quiz_flow_rate_done'         },
+      { title: 'Hydrostatic Pressure',  meta: 'Physics · Fluid Mechanics', file: 'hydrostatic.json',       lock: 'quiz_hydrostatic_done'       }
     ]
   }
 ];
 
 /* ── helpers ── */
-function getRecord(key) {
-  try { return JSON.parse(localStorage.getItem(key)); } catch(e) { return null; }
+function safeGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
+function escHtml(s) {
+  return String(s).replace(/[&<>"]/g, function(c) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+}
+function fmtTime(s) {
+  if (!s && s !== 0) return '—';
+  var m = Math.floor(s/60);
+  return m > 0 ? m+'m '+(s%60)+'s' : s+'s';
+}
+function fmtTimeLong(s) {
+  if (!s && s !== 0) return '—';
+  var m = Math.floor(s/60);
+  return m > 0 ? m+' min '+(s%60)+' sec' : s+' sec';
+}
+function gradeLabel(p) {
+  if (p >= 97) return 'Highest Distinction';
+  if (p >= 90) return 'Excellent';
+  if (p >= 80) return 'Very Good';
+  if (p >= 75) return 'Passing';
+  if (p >= 60) return 'Below Passing';
+  return 'Failed';
+}
+function capitalize(s) { return s ? s.charAt(0).toUpperCase()+s.slice(1) : ''; }
+function slugify(n) { return n.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,''); }
+function formatDate(d) {
+  var mo = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return mo[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
 }
 
-function scoreClass(rec) {
-  if (!rec)              return 'none';
-  if (rec.terminated)    return 'terminated';
-  if (rec.score >= 80)   return 'high';
-  if (rec.score >= 50)   return 'mid';
-  return 'low';
-}
+/* ── Render activity cards ── */
+function renderActivities() {
+  var mount = document.getElementById('activities-mount');
+  var html  = '';
+  var idx   = 1;
 
-function scoreDisplay(rec) {
-  if (!rec)           return '—';
-  if (rec.terminated) return 'TERM.';
-  return `${rec.score}`;
-}
+  SECTIONS.forEach(function(sec) {
+    html += '<div class="section-head"><span class="label">'+escHtml(sec.label)+'</span><span class="ruled"></span></div>';
+    html += '<div class="activity-list">';
 
-/* ── render ── */
-function render() {
-  const dash = document.getElementById('dashboard');
-  dash.innerHTML = '';
+    sec.activities.forEach(function(act) {
+      var raw  = safeGet(act.lock);
+      var rec  = null;
+      try { rec = raw ? JSON.parse(raw) : null; } catch(e) {}
+      var done = !!rec;
 
-  let globalIndex = 1;
-  let totalDone = 0;
-  let totalScore = 0;
-
-  SECTIONS.forEach(section => {
-    const secLabel = document.createElement('p');
-    secLabel.className = 'section-label';
-    secLabel.textContent = section.label;
-    dash.appendChild(secLabel);
-
-    const list = document.createElement('div');
-    list.className = 'activity-list';
-
-    section.activities.forEach(act => {
-      const rec  = getRecord(act.lock);
-      const done = !!rec;
+      var scoreHtml = '<div class="a-score">—</div>';
+      var btnHtml;
 
       if (done) {
-        totalDone++;
-        if (!rec.terminated) totalScore += rec.score;
-      }
-
-      const row = document.createElement('div');
-      row.className = 'activity-row';
-
-      /* info */
-      const info = document.createElement('div');
-      info.className = 'activity-info';
-      info.innerHTML = `
-        <div class="a-num">Activity ${globalIndex}</div>
-        <div class="a-title">${act.title}</div>
-        <div class="a-meta">${act.meta}</div>
-      `;
-      row.appendChild(info);
-
-      /* score */
-      const sc = document.createElement('div');
-      sc.className = `activity-score ${scoreClass(rec)}`;
-      sc.textContent = scoreDisplay(rec);
-      row.appendChild(sc);
-
-      /* button */
-      const btn = document.createElement('button');
-      if (done && rec.terminated) {
-        btn.className   = 'open-btn terminated-btn';
-        btn.textContent = 'Terminated';
-        btn.disabled    = true;
-      } else if (done) {
-        btn.className   = 'open-btn submitted';
-        btn.textContent = 'Submitted';
-        btn.disabled    = true;
+        var sc  = rec.score || 0;
+        var cls = sc >= 80 ? 'high' : sc >= 50 ? 'mid' : 'low';
+        scoreHtml = '<div class="a-score '+cls+'">'+sc+'</div>';
+        btnHtml   = '<span class="open-btn submitted">Submitted</span>';
       } else {
-        btn.className   = 'open-btn';
-        btn.textContent = 'Open →';
-        btn.onclick     = () => { window.location.href = `quiz.html?data=${act.file}`; };
+        btnHtml = '<a class="open-btn" href="quiz.html?data='+act.file+'">Open →</a>';
       }
-      row.appendChild(btn);
 
-      list.appendChild(row);
-      globalIndex++;
+      html +=
+        '<div class="activity-row">' +
+          '<div class="a-info">' +
+            '<div class="a-num">Activity '+idx+'</div>' +
+            '<div class="a-title">'+escHtml(act.title)+'</div>' +
+            '<div class="a-meta">'+escHtml(act.meta)+'  ·  10 questions</div>' +
+          '</div>' +
+          scoreHtml +
+          btnHtml +
+        '</div>';
+      idx++;
     });
 
-    dash.appendChild(list);
+    html += '</div>';
   });
 
-  /* summary bar */
-  const total = SECTIONS.reduce((n, s) => n + s.activities.length, 0);
-  const avg   = totalDone > 0
-    ? Math.round(totalScore / SECTIONS.reduce((n, s) => {
-        return n + s.activities.filter(a => {
-          const r = getRecord(a.lock);
-          return r && !r.terminated;
-        }).length;
-      }, 0))
-    : null;
-
-  document.getElementById('summary-bar').innerHTML = `
-    <span>Completed: <strong>${totalDone} / ${total}</strong></span>
-    ${avg !== null ? `<span>Average Score: <strong>${avg} / 100</strong></span>` : ''}
-    <span style="margin-left:auto; font-size:0.7rem;">Scores read from local browser storage</span>
-  `;
+  mount.innerHTML = html;
 }
 
-render();
+/* ── Results table ── */
+var allRecords = [];
+var sortKey    = 'datetime';
+var sortDir    = 'desc';
+
+function loadRecords() {
+  allRecords = JSON.parse(safeGet('phys111_all_records') || '[]');
+  allRecords.forEach(function(r) {
+    r.tabSwitches     = r.tabSwitches     || 0;
+    r.fastAnswerCount = r.fastAnswerCount || 0;
+  });
+}
+
+function populateActivityFilter() {
+  var sel  = document.getElementById('filter-activity');
+  var seen = {};
+  sel.innerHTML = '<option value="">All Activities</option>';
+  allRecords.forEach(function(r) {
+    var k = r.quizFile || '';
+    if (!seen[k]) {
+      seen[k] = true;
+      var opt = document.createElement('option');
+      opt.value = k;
+      opt.textContent = r.quizTitle || k;
+      sel.appendChild(opt);
+    }
+  });
+}
+
+function renderStats() {
+  var total   = allRecords.length;
+  var flagged = allRecords.filter(function(r) { return r.tabSwitches > 0 || r.fastAnswerCount > 0; }).length;
+  var avgPct  = total > 0 ? Math.round(allRecords.reduce(function(s,r) { return s+r.score; }, 0) / total) : 0;
+  var passing = allRecords.filter(function(r) { return r.score >= 75; }).length;
+  document.getElementById('stats-bar').innerHTML =
+    '<span><strong>'+total+'</strong> submission(s)</span>' +
+    '<span><strong>'+passing+'</strong> passing (≥75%)</span>' +
+    '<span>Avg: <strong>'+avgPct+'%</strong></span>' +
+    '<span style="color:'+(flagged>0?'var(--bad)':'var(--dimmer)')+'"><strong>'+flagged+'</strong> flagged</span>';
+}
+
+function renderTable() {
+  var search   = document.getElementById('search-input').value.toLowerCase();
+  var actFilt  = document.getElementById('filter-activity').value;
+  var flagFilt = document.getElementById('filter-flag').value;
+
+  var rows = allRecords.filter(function(r) {
+    var matchName = r.name.toLowerCase().indexOf(search) !== -1;
+    var matchAct  = !actFilt || r.quizFile === actFilt;
+    var bad       = r.tabSwitches > 0 || r.fastAnswerCount > 0;
+    var matchFlag = !flagFilt || (flagFilt === 'flagged' ? bad : !bad);
+    return matchName && matchAct && matchFlag;
+  });
+
+  rows.sort(function(a,b) {
+    var va = a[sortKey], vb = b[sortKey];
+    if (typeof va === 'string') va = va.toLowerCase();
+    if (typeof vb === 'string') vb = vb.toLowerCase();
+    if (va < vb) return sortDir === 'asc' ? -1 : 1;
+    if (va > vb) return sortDir === 'asc' ?  1 : -1;
+    return 0;
+  });
+
+  var colKeys = ['name','quizTitle','setLabel','datetime','totalElapsed','score','score','tabSwitches','fastAnswerCount'];
+  document.querySelectorAll('thead th').forEach(function(th,i) {
+    th.classList.remove('sort-asc','sort-desc');
+    if (colKeys[i] === sortKey) th.classList.add(sortDir==='asc'?'sort-asc':'sort-desc');
+  });
+
+  var tbody = document.getElementById('results-tbody');
+  var empty = document.getElementById('empty-state');
+
+  if (rows.length === 0) { tbody.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+
+  tbody.innerHTML = rows.map(function(r) {
+    var pCls  = r.score >= 75 ? 'pass' : 'fail';
+    var tabC  = r.tabSwitches > 0 ? '<span class="flagged">'+r.tabSwitches+'</span>' : '<span class="clean">0</span>';
+    var fastC = r.fastAnswerCount > 0 ? '<span class="flagged">'+r.fastAnswerCount+'</span>' : '<span class="clean">0</span>';
+    var recKey = 'phys111_full_' + slugify(r.name) + '_' + (r.quizFile||'');
+    return '<tr>' +
+      '<td>'+escHtml(r.name)+'</td>' +
+      '<td>'+escHtml(r.quizTitle||r.quizFile||'—')+'</td>' +
+      '<td>'+(r.setLabel||'—')+'</td>' +
+      '<td>'+escHtml(r.datetime)+'</td>' +
+      '<td>'+fmtTime(r.totalElapsed)+'</td>' +
+      '<td class="'+pCls+'">'+(r.raw!==undefined?r.raw+' / '+r.total:'—')+'</td>' +
+      '<td class="'+pCls+'">'+r.score+'%</td>' +
+      '<td>'+tabC+'</td>' +
+      '<td>'+fastC+'</td>' +
+      '<td><button class="btn-cert" onclick="openCert(\''+recKey+'\',\''+escHtml(r.name)+'\')">View</button></td>' +
+    '</tr>';
+  }).join('');
+}
+
+function sortBy(key) {
+  sortDir = sortKey === key ? (sortDir==='asc'?'desc':'asc') : 'desc';
+  sortKey = key;
+  renderTable();
+}
+
+function renderSummaryBar() {
+  var total    = allRecords.length;
+  var avgPct   = total > 0 ? Math.round(allRecords.reduce(function(s,r){return s+r.score;},0)/total) : 0;
+  document.getElementById('summary-v').textContent =
+    total > 0 ? total+' submission(s)  ·  '+avgPct+'% avg' : 'No submissions yet';
+  document.getElementById('dl-btn').disabled = total === 0;
+}
+
+function refreshAll() {
+  loadRecords();
+  renderActivities();
+  populateActivityFilter();
+  renderStats();
+  renderTable();
+  renderSummaryBar();
+}
+
+/* ── Certificate modal ── */
+function openCert(recKey, name) {
+  var raw = safeGet(recKey);
+  if (!raw) {
+    // Fallback: check lock key directly
+    var act = null;
+    SECTIONS.forEach(function(s){ s.activities.forEach(function(a){ if(a.title===name||slugify(a.title)===slugify(name)) act=a; }); });
+    if (act) raw = safeGet(act.lock);
+  }
+  if (!raw) { alert('Full record not found for: ' + name); return; }
+
+  var rec = null;
+  try { rec = JSON.parse(raw); } catch(e) { alert('Could not parse record.'); return; }
+
+  var tabCount  = rec.tabSwitches || 0;
+  var fastCount = rec.fastAnswerCount || (rec.fastAnswers ? rec.fastAnswers.length : 0);
+  var hasBad    = tabCount > 0 || fastCount > 0;
+  var scoreStr  = rec.raw !== undefined ? rec.raw+' / '+rec.total : '—';
+  var pct       = rec.score || 0;
+
+  var fastRows = '';
+  if (rec.fastAnswers && rec.fastAnswers.length > 0) {
+    fastRows = rec.fastAnswers.map(function(f) {
+      return '<div class="cert-flag-row"><span class="lbl">Q'+f.qIndex+'</span>' +
+        '<span class="vbad">'+f.elapsed+'s &lt; '+f.minRequired+'s min</span></div>';
+    }).join('');
+  } else {
+    fastRows = '<div class="cert-flag-row"><span class="lbl">Fast answers</span><span class="vgood">None</span></div>';
+  }
+
+  document.getElementById('cert-content').innerHTML =
+    '<div class="cert-school">SURIGAO EDUCATION CENTER<br>' +
+      'Km. 2, Nat\'l Highway, Surigao City, Philippines 8400<br>' +
+      'PHYS 111 – Physics for Engineers</div>' +
+    '<div class="cert-title">Activity Result Record</div>' +
+    '<div class="cert-subtitle">'+(rec.quizTitle||'Activity')+'</div>' +
+
+    '<div class="cert-sect">' +
+      '<div class="cert-sect-title">Student Information</div>' +
+      '<div class="cert-row"><span class="lbl">Name</span><span class="val">'+escHtml(rec.name||name)+'</span></div>' +
+      '<div class="cert-row"><span class="lbl">Set</span><span class="val">Set '+(rec.setLabel||'—')+'</span></div>' +
+      '<div class="cert-row"><span class="lbl">Started</span><span class="val">'+escHtml(rec.datetime||'—')+'</span></div>' +
+      '<div class="cert-row"><span class="lbl">Submitted</span><span class="val">'+escHtml(rec.endDatetime||'—')+'</span></div>' +
+      '<div class="cert-row"><span class="lbl">Duration</span><span class="val">'+fmtTimeLong(rec.totalElapsed)+'</span></div>' +
+    '</div>' +
+
+    '<div class="cert-sect">' +
+      '<div class="cert-sect-title">Score</div>' +
+      '<div class="cert-score-big">'+scoreStr+'</div>' +
+      '<div class="cert-score-sub">'+pct+'%  —  '+gradeLabel(pct)+'</div>' +
+    '</div>' +
+
+    '<div class="cert-integrity">' +
+      '<div class="cert-int-title">Academic Integrity &nbsp;'+(hasBad?'⚑ FLAGGED':'✓ CLEAN')+'</div>' +
+      '<div class="cert-flag-row"><span class="lbl">Tab / window switches</span>' +
+        '<span class="'+(tabCount>0?'vbad':'vgood')+'">'+tabCount+'</span></div>' +
+      '<div class="cert-flag-row"><span class="lbl">Fast answers</span>' +
+        '<span class="'+(fastCount>0?'vbad':'vgood')+'">'+fastCount+'</span></div>' +
+      fastRows +
+    '</div>' +
+
+    '<div class="cert-footer">' +
+      '<span>Generated: '+new Date().toLocaleString()+'</span>' +
+      '<span>PHYS 111 — SEC</span>' +
+    '</div>';
+
+  document.getElementById('cert-modal').classList.add('show');
+}
+
+function closeCert()  { document.getElementById('cert-modal').classList.remove('show'); }
+function closeCertBg(e) { if (e.target === document.getElementById('cert-modal')) closeCert(); }
+
+/* ── Summary PNG ── */
+var lastCanvas = null;
+
+function generateSummary() {
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(drawSummary);
+  } else { drawSummary(); }
+}
+
+function drawSummary() {
+  var W = 1100, H = 200 + allRecords.length * 32 + 400;
+  H = Math.max(H, 900);
+  var canvas = document.createElement('canvas');
+  canvas.width = W; canvas.height = H;
+  var ctx = canvas.getContext('2d');
+
+  ctx.fillStyle = '#fdfcf8'; ctx.fillRect(0,0,W,H);
+
+  // Grain
+  ctx.save(); ctx.globalAlpha = 0.018;
+  for (var i=0; i<1200; i++) {
+    ctx.fillStyle = i%2?'#000':'#806000';
+    ctx.fillRect(Math.random()*W, Math.random()*H, 1, 1);
+  }
+  ctx.restore();
+
+  // Borders
+  ctx.strokeStyle='#1a1a1a'; ctx.lineWidth=2.5;
+  ctx.strokeRect(44,44,W-88,H-88);
+  ctx.lineWidth=1; ctx.strokeRect(56,56,W-112,H-112);
+
+  // Corner ornaments
+  [[56,56,1,1],[W-56,56,-1,1],[56,H-56,1,-1],[W-56,H-56,-1,-1]].forEach(function(c) {
+    drawCorner(ctx,c[0],c[1],c[2],c[3]);
+  });
+
+  var cx=W/2, lx=120, rx=W-120;
+
+  ctx.fillStyle='#806020'; ctx.textAlign='center';
+  ctx.font='500 16px "JetBrains Mono",monospace';
+  ctx.fillText('MATHEMATICS & PHYSICS  ·  PHYS 111  ·  ACTIVITY DASHBOARD', cx, 128);
+  drawDivider(ctx,cx,152);
+
+  ctx.fillStyle='#1a1a1a';
+  ctx.font='700 58px Fraunces,serif';
+  ctx.fillText('Activity Summary', cx, 234);
+  ctx.fillStyle='#5a5a5a';
+  ctx.font='italic 400 19px Fraunces,serif';
+  ctx.fillText('Surigao Education Center  ·  PHYS 111', cx, 268);
+  drawDivider(ctx,cx,294);
+
+  var totalScore = allRecords.reduce(function(s,r){return s+(r.raw||0);},0);
+  var totalPoss  = allRecords.reduce(function(s,r){return s+(r.total||10);},0);
+  var totalCount = allRecords.length;
+  var avgPct     = totalCount>0?Math.round(allRecords.reduce(function(s,r){return s+r.score;},0)/totalCount):0;
+
+  ctx.fillStyle='#1a1a1a'; ctx.font='700 44px Fraunces,serif';
+  ctx.fillText(totalScore+' / '+totalPoss, cx, 352);
+  ctx.fillStyle='#5a5a5a'; ctx.font='400 16px "JetBrains Mono",monospace';
+  ctx.fillText(totalCount+' submissions  ·  '+avgPct+'% avg  ·  '+
+    allRecords.filter(function(r){return r.score>=75;}).length+' passing', cx, 382);
+
+  var y = 430;
+
+  // Group by activity
+  var groups = {};
+  allRecords.forEach(function(r) {
+    var k = r.quizFile||'unknown';
+    if (!groups[k]) groups[k] = { title: r.quizTitle||k, records: [] };
+    groups[k].records.push(r);
+  });
+
+  Object.keys(groups).forEach(function(k) {
+    var g = groups[k];
+    ctx.fillStyle='#806020'; ctx.textAlign='left';
+    ctx.font='500 13px "JetBrains Mono",monospace';
+    ctx.fillText(g.title.toUpperCase(), lx, y);
+    var hw = ctx.measureText(g.title.toUpperCase()).width;
+    ctx.strokeStyle='#d0c8b0'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(lx+hw+16,y-4); ctx.lineTo(rx,y-4); ctx.stroke();
+    y += 24;
+
+    var gPct = Math.round(g.records.reduce(function(s,r){return s+r.score;},0)/g.records.length);
+    var gFlag = g.records.filter(function(r){return r.tabSwitches>0||r.fastAnswerCount>0;}).length;
+    ctx.fillStyle='#5a5a5a'; ctx.font='400 13px "JetBrains Mono",monospace';
+    ctx.fillText(g.records.length+' taken  ·  avg '+gPct+'%  ·  '+gFlag+' flagged', lx, y);
+    y += 26;
+
+    g.records.sort(function(a,b){return b.score-a.score;});
+    g.records.forEach(function(r) {
+      var isBad = r.tabSwitches>0||r.fastAnswerCount>0;
+      ctx.fillStyle='#1a1a1a'; ctx.textAlign='left';
+      ctx.font='400 17px Fraunces,serif';
+      var nm = r.name.length>38?r.name.slice(0,37)+'…':r.name;
+      ctx.fillText(nm, lx, y);
+      var nw = ctx.measureText(nm).width;
+      var rt = (r.raw!==undefined?r.raw+' / '+r.total+'  ':'')+r.score+'%';
+      ctx.font='500 14px "JetBrains Mono",monospace';
+      var rtW = ctx.measureText(rt).width;
+      ctx.fillStyle='#b0a890'; ctx.font='400 13px Fraunces,serif';
+      var ds=lx+nw+10, de=rx-rtW-20;
+      var dw=ctx.measureText('· ').width, dc=Math.max(0,Math.floor((de-ds)/dw));
+      var dots=''; for(var j=0;j<dc;j++) dots+='· ';
+      ctx.fillText(dots,ds,y);
+      if(isBad){ctx.fillStyle='#b00020';ctx.font='700 12px "JetBrains Mono",monospace';ctx.textAlign='right';ctx.fillText('⚑',rx-rtW-8,y);}
+      ctx.fillStyle=r.score>=75?'#1a1a1a':'#888';
+      ctx.font='500 14px "JetBrains Mono",monospace'; ctx.textAlign='right';
+      ctx.fillText(rt, rx, y);
+      y+=28;
+    });
+    y+=16;
+  });
+
+  // Footer
+  y = Math.max(y+20, H-140);
+  ctx.strokeStyle='#1a1a1a'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(lx,y); ctx.lineTo(rx,y); ctx.stroke();
+  y+=32;
+  ctx.fillStyle='#7a7060'; ctx.textAlign='center';
+  ctx.font='italic 400 14px Fraunces,serif';
+  ctx.fillText('Generated '+formatDate(new Date()), cx, y);
+  ctx.fillStyle='#806020'; ctx.font='400 12px "JetBrains Mono",monospace';
+  ctx.fillText('SURIGAO  EDUCATION  CENTER  ·  PHYS 111', cx, y+26);
+
+  lastCanvas = canvas;
+  document.getElementById('preview-img').src = canvas.toDataURL('image/png');
+  document.getElementById('summary-modal').classList.add('show');
+}
+
+function drawCorner(ctx,x,y,dx,dy) {
+  ctx.save(); ctx.translate(x,y); ctx.scale(dx,dy);
+  ctx.strokeStyle='#806020'; ctx.lineWidth=1;
+  ctx.beginPath();
+  ctx.moveTo(8,22); ctx.lineTo(22,22); ctx.lineTo(22,8);
+  ctx.moveTo(8,13); ctx.lineTo(13,13); ctx.lineTo(13,8);
+  ctx.stroke();
+  ctx.fillStyle='#806020';
+  ctx.beginPath(); ctx.arc(18,18,1.5,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+}
+
+function drawDivider(ctx,cx,y) {
+  ctx.strokeStyle='#806020'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(cx-180,y); ctx.lineTo(cx-12,y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx+12,y); ctx.lineTo(cx+180,y); ctx.stroke();
+  ctx.fillStyle='#806020';
+  ctx.beginPath(); ctx.moveTo(cx,y-7); ctx.lineTo(cx+7,y); ctx.lineTo(cx,y+7); ctx.lineTo(cx-7,y); ctx.closePath(); ctx.fill();
+}
+
+function closeSummaryModal() { document.getElementById('summary-modal').classList.remove('show'); }
+function downloadPNG() {
+  if (!lastCanvas) return;
+  var a=document.createElement('a');
+  a.href=lastCanvas.toDataURL('image/png');
+  a.download='phys111_activity_summary.png';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+/* ── Boot ── */
+refreshAll();
 </script>
 </body>
 </html>
