@@ -4,136 +4,96 @@
     "subject": "Physics · Fluid Mechanics",
     "lock_key": "quiz_hydrostatic_done"
   },
-  "examples": [
-    {
-      "q": "What is the hydrostatic pressure at a depth of 5 m in fresh water? (ρ = 1 000 kg/m³, g = 10 m/s²)",
-      "solution": "Hydrostatic pressure is the pressure exerted by\na fluid at rest due to the weight of fluid above.\n\nFormula:\n    P = ρ × g × h\n\nwhere  P = hydrostatic pressure  (Pa)\n       ρ = density of fluid      (kg/m³)\n       g = gravitational field   (10 m/s² on Earth)\n       h = depth below surface   (m)\n\nStep 1 — Identify the values:\n    ρ = 1 000 kg/m³\n    g = 10 m/s²\n    h = 5 m\n\nStep 2 — Substitute and solve:\n    P = 1 000 × 10 × 5\n    P = 50 000 Pa\n\nAnswer:  P = 50 000 Pa  (50 kPa)\n\nNote: Pressure increases linearly with depth.",
-      "opts": [
-        "50 000 Pa",
-        "5 000 Pa",
-        "500 000 Pa",
-        "500 Pa"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A diver descends to 12 m in seawater (ρ = 1 025 kg/m³, g = 10 m/s²). The atmospheric pressure at the surface is 101 325 Pa. What is the total (absolute) pressure at that depth?",
-      "solution": "Total (absolute) pressure at depth = atmospheric\npressure at the surface PLUS hydrostatic pressure:\n\n    P_total = P_atm + ρgh\n\nStep 1 — Calculate hydrostatic pressure:\n    P_hydro = ρ × g × h\n    P_hydro = 1 025 × 10 × 12\n    P_hydro = 123 000 Pa\n\nStep 2 — Add atmospheric pressure:\n    P_total = 101 325 + 123 000\n    P_total = 224 325 Pa\n\nAnswer:  P_total ≈ 224 325 Pa (≈ 224.3 kPa)\n\nNote: Gauge pressure = P_hydro only (ignores P_atm).\nAbsolute pressure always includes P_atm.",
-      "opts": [
-        "224 325 Pa",
-        "123 000 Pa",
-        "101 325 Pa",
-        "224 325 000 Pa"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Two connected containers are filled with water (ρ = 1 000 kg/m³). Container A has a depth of 3 m and Container B has a depth of 3 m. How does the pressure at the bottom of A compare to B?",
-      "solution": "This demonstrates that hydrostatic pressure depends\nONLY on depth and fluid density — NOT on the shape\nor volume of the container.\n\nFormula:  P = ρgh\n\nContainer A:\n    P_A = 1 000 × 10 × 3 = 30 000 Pa\n\nContainer B:\n    P_B = 1 000 × 10 × 3 = 30 000 Pa\n\nAnswer:  P_A = P_B = 30 000 Pa\n\nThis is called the Hydrostatic Paradox:\n  The pressure at a given depth is the same\n  regardless of the shape, width, or total volume\n  of the container — only depth matters.",
-      "opts": [
-        "P_A = P_B — pressure depends only on depth, not container shape",
-        "P_A > P_B — wider containers have higher pressure",
-        "P_B > P_A — narrower containers have higher pressure",
-        "Cannot be determined without knowing container shape"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "What is the hydrostatic pressure at a depth of 8 m in fresh water? (ρ = 1 000 kg/m³, g = 10 m/s²)",
-      "given": "Formula:  P = ρ × g × h",
-      "opts": ["80 000 Pa", "8 000 Pa", "800 000 Pa", "800 Pa"],
-      "ans": 0,
-      "sol": "P = 1 000 × 10 × 8 = 80 000 Pa."
+      "sets": [
+        { "q": "What is the hydrostatic pressure at a depth of 3 m in water? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "Formula: P = ρgh", "opts": ["30 000 Pa", "3 000 Pa", "300 Pa", "300 000 Pa"], "ans": 0 },
+        { "q": "Find the hydrostatic pressure at 5 m depth in water. (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["50 000 Pa", "5 000 Pa", "500 Pa", "500 000 Pa"], "ans": 0 },
+        { "q": "What is the hydrostatic pressure at 8 m depth in water? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["80 000 Pa", "8 000 Pa", "800 Pa", "800 000 Pa"], "ans": 0 },
+        { "q": "What is the hydrostatic pressure at 12 m depth in water? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["120 000 Pa", "12 000 Pa", "1 200 Pa", "1 200 000 Pa"], "ans": 0 },
+        { "q": "Calculate the hydrostatic pressure at 20 m depth in water. (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["200 000 Pa", "20 000 Pa", "2 000 Pa", "2 000 000 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "What factors determine the hydrostatic pressure at a point in a fluid?",
-      "given": "Formula:  P = ρ × g × h\nExamine what variables appear in the equation.",
-      "opts": [
-        "Fluid density, gravitational field strength, and depth",
-        "Fluid volume, temperature, and depth",
-        "Container shape, fluid mass, and depth",
-        "Fluid velocity, density, and depth"
-      ],
-      "ans": 0,
-      "sol": "P = ρgh — only fluid density (ρ), gravitational field strength (g), and depth (h) determine hydrostatic pressure."
+      "sets": [
+        { "q": "What is the absolute pressure at 4 m depth in water? (ρ = 1 000 kg/m³, g = 10 m/s², atmospheric pressure = 101 325 Pa)", "given": "Absolute pressure = Patm + ρgh", "opts": ["141 325 Pa", "40 000 Pa", "101 325 Pa", "4 000 Pa"], "ans": 0 },
+        { "q": "Find the absolute pressure at 10 m depth in water. (ρ = 1 000 kg/m³, g = 10 m/s², Patm = 101 325 Pa)", "given": "Pabs = Patm + ρgh", "opts": ["201 325 Pa", "100 000 Pa", "101 325 Pa", "10 000 Pa"], "ans": 0 },
+        { "q": "What is the absolute pressure at 2 m depth? (ρ = 1 000 kg/m³, g = 10 m/s², Patm = 101 325 Pa)", "given": "Pabs = Patm + ρgh", "opts": ["121 325 Pa", "20 000 Pa", "101 325 Pa", "2 000 Pa"], "ans": 0 },
+        { "q": "Calculate the absolute pressure at 6 m below the water surface. (ρ = 1 000 kg/m³, g = 10 m/s², Patm = 101 325 Pa)", "given": "Pabs = Patm + ρgh", "opts": ["161 325 Pa", "60 000 Pa", "101 325 Pa", "6 000 Pa"], "ans": 0 },
+        { "q": "Find the absolute pressure at 15 m depth. (ρ = 1 000 kg/m³, g = 10 m/s², Patm = 101 325 Pa)", "given": "Pabs = Patm + ρgh", "opts": ["251 325 Pa", "150 000 Pa", "101 325 Pa", "15 000 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "The hydrostatic pressure at a certain depth in water is 40 000 Pa. (ρ = 1 000 kg/m³, g = 10 m/s²). What is the depth?",
-      "given": "Rearrange:  P = ρ × g × h\n→  h = P / (ρ × g)",
-      "opts": ["4 m", "40 m", "400 m", "0.4 m"],
-      "ans": 0,
-      "sol": "h = 40 000 / (1 000 × 10) = 40 000 / 10 000 = 4 m."
+      "sets": [
+        { "q": "What is the difference between gauge pressure and absolute pressure?", "given": "Absolute pressure = gauge pressure + atmospheric pressure.", "opts": ["Gauge pressure is pressure measured above atmospheric; absolute is total including atmospheric.", "Gauge pressure includes atmospheric; absolute does not.", "They are the same in liquids.", "Absolute pressure is always smaller than gauge pressure."], "ans": 0 },
+        { "q": "A diver's depth gauge reads 50 000 Pa. What does this reading represent?", "given": "Depth gauges measure pressure above atmospheric (gauge pressure).", "opts": ["Gauge pressure — the pressure above atmospheric", "Absolute pressure — the total pressure on the diver", "Hydrostatic pressure minus atmospheric pressure", "Atmospheric pressure only"], "ans": 0 },
+        { "q": "At the water surface (h = 0), what is the gauge pressure?", "given": "Pgauge = ρgh. At h = 0: Pgauge = ?", "opts": ["0 Pa", "101 325 Pa", "ρg Pa", "Atmospheric pressure"], "ans": 0 },
+        { "q": "A tire pressure gauge reads 200 000 Pa. The actual absolute pressure in the tire is:", "given": "Pabs = Pgauge + Patm (Patm ≈ 101 325 Pa)", "opts": ["≈ 301 325 Pa", "200 000 Pa", "≈ 98 675 Pa", "101 325 Pa"], "ans": 0 },
+        { "q": "Which pressure is always greater: gauge pressure or absolute pressure?", "given": "Absolute = Gauge + Atmospheric. Atmospheric > 0.", "opts": ["Absolute pressure (it includes atmospheric)", "Gauge pressure (it exceeds absolute)", "They are equal at depth", "Depends on depth"], "ans": 0 }
+      ]
     },
     {
-      "q": "Seawater has a density of 1 025 kg/m³. What is the hydrostatic pressure at a depth of 20 m? (g = 10 m/s²)",
-      "given": "Formula:  P = ρ × g × h",
-      "opts": ["205 000 Pa", "200 000 Pa", "20 500 Pa", "2 050 000 Pa"],
-      "ans": 0,
-      "sol": "P = 1 025 × 10 × 20 = 205 000 Pa."
+      "sets": [
+        { "q": "At what depth in fresh water is the hydrostatic pressure equal to 70 000 Pa? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "Rearrange P = ρgh: h = P / (ρg)", "opts": ["7 m", "0.7 m", "70 m", "700 m"], "ans": 0 },
+        { "q": "At what depth does water exert a gauge pressure of 25 000 Pa? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "h = P / (ρg)", "opts": ["2.5 m", "0.25 m", "25 m", "250 m"], "ans": 0 },
+        { "q": "How deep must one dive for the gauge pressure to reach 150 000 Pa? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "h = P / (ρg)", "opts": ["15 m", "1.5 m", "150 m", "1 500 m"], "ans": 0 },
+        { "q": "At what depth is the hydrostatic pressure 40 000 Pa? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "h = P / (ρg)", "opts": ["4 m", "0.4 m", "40 m", "400 m"], "ans": 0 },
+        { "q": "What depth gives a hydrostatic pressure of 200 000 Pa in fresh water? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "h = P / (ρg)", "opts": ["20 m", "2 m", "200 m", "0.2 m"], "ans": 0 }
+      ]
     },
     {
-      "q": "In which direction does hydrostatic pressure act at a point inside a fluid?",
-      "given": "Think about the nature of pressure in a fluid at rest.\nA fluid cannot exert shear forces.",
-      "opts": [
-        "Equally in all directions",
-        "Only downward",
-        "Only upward",
-        "Only horizontally"
-      ],
-      "ans": 0,
-      "sol": "Hydrostatic pressure at any point acts equally in all directions. Fluids at rest transmit pressure uniformly."
+      "sets": [
+        { "q": "Calculate the hydrostatic pressure at 5 m depth in seawater. (ρ = 1 025 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["51 250 Pa", "50 000 Pa", "5 125 Pa", "512 500 Pa"], "ans": 0 },
+        { "q": "Find the gauge pressure at 10 m depth in seawater. (ρ = 1 025 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["102 500 Pa", "100 000 Pa", "10 250 Pa", "1 025 000 Pa"], "ans": 0 },
+        { "q": "At 3 m depth in seawater (ρ = 1 025 kg/m³, g = 10 m/s²), what is the hydrostatic pressure?", "given": "P = ρgh", "opts": ["30 750 Pa", "30 000 Pa", "3 075 Pa", "307 500 Pa"], "ans": 0 },
+        { "q": "Why is hydrostatic pressure greater in seawater than fresh water at the same depth?", "given": "P = ρgh. Seawater: ρ ≈ 1 025 kg/m³. Fresh water: ρ = 1 000 kg/m³.", "opts": ["Seawater has higher density, so ρgh is larger", "Seawater has lower density", "Depth affects only fresh water pressure", "g is different in seawater"], "ans": 0 },
+        { "q": "Hydrostatic pressure at 8 m in seawater (ρ = 1 025 kg/m³, g = 10 m/s²)?", "given": "P = ρgh", "opts": ["82 000 Pa", "80 000 Pa", "8 200 Pa", "820 000 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "A large wide tank and a narrow tall cylinder are both filled with water to the same depth of 6 m. How does the pressure at the bottom compare?",
-      "given": "Formula:  P = ρgh\nPressure depends on depth, not container shape or volume.",
-      "opts": [
-        "Equal — pressure depends only on depth",
-        "Higher in the wide tank — more water above",
-        "Higher in the narrow cylinder — water is more compressed",
-        "Cannot be determined without knowing the volumes"
-      ],
-      "ans": 0,
-      "sol": "P = ρgh. Since depth and density are the same, pressure is equal. This is the Hydrostatic Paradox."
+      "sets": [
+        { "q": "Hydrostatic pressure depends on which factors?", "given": "Formula: P = ρgh — identify the variables.", "opts": ["Fluid density, gravitational acceleration, and depth", "Container shape, volume, and temperature", "Fluid speed and pipe area", "Atmospheric pressure only"], "ans": 0 },
+        { "q": "Two identical containers are filled with water to different heights. Where is the pressure at the base greater?", "given": "P = ρgh. Same ρ and g; compare h.", "opts": ["Taller container — greater h gives greater pressure", "Shorter container — less weight of water", "They are equal regardless of height", "Depends on container width"], "ans": 0 },
+        { "q": "Two pools: one deep and narrow, one shallow and wide, both filled with the same liquid. At equal depth, how does pressure compare?", "given": "P = ρgh. Pressure depends only on depth, density, and g — not container shape.", "opts": ["Equal — pressure at the same depth is the same", "Higher in the narrow pool — more weight per area", "Higher in the wide pool — more total water", "Depends on total volume"], "ans": 0 },
+        { "q": "The 'hydrostatic paradox' states that pressure at a given depth in a liquid depends only on:", "given": "P = ρgh — examine which variables appear.", "opts": ["Depth (h), fluid density (ρ), and gravitational acceleration (g)", "Container shape and volume", "The weight of fluid above the point", "The surface area of the container"], "ans": 0 },
+        { "q": "Which change does NOT affect the hydrostatic pressure at a given point?", "given": "P = ρgh. Identify which factor is not included.", "opts": ["Increasing the horizontal width of the container", "Increasing the depth (h)", "Increasing fluid density (ρ)", "Increasing g (e.g., different planet)"], "ans": 0 }
+      ]
     },
     {
-      "q": "What is the gauge pressure at a depth of 10 m in fresh water? (ρ = 1 000 kg/m³, g = 10 m/s²)",
-      "given": "Gauge pressure = hydrostatic pressure only (excludes atmospheric pressure).\nFormula:  P_gauge = ρgh",
-      "opts": ["100 000 Pa", "201 325 Pa", "10 000 Pa", "1 000 000 Pa"],
-      "ans": 0,
-      "sol": "P_gauge = ρgh = 1 000 × 10 × 10 = 100 000 Pa. Gauge pressure ignores atmospheric pressure."
+      "sets": [
+        { "q": "A dam holds back water to a depth of 40 m. What is the hydrostatic pressure at the base of the dam? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["400 000 Pa", "40 000 Pa", "4 000 Pa", "4 000 000 Pa"], "ans": 0 },
+        { "q": "A submarine operates at 200 m depth in seawater (ρ = 1 025 kg/m³, g = 10 m/s²). What is the gauge pressure?", "given": "P = ρgh", "opts": ["2 050 000 Pa", "2 000 000 Pa", "205 000 Pa", "20 500 000 Pa"], "ans": 0 },
+        { "q": "A diver at 15 m depth in fresh water (ρ = 1 000 kg/m³, g = 10 m/s²). What gauge pressure do they experience?", "given": "P = ρgh", "opts": ["150 000 Pa", "15 000 Pa", "1 500 Pa", "1 500 000 Pa"], "ans": 0 },
+        { "q": "The Hinatuan Enchanted River is about 8 m deep. Estimate the hydrostatic pressure at its deepest point. (ρ = 1 025 kg/m³, g = 10 m/s²)", "given": "P = ρgh (use seawater density — it's a saltwater river)", "opts": ["82 000 Pa", "80 000 Pa", "8 000 Pa", "820 000 Pa"], "ans": 0 },
+        { "q": "A scuba diver is at 25 m depth in fresh water (ρ = 1 000 kg/m³, g = 10 m/s²). What is the absolute pressure? (Patm = 101 325 Pa)", "given": "Pabs = Patm + ρgh", "opts": ["351 325 Pa", "250 000 Pa", "101 325 Pa", "25 000 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "A submarine is at a depth where the hydrostatic pressure is 500 000 Pa. (ρ = 1 025 kg/m³, g = 10 m/s²). What is the approximate depth?",
-      "given": "Rearrange:  P = ρ × g × h\n→  h = P / (ρ × g)",
-      "opts": ["≈ 48.8 m", "≈ 50 m", "≈ 488 m", "≈ 5 000 m"],
-      "ans": 0,
-      "sol": "h = 500 000 / (1 025 × 10) = 500 000 / 10 250 ≈ 48.8 m."
+      "sets": [
+        { "q": "The hydrostatic pressure at a certain depth is 60 000 Pa in fresh water. What is the density of a liquid that produces 72 000 Pa at the same depth? (g = 10 m/s²)", "given": "P = ρgh. Same h and g. New P / Old P = new ρ / old ρ.", "opts": ["1 200 kg/m³", "1 000 kg/m³", "1 025 kg/m³", "800 kg/m³"], "ans": 0 },
+        { "q": "Mercury (ρ = 13 600 kg/m³) fills a tube to height 0.76 m. What pressure does it exert? (g = 10 m/s²)", "given": "P = ρgh", "opts": ["103 360 Pa", "14 360 Pa", "10 336 Pa", "1 033 600 Pa"], "ans": 0 },
+        { "q": "Oil (ρ = 800 kg/m³) fills a tank to 5 m depth. What is the hydrostatic pressure at the base? (g = 10 m/s²)", "given": "P = ρgh", "opts": ["40 000 Pa", "50 000 Pa", "4 000 Pa", "400 000 Pa"], "ans": 0 },
+        { "q": "Saltwater (ρ = 1 025 kg/m³) and fresh water (ρ = 1 000 kg/m³) both have 6 m depth. Which has greater base pressure?", "given": "P = ρgh. Compare for same h and g.", "opts": ["Saltwater — higher density", "Fresh water — lower density", "They are equal", "Depends on container shape"], "ans": 0 },
+        { "q": "Glycerin (ρ = 1 260 kg/m³) fills a vessel to 2 m depth. What is the pressure at the bottom? (g = 10 m/s²)", "given": "P = ρgh", "opts": ["25 200 Pa", "12 600 Pa", "2 520 Pa", "252 000 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "Why does a dam need to be thicker at the base than at the top?",
-      "given": "Consider how hydrostatic pressure varies with depth:\nP = ρgh — pressure increases with depth.",
-      "opts": [
-        "Pressure increases with depth, so the base experiences the greatest force",
-        "The base supports the weight of the dam itself",
-        "Water flows faster at the base, creating more force",
-        "The base needs more material to prevent flooding"
-      ],
-      "ans": 0,
-      "sol": "P = ρgh — hydrostatic pressure increases with depth. The base of the dam faces the highest pressure and needs the most structural strength."
+      "sets": [
+        { "q": "A U-tube manometer has fresh water (ρ = 1 000 kg/m³) in one arm 0.3 m above the other arm. What is the pressure difference between the two arms? (g = 10 m/s²)", "given": "ΔP = ρgh", "opts": ["3 000 Pa", "300 Pa", "30 000 Pa", "30 Pa"], "ans": 0 },
+        { "q": "One arm of a U-tube is 0.5 m higher than the other. Filled with water (ρ = 1 000 kg/m³). What pressure difference does this represent? (g = 10 m/s²)", "given": "ΔP = ρgh", "opts": ["5 000 Pa", "500 Pa", "50 000 Pa", "50 Pa"], "ans": 0 },
+        { "q": "A water column 0.8 m high is used to measure gauge pressure. What pressure does it represent? (ρ = 1 000 kg/m³, g = 10 m/s²)", "given": "P = ρgh", "opts": ["8 000 Pa", "800 Pa", "80 000 Pa", "80 Pa"], "ans": 0 },
+        { "q": "A mercury manometer shows a height difference of 0.15 m. What pressure difference does it indicate? (ρHg = 13 600 kg/m³, g = 10 m/s²)", "given": "ΔP = ρgh", "opts": ["20 400 Pa", "2 040 Pa", "204 000 Pa", "20.4 Pa"], "ans": 0 },
+        { "q": "Oil (ρ = 800 kg/m³) in a U-tube shows a height difference of 0.4 m. What is the gauge pressure? (g = 10 m/s²)", "given": "P = ρgh", "opts": ["3 200 Pa", "320 Pa", "32 000 Pa", "32 Pa"], "ans": 0 }
+      ]
     },
     {
-      "q": "Fresh water (ρ = 1 000 kg/m³) and oil (ρ = 800 kg/m³) are each at a depth of 5 m. Which has greater hydrostatic pressure? (g = 10 m/s²)",
-      "given": "Formula:  P = ρ × g × h\nCalculate and compare pressure for each fluid.",
-      "opts": [
-        "Water — P = 50 000 Pa vs oil P = 40 000 Pa",
-        "Oil — lower density means less resistance",
-        "They are equal — same depth",
-        "Cannot be determined without volume"
-      ],
-      "ans": 0,
-      "sol": "P_water = 1 000 × 10 × 5 = 50 000 Pa. P_oil = 800 × 10 × 5 = 40 000 Pa. Water has higher pressure due to greater density."
+      "sets": [
+        { "q": "Why do divers experience ear pain when swimming deeper?", "given": "Consider how hydrostatic pressure changes with depth.", "opts": ["Increased water pressure with depth compresses air pockets in the ear", "The water becomes colder at depth", "Sound waves travel differently at depth", "The weight of the water above increases the swimmer's mass"], "ans": 0 },
+        { "q": "Why are deep-sea submarines built with thick, curved hulls?", "given": "At great depth, P = ρgh becomes very large.", "opts": ["To withstand the enormous hydrostatic pressure at depth", "To reduce drag in fast currents", "To maximize internal space", "To reflect sonar signals"], "ans": 0 },
+        { "q": "Why are water tanks and reservoirs placed at high elevation above the area they serve?", "given": "P = ρgh. Higher h means higher pressure.", "opts": ["Greater height creates greater water pressure for delivery", "To keep water cooler", "To reduce evaporation", "To prevent contamination"], "ans": 0 },
+        { "q": "A dam wall is made thicker at the bottom than at the top. Why?", "given": "P = ρgh increases with depth h.", "opts": ["Greater hydrostatic pressure at greater depth requires more structural support", "The bottom needs more weight to stay stable", "The top must be light to reduce cost", "Water pressure is the same throughout"], "ans": 0 },
+        { "q": "A sealed bag of chips appears puffed up when brought to a high mountain top. This is because:", "given": "Atmospheric pressure decreases with altitude.", "opts": ["External atmospheric pressure decreases, so the bag expands outward", "The chips absorb air at high altitude", "Temperature increases with altitude", "The bag's volume decreases at altitude"], "ans": 0 }
+      ]
     }
   ]
 }
