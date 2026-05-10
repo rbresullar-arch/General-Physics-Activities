@@ -1,124 +1,599 @@
 {
   "meta": {
     "title": "Trigonometry: Pythagorean Theorem & SOH-CAH-TOA",
-    "subject": "Mathematics · Trigonometry",
+    "subject": "Mathematics \u00b7 Trigonometry",
     "lock_key": "quiz_trigonometry_done"
   },
-  "examples": [
-    {
-      "q": "A right triangle has legs of length 3 cm and 4 cm. What is the length of the hypotenuse?",
-      "solution": "The Pythagorean Theorem states:\n    c² = a² + b²\n\nwhere  c  is the hypotenuse (side opposite the right angle)\nand    a, b  are the two legs.\n\nStep 1 — Substitute the known values:\n    c² = 3² + 4²\n    c² = 9 + 16\n    c² = 25\n\nStep 2 — Take the square root:\n    c = √25 = 5\n\nAnswer:  The hypotenuse is  5 cm.\n\nNote: 3-4-5 is a classic Pythagorean triple.",
-      "opts": [
-        "5 cm",
-        "7 cm",
-        "√7 cm",
-        "25 cm"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "In a right triangle, the angle θ = 30°, and the hypotenuse = 10 cm. Find the side opposite to θ.",
-      "solution": "We are given the hypotenuse and need the OPPOSITE side.\nUse the SOH part of SOH-CAH-TOA:\n\n    sin θ = Opposite / Hypotenuse\n\nStep 1 — Write the equation:\n    sin 30° = Opposite / 10\n\nStep 2 — Recall that sin 30° = 0.5:\n    0.5 = Opposite / 10\n\nStep 3 — Solve for Opposite:\n    Opposite = 0.5 × 10 = 5\n\nAnswer:  The opposite side is  5 cm.",
-      "opts": [
-        "5 cm",
-        "8.66 cm",
-        "10 cm",
-        "2.5 cm"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "In a right triangle, the adjacent side = 6 cm and the opposite side = 6 cm. What is angle θ?",
-      "solution": "We have the OPPOSITE and ADJACENT sides.\nUse the TOA part of SOH-CAH-TOA:\n\n    tan θ = Opposite / Adjacent\n\nStep 1 — Substitute:\n    tan θ = 6 / 6 = 1\n\nStep 2 — Find θ using the inverse tangent:\n    θ = tan⁻¹(1)\n    θ = 45°\n\nAnswer:  θ = 45°\n\nNote: When opposite = adjacent, the angle is always 45°\nbecause tan 45° = 1.",
-      "opts": [
-        "45°",
-        "30°",
-        "60°",
-        "90°"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "A right triangle has legs of 5 cm and 12 cm. What is the hypotenuse?",
-      "given": "Pythagorean Theorem:  c² = a² + b²\nc is the hypotenuse; a and b are the legs.",
-      "opts": ["13 cm", "17 cm", "√17 cm", "60 cm"],
-      "ans": 0,
-      "sol": "c² = 5² + 12² = 25 + 144 = 169.  c = √169 = 13 cm."
+      "sets": [
+        {
+          "q": "A right triangle has legs of 5 cm and 12 cm. What is the hypotenuse?",
+          "given": "c\u00b2 = a\u00b2 + b\u00b2",
+          "opts": [
+            "13 cm",
+            "17 cm",
+            "\u221a17 cm",
+            "60 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A right triangle has legs of 6 cm and 8 cm. What is the hypotenuse?",
+          "given": "c\u00b2 = a\u00b2 + b\u00b2",
+          "opts": [
+            "10 cm",
+            "14 cm",
+            "\u221a28 cm",
+            "48 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A right triangle has legs of 9 cm and 12 cm. What is the hypotenuse?",
+          "given": "c\u00b2 = a\u00b2 + b\u00b2",
+          "opts": [
+            "15 cm",
+            "21 cm",
+            "\u221a63 cm",
+            "108 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A right triangle has legs of 8 cm and 15 cm. What is the hypotenuse?",
+          "given": "c\u00b2 = a\u00b2 + b\u00b2",
+          "opts": [
+            "17 cm",
+            "23 cm",
+            "\u221a89 cm",
+            "120 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A right triangle has legs of 7 cm and 24 cm. What is the hypotenuse?",
+          "given": "c\u00b2 = a\u00b2 + b\u00b2",
+          "opts": [
+            "25 cm",
+            "31 cm",
+            "\u221a175 cm",
+            "168 cm"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "The hypotenuse of a right triangle is 15 cm and one leg is 9 cm. Find the other leg.",
-      "given": "Rearrange the Pythagorean Theorem:\n    b² = c² − a²",
-      "opts": ["12 cm", "10 cm", "6 cm", "√306 cm"],
-      "ans": 0,
-      "sol": "b² = 15² − 9² = 225 − 81 = 144.  b = √144 = 12 cm."
+      "sets": [
+        {
+          "q": "The hypotenuse of a right triangle is 15 cm and one leg is 9 cm. Find the other leg.",
+          "given": "b\u00b2 = c\u00b2 \u2212 a\u00b2",
+          "opts": [
+            "12 cm",
+            "10 cm",
+            "6 cm",
+            "\u221a306 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The hypotenuse is 13 cm and one leg is 5 cm. Find the other leg.",
+          "given": "b\u00b2 = c\u00b2 \u2212 a\u00b2",
+          "opts": [
+            "12 cm",
+            "8 cm",
+            "18 cm",
+            "\u221a194 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The hypotenuse is 25 cm and one leg is 7 cm. Find the other leg.",
+          "given": "b\u00b2 = c\u00b2 \u2212 a\u00b2",
+          "opts": [
+            "24 cm",
+            "18 cm",
+            "32 cm",
+            "\u221a576 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The hypotenuse is 10 cm and one leg is 6 cm. Find the other leg.",
+          "given": "b\u00b2 = c\u00b2 \u2212 a\u00b2",
+          "opts": [
+            "8 cm",
+            "4 cm",
+            "16 cm",
+            "\u221a164 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The hypotenuse is 17 cm and one leg is 8 cm. Find the other leg.",
+          "given": "b\u00b2 = c\u00b2 \u2212 a\u00b2",
+          "opts": [
+            "15 cm",
+            "9 cm",
+            "25 cm",
+            "\u221a225 cm"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In a right triangle, θ = 60° and hypotenuse = 8 cm. Find the side adjacent to θ.",
-      "given": "SOH-CAH-TOA\nCAH → cos θ = Adjacent / Hypotenuse\ncos 60° = 0.5",
-      "opts": ["4 cm", "6.93 cm", "9.24 cm", "5 cm"],
-      "ans": 0,
-      "sol": "cos 60° = Adjacent / 8  →  0.5 × 8 = 4 cm."
+      "sets": [
+        {
+          "q": "In a right triangle, \u03b8 = 60\u00b0 and hypotenuse = 8 cm. Find the side adjacent to \u03b8.",
+          "given": "CAH: cos \u03b8 = Adjacent / Hypotenuse, cos 60\u00b0 = 0.5",
+          "opts": [
+            "4 cm",
+            "6.93 cm",
+            "9.24 cm",
+            "5 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 60\u00b0 and hypotenuse = 10 cm. Find the adjacent side.",
+          "given": "cos 60\u00b0 = 0.5",
+          "opts": [
+            "5 cm",
+            "8.66 cm",
+            "11.55 cm",
+            "6 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 60\u00b0 and hypotenuse = 12 cm. Find the adjacent side.",
+          "given": "cos 60\u00b0 = 0.5",
+          "opts": [
+            "6 cm",
+            "10.39 cm",
+            "13.86 cm",
+            "8 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 60\u00b0 and hypotenuse = 20 cm. Find the adjacent side.",
+          "given": "cos 60\u00b0 = 0.5",
+          "opts": [
+            "10 cm",
+            "17.32 cm",
+            "23.09 cm",
+            "15 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 60\u00b0 and hypotenuse = 6 cm. Find the adjacent side.",
+          "given": "cos 60\u00b0 = 0.5",
+          "opts": [
+            "3 cm",
+            "5.20 cm",
+            "6.93 cm",
+            "4 cm"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In a right triangle, θ = 45° and the adjacent side = 7 cm. Find the opposite side.",
-      "given": "SOH-CAH-TOA\nTOA → tan θ = Opposite / Adjacent\ntan 45° = 1",
-      "opts": ["7 cm", "4.95 cm", "9.90 cm", "14 cm"],
-      "ans": 0,
-      "sol": "tan 45° = Opposite / 7  →  1 × 7 = 7 cm."
+      "sets": [
+        {
+          "q": "In a right triangle, \u03b8 = 45\u00b0 and the adjacent side = 7 cm. Find the opposite side.",
+          "given": "TOA: tan \u03b8 = Opposite / Adjacent, tan 45\u00b0 = 1",
+          "opts": [
+            "7 cm",
+            "4.95 cm",
+            "9.90 cm",
+            "14 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 45\u00b0 and adjacent = 10 cm. Find the opposite side.",
+          "given": "tan 45\u00b0 = 1",
+          "opts": [
+            "10 cm",
+            "7.07 cm",
+            "14.14 cm",
+            "20 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 45\u00b0 and adjacent = 5 cm. Find the opposite side.",
+          "given": "tan 45\u00b0 = 1",
+          "opts": [
+            "5 cm",
+            "3.54 cm",
+            "7.07 cm",
+            "10 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 45\u00b0 and adjacent = 12 cm. Find the opposite side.",
+          "given": "tan 45\u00b0 = 1",
+          "opts": [
+            "12 cm",
+            "8.49 cm",
+            "16.97 cm",
+            "24 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 45\u00b0 and adjacent = 9 cm. Find the opposite side.",
+          "given": "tan 45\u00b0 = 1",
+          "opts": [
+            "9 cm",
+            "6.36 cm",
+            "12.73 cm",
+            "18 cm"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Which ratio defines sin θ in a right triangle?",
-      "given": "SOH-CAH-TOA refers to the three main trig ratios.\nAll ratios are relative to the angle θ.",
-      "opts": [
-        "Opposite / Hypotenuse",
-        "Adjacent / Hypotenuse",
-        "Opposite / Adjacent",
-        "Hypotenuse / Opposite"
-      ],
-      "ans": 0,
-      "sol": "SOH: sin θ = Opposite / Hypotenuse."
+      "sets": [
+        {
+          "q": "Which ratio defines sin \u03b8 in a right triangle?",
+          "given": "SOH-CAH-TOA refers to the three main trig ratios.",
+          "opts": [
+            "Opposite / Hypotenuse",
+            "Adjacent / Hypotenuse",
+            "Opposite / Adjacent",
+            "Hypotenuse / Opposite"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "SOH in SOH-CAH-TOA stands for:",
+          "given": "SOH describes the sine ratio.",
+          "opts": [
+            "sin = Opposite / Hypotenuse",
+            "sin = Opposite / Hypotenuse (but hyp goes first)",
+            "sin = Adjacent / Hypotenuse",
+            "sin = Opposite / Adjacent"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, which ratio gives cos \u03b8?",
+          "given": "CAH in SOH-CAH-TOA.",
+          "opts": [
+            "Adjacent / Hypotenuse",
+            "Opposite / Hypotenuse",
+            "Opposite / Adjacent",
+            "Hypotenuse / Adjacent"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "tan \u03b8 in a right triangle equals:",
+          "given": "TOA in SOH-CAH-TOA.",
+          "opts": [
+            "Opposite / Adjacent",
+            "Opposite / Hypotenuse",
+            "Adjacent / Hypotenuse",
+            "Adjacent / Opposite"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which trig ratio would you use if you know the hypotenuse and want to find the opposite side?",
+          "given": "SOH-CAH-TOA \u2014 identify which involves hypotenuse and opposite.",
+          "opts": [
+            "sin \u03b8 = Opposite / Hypotenuse",
+            "cos \u03b8 = Adjacent / Hypotenuse",
+            "tan \u03b8 = Opposite / Adjacent",
+            "sin \u03b8 = Hypotenuse / Opposite"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In a right triangle, θ = 30° and the opposite side = 4 cm. Find the hypotenuse.",
-      "given": "SOH → sin θ = Opposite / Hypotenuse\nRearrange: Hypotenuse = Opposite / sin θ\nsin 30° = 0.5",
-      "opts": ["8 cm", "4 cm", "6.93 cm", "2 cm"],
-      "ans": 0,
-      "sol": "Hypotenuse = 4 / sin 30° = 4 / 0.5 = 8 cm."
+      "sets": [
+        {
+          "q": "In a right triangle, \u03b8 = 30\u00b0 and the opposite side = 4 cm. Find the hypotenuse.",
+          "given": "SOH: sin \u03b8 = Opposite / Hypotenuse \u2192 Hypotenuse = Opposite / sin \u03b8, sin 30\u00b0 = 0.5",
+          "opts": [
+            "8 cm",
+            "4 cm",
+            "6.93 cm",
+            "2 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 30\u00b0 and opposite = 6 cm. Find the hypotenuse.",
+          "given": "Hypotenuse = Opposite / sin 30\u00b0, sin 30\u00b0 = 0.5",
+          "opts": [
+            "12 cm",
+            "6 cm",
+            "10.39 cm",
+            "3 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 30\u00b0 and opposite = 5 cm. Find the hypotenuse.",
+          "given": "Hypotenuse = Opposite / sin 30\u00b0, sin 30\u00b0 = 0.5",
+          "opts": [
+            "10 cm",
+            "5 cm",
+            "8.66 cm",
+            "2.5 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 30\u00b0 and opposite = 3 cm. Find the hypotenuse.",
+          "given": "Hypotenuse = Opposite / sin 30\u00b0, sin 30\u00b0 = 0.5",
+          "opts": [
+            "6 cm",
+            "3 cm",
+            "5.20 cm",
+            "1.5 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, \u03b8 = 30\u00b0 and opposite = 7 cm. Find the hypotenuse.",
+          "given": "Hypotenuse = Opposite / sin 30\u00b0, sin 30\u00b0 = 0.5",
+          "opts": [
+            "14 cm",
+            "7 cm",
+            "12.12 cm",
+            "3.5 cm"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A ladder 10 m long leans against a wall. It makes a 60° angle with the ground. How high up the wall does it reach?",
-      "given": "The ladder is the hypotenuse.\nThe height is the side OPPOSITE the 60° angle.\nSOH: sin 60° = Opposite / Hypotenuse\nsin 60° ≈ 0.866",
-      "opts": ["8.66 m", "5 m", "10 m", "6.67 m"],
-      "ans": 0,
-      "sol": "sin 60° = height / 10  →  height = 0.866 × 10 = 8.66 m."
+      "sets": [
+        {
+          "q": "A ladder 10 m long leans against a wall at 60\u00b0 with the ground. How high up the wall does it reach?",
+          "given": "sin 60\u00b0 \u2248 0.866, height = hypotenuse \u00d7 sin 60\u00b0",
+          "opts": [
+            "8.66 m",
+            "5 m",
+            "10 m",
+            "6.67 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ramp 8 m long makes a 30\u00b0 angle with the ground. How high does it rise?",
+          "given": "height = hypotenuse \u00d7 sin \u03b8, sin 30\u00b0 = 0.5",
+          "opts": [
+            "4 m",
+            "6.93 m",
+            "8 m",
+            "2 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A kite string 50 m long makes a 45\u00b0 angle with the ground. How high is the kite?",
+          "given": "height = string length \u00d7 sin 45\u00b0, sin 45\u00b0 \u2248 0.707",
+          "opts": [
+            "35.36 m",
+            "25 m",
+            "50 m",
+            "17.68 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ladder 12 m long leans against a wall at 60\u00b0 with the ground. How high does it reach?",
+          "given": "height = hypotenuse \u00d7 sin 60\u00b0, sin 60\u00b0 \u2248 0.866",
+          "opts": [
+            "10.39 m",
+            "6 m",
+            "12 m",
+            "8 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A slide in a park is 6 m long and makes a 30\u00b0 angle with the ground. What is its vertical height?",
+          "given": "height = length \u00d7 sin 30\u00b0, sin 30\u00b0 = 0.5",
+          "opts": [
+            "3 m",
+            "5.20 m",
+            "6 m",
+            "1.5 m"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In a right triangle, the opposite side = 9 cm and hypotenuse = 15 cm. Find angle θ.",
-      "given": "SOH: sin θ = Opposite / Hypotenuse\nUse inverse sine to find θ:\n    θ = sin⁻¹(Opposite / Hypotenuse)\nsin 37° ≈ 0.6",
-      "opts": ["37°", "45°", "53°", "30°"],
-      "ans": 0,
-      "sol": "sin θ = 9 / 15 = 0.6  →  θ = sin⁻¹(0.6) ≈ 37°."
+      "sets": [
+        {
+          "q": "In a right triangle, the opposite side = 9 cm and hypotenuse = 15 cm. Find angle \u03b8.",
+          "given": "sin \u03b8 = Opposite / Hypotenuse, \u03b8 = sin\u207b\u00b9(9/15), sin 37\u00b0 \u2248 0.6",
+          "opts": [
+            "37\u00b0",
+            "45\u00b0",
+            "53\u00b0",
+            "30\u00b0"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, opposite = 6 cm and hypotenuse = 10 cm. Find \u03b8.",
+          "given": "sin \u03b8 = 6/10 = 0.6, \u03b8 = sin\u207b\u00b9(0.6) \u2248 37\u00b0",
+          "opts": [
+            "37\u00b0",
+            "45\u00b0",
+            "53\u00b0",
+            "60\u00b0"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, adjacent = 8 cm and hypotenuse = 10 cm. Find \u03b8.",
+          "given": "cos \u03b8 = 8/10 = 0.8, \u03b8 = cos\u207b\u00b9(0.8) \u2248 37\u00b0",
+          "opts": [
+            "37\u00b0",
+            "45\u00b0",
+            "53\u00b0",
+            "30\u00b0"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, opposite = 3 cm and adjacent = 4 cm. Find \u03b8.",
+          "given": "tan \u03b8 = 3/4 = 0.75, \u03b8 = tan\u207b\u00b9(0.75) \u2248 37\u00b0",
+          "opts": [
+            "37\u00b0",
+            "45\u00b0",
+            "53\u00b0",
+            "30\u00b0"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, opposite = 4 cm and hypotenuse = 5 cm. Find \u03b8.",
+          "given": "sin \u03b8 = 4/5 = 0.8, \u03b8 \u2248 53\u00b0",
+          "opts": [
+            "53\u00b0",
+            "37\u00b0",
+            "45\u00b0",
+            "60\u00b0"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Which theorem relates the three sides of a right triangle?",
-      "given": "This theorem applies ONLY to right triangles.\nIt uses the hypotenuse and the two legs.",
-      "opts": [
-        "Pythagorean Theorem: c² = a² + b²",
-        "SOH-CAH-TOA: sin θ = opp/hyp",
-        "Law of Sines: a/sin A = b/sin B",
-        "Law of Cosines: c² = a² + b² − 2ab cos C"
-      ],
-      "ans": 0,
-      "sol": "The Pythagorean Theorem c² = a² + b² relates all three sides of a right triangle."
+      "sets": [
+        {
+          "q": "Which theorem relates the three sides of a right triangle?",
+          "given": "This theorem applies ONLY to right triangles.",
+          "opts": [
+            "Pythagorean Theorem: c\u00b2 = a\u00b2 + b\u00b2",
+            "SOH-CAH-TOA: sin \u03b8 = opp/hyp",
+            "Law of Sines: a/sin A = b/sin B",
+            "Law of Cosines: c\u00b2 = a\u00b2 + b\u00b2 \u2212 2ab cos C"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The Pythagorean Theorem states that in a right triangle:",
+          "given": "c is the hypotenuse; a and b are the two legs.",
+          "opts": [
+            "c\u00b2 = a\u00b2 + b\u00b2",
+            "c = a + b",
+            "c\u00b2 = a\u00b2 \u2212 b\u00b2",
+            "c\u00b2 = 2ab"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which of the following is the correct form of the Pythagorean Theorem?",
+          "given": "The theorem relates the three sides of a right triangle.",
+          "opts": [
+            "hypotenuse\u00b2 = leg\u2081\u00b2 + leg\u2082\u00b2",
+            "hypotenuse = leg\u2081 + leg\u2082",
+            "leg\u00b2 = hypotenuse\u00b2 + other leg\u00b2",
+            "hypotenuse\u00b2 = leg\u2081\u00b2 \u2212 leg\u2082\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a 3-4-5 right triangle, which side is the hypotenuse?",
+          "given": "The hypotenuse is always opposite the right angle (90\u00b0) and is the longest side.",
+          "opts": [
+            "5",
+            "4",
+            "3",
+            "All are equal"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The Pythagorean Theorem can only be applied to:",
+          "given": "Consider the condition required for the theorem.",
+          "opts": [
+            "Right triangles only",
+            "Any triangle",
+            "Isosceles triangles only",
+            "Equilateral triangles only"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In a right triangle, the adjacent side = 5 cm and the hypotenuse = 13 cm. Find the opposite side.",
-      "given": "Use the Pythagorean Theorem:\n    opposite² = hypotenuse² − adjacent²",
-      "opts": ["12 cm", "8 cm", "10 cm", "√194 cm"],
-      "ans": 0,
-      "sol": "opposite² = 13² − 5² = 169 − 25 = 144.  opposite = 12 cm."
+      "sets": [
+        {
+          "q": "In a right triangle, the adjacent side = 5 cm and the hypotenuse = 13 cm. Find the opposite side.",
+          "given": "opposite\u00b2 = hypotenuse\u00b2 \u2212 adjacent\u00b2",
+          "opts": [
+            "12 cm",
+            "8 cm",
+            "10 cm",
+            "\u221a194 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, adjacent = 9 cm and hypotenuse = 15 cm. Find the opposite side.",
+          "given": "opposite\u00b2 = 15\u00b2 \u2212 9\u00b2",
+          "opts": [
+            "12 cm",
+            "6 cm",
+            "24 cm",
+            "\u221a306 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, adjacent = 12 cm and hypotenuse = 13 cm. Find the opposite side.",
+          "given": "opposite\u00b2 = hypotenuse\u00b2 \u2212 adjacent\u00b2",
+          "opts": [
+            "5 cm",
+            "1 cm",
+            "25 cm",
+            "\u221a313 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, adjacent = 24 cm and hypotenuse = 25 cm. Find the opposite side.",
+          "given": "opposite\u00b2 = 25\u00b2 \u2212 24\u00b2",
+          "opts": [
+            "7 cm",
+            "1 cm",
+            "49 cm",
+            "\u221a1249 cm"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In a right triangle, adjacent = 40 cm and hypotenuse = 41 cm. Find the opposite side.",
+          "given": "opposite\u00b2 = hypotenuse\u00b2 \u2212 adjacent\u00b2",
+          "opts": [
+            "9 cm",
+            "1 cm",
+            "81 cm",
+            "\u221a3281 cm"
+          ],
+          "ans": 0
+        }
+      ]
     }
   ]
 }
