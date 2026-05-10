@@ -1,119 +1,599 @@
 {
   "meta": {
     "title": "Centripetal Force & Acceleration",
-    "subject": "Physics · Circular Motion",
+    "subject": "Physics \u00b7 Circular Motion",
     "lock_key": "quiz_centripetal_done"
   },
-  "examples": [
-    {
-      "q": "A car moves in a circle of radius 50 m at a constant speed of 10 m/s. What is its centripetal acceleration?",
-      "solution": "Centripetal acceleration is the acceleration directed\ntoward the CENTER of a circular path.\n\nFormula:\n    ac = v² / r\n\nwhere  v  = speed (m/s)\n       r  = radius of circular path (m)\n       ac = centripetal acceleration (m/s²)\n\nStep 1 — Identify the values:\n    v = 10 m/s\n    r = 50 m\n\nStep 2 — Substitute and solve:\n    ac = (10)² / 50\n    ac = 100 / 50\n    ac = 2 m/s²\n\nAnswer:  ac = 2 m/s², directed toward the center.",
-      "opts": [
-        "2 m/s²",
-        "0.2 m/s²",
-        "5 m/s²",
-        "20 m/s²"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 0.5 kg ball on a string moves in a horizontal circle of radius 1.5 m at a speed of 3 m/s. What is the centripetal force acting on the ball?",
-      "solution": "Centripetal force is the net force directed toward\nthe center, keeping the object in circular motion.\n\nFormula:\n    Fc = m × ac = m × v² / r\n\nwhere  m  = mass (kg)\n       v  = speed (m/s)\n       r  = radius (m)\n       Fc = centripetal force (N)\n\nStep 1 — Identify the values:\n    m = 0.5 kg\n    v = 3 m/s\n    r = 1.5 m\n\nStep 2 — Substitute and solve:\n    Fc = 0.5 × (3)² / 1.5\n    Fc = 0.5 × 9 / 1.5\n    Fc = 4.5 / 1.5\n    Fc = 3 N\n\nAnswer:  Fc = 3 N, directed toward the center.",
-      "opts": [
-        "3 N",
-        "1 N",
-        "9 N",
-        "4.5 N"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 2 kg object moves in a circle. Its centripetal acceleration is 8 m/s². What centripetal force is required?",
-      "solution": "By Newton's Second Law, force equals mass\ntimes acceleration:\n\n    F = m × a\n\nFor circular motion, the acceleration IS the\ncentripetal acceleration:\n\n    Fc = m × ac\n\nStep 1 — Identify the values:\n    m  = 2 kg\n    ac = 8 m/s²\n\nStep 2 — Substitute and solve:\n    Fc = 2 × 8\n    Fc = 16 N\n\nAnswer:  Fc = 16 N\n\nNote: This is just Newton's 2nd Law (F = ma)\napplied to circular motion.",
-      "opts": [
-        "16 N",
-        "4 N",
-        "10 N",
-        "0.25 N"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "What is the centripetal acceleration of an object moving at 6 m/s in a circle of radius 9 m?",
-      "given": "Formula:  ac = v² / r",
-      "opts": ["4 m/s²", "0.67 m/s²", "54 m/s²", "1.5 m/s²"],
-      "ans": 0,
-      "sol": "ac = 6² / 9 = 36 / 9 = 4 m/s²."
+      "sets": [
+        {
+          "q": "What is the centripetal acceleration of an object moving at 6 m/s in a circle of radius 9 m?",
+          "given": "Formula: ac = v\u00b2 / r",
+          "opts": [
+            "4 m/s\u00b2",
+            "0.67 m/s\u00b2",
+            "54 m/s\u00b2",
+            "1.5 m/s\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "An object moves at 4 m/s in a circle of radius 4 m. What is the centripetal acceleration?",
+          "given": "ac = v\u00b2 / r",
+          "opts": [
+            "4 m/s\u00b2",
+            "1 m/s\u00b2",
+            "16 m/s\u00b2",
+            "8 m/s\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A car rounds a curve of radius 25 m at 10 m/s. Find the centripetal acceleration.",
+          "given": "ac = v\u00b2 / r",
+          "opts": [
+            "4 m/s\u00b2",
+            "0.4 m/s\u00b2",
+            "250 m/s\u00b2",
+            "40 m/s\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "An object moves at 3 m/s in a circle of radius 3 m. What is the centripetal acceleration?",
+          "given": "ac = v\u00b2 / r",
+          "opts": [
+            "3 m/s\u00b2",
+            "1 m/s\u00b2",
+            "9 m/s\u00b2",
+            "6 m/s\u00b2"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ball on a string moves at 5 m/s in a circle of radius 5 m. Find ac.",
+          "given": "ac = v\u00b2 / r",
+          "opts": [
+            "5 m/s\u00b2",
+            "1 m/s\u00b2",
+            "25 m/s\u00b2",
+            "10 m/s\u00b2"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 3 kg object moves in a circle of radius 2 m at 4 m/s. What is the centripetal force?",
-      "given": "Formula:  Fc = m × v² / r",
-      "opts": ["24 N", "6 N", "48 N", "8 N"],
-      "ans": 0,
-      "sol": "Fc = 3 × (4)² / 2 = 3 × 16 / 2 = 48 / 2 = 24 N."
+      "sets": [
+        {
+          "q": "A 3 kg object moves in a circle of radius 2 m at 4 m/s. What is the centripetal force?",
+          "given": "Formula: Fc = m \u00d7 v\u00b2 / r",
+          "opts": [
+            "24 N",
+            "6 N",
+            "48 N",
+            "8 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 2 kg object moves in a circle of radius 5 m at 5 m/s. What is the centripetal force?",
+          "given": "Fc = m \u00d7 v\u00b2 / r",
+          "opts": [
+            "10 N",
+            "50 N",
+            "5 N",
+            "100 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 5 kg object moves in a circle of radius 4 m at 2 m/s. What is the centripetal force?",
+          "given": "Fc = m \u00d7 v\u00b2 / r",
+          "opts": [
+            "5 N",
+            "10 N",
+            "40 N",
+            "20 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg object travels in a circle of radius 1 m at 3 m/s. Find the centripetal force.",
+          "given": "Fc = m \u00d7 v\u00b2 / r",
+          "opts": [
+            "36 N",
+            "12 N",
+            "48 N",
+            "9 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 10 kg object moves in a circle of radius 5 m at 4 m/s. Find Fc.",
+          "given": "Fc = m \u00d7 v\u00b2 / r",
+          "opts": [
+            "32 N",
+            "80 N",
+            "8 N",
+            "40 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "In which direction does centripetal acceleration always point?",
-      "given": "Centripetal means 'center-seeking'.\nThe acceleration is responsible for changing the direction of velocity.",
-      "opts": [
-        "Toward the center of the circle",
-        "Away from the center of the circle",
-        "Tangent to the circle",
-        "In the direction of motion"
-      ],
-      "ans": 0,
-      "sol": "Centripetal acceleration always points toward the center of the circular path — it is center-seeking."
+      "sets": [
+        {
+          "q": "In which direction does centripetal acceleration always point?",
+          "given": "Centripetal means 'center-seeking'.",
+          "opts": [
+            "Toward the center of the circle",
+            "Away from the center",
+            "Tangent to the circle",
+            "In the direction of motion"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "As an object moves in a circle at constant speed, the centripetal acceleration points:",
+          "given": "The acceleration changes velocity direction, not magnitude.",
+          "opts": [
+            "Radially inward (toward center)",
+            "Radially outward",
+            "Along the velocity",
+            "Opposite to velocity"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A satellite orbiting Earth has centripetal acceleration directed:",
+          "given": "The net force and acceleration point in the same direction.",
+          "opts": [
+            "Toward Earth's center",
+            "Away from Earth",
+            "Tangent to orbit",
+            "Opposite to orbital velocity"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The centripetal force on a car rounding a curve always points:",
+          "given": "Centripetal means center-seeking \u2014 the force points inward.",
+          "opts": [
+            "Toward the center of the curve",
+            "Away from the center",
+            "Forward along the road",
+            "Upward"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which statement about centripetal acceleration is correct?",
+          "given": "Think about what centripetal means.",
+          "opts": [
+            "It always points toward the center of the circular path",
+            "It always points away from the center",
+            "It is in the direction of motion",
+            "It is zero for constant speed"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "If the speed of an object in circular motion is doubled (radius unchanged), what happens to the centripetal acceleration?",
-      "given": "Formula:  ac = v² / r\nAnalyze how doubling v affects ac.",
-      "opts": ["It quadruples (×4)", "It doubles (×2)", "It halves (÷2)", "It stays the same"],
-      "ans": 0,
-      "sol": "ac = v²/r. If v doubles, v² becomes 4× larger. So ac quadruples."
+      "sets": [
+        {
+          "q": "If speed in circular motion is doubled (radius unchanged), what happens to ac?",
+          "given": "Formula: ac = v\u00b2 / r. Analyze effect of doubling v.",
+          "opts": [
+            "It quadruples (\u00d74)",
+            "It doubles (\u00d72)",
+            "It halves (\u00f72)",
+            "It stays the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "If speed is tripled (radius unchanged), centripetal acceleration:",
+          "given": "ac = v\u00b2 / r. New ac = (3v)\u00b2 / r",
+          "opts": [
+            "Increases 9 times",
+            "Triples",
+            "Stays the same",
+            "Doubles"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Speed is halved and radius stays the same. What happens to centripetal acceleration?",
+          "given": "ac = v\u00b2 / r. New v = v/2.",
+          "opts": [
+            "Decreases to \u00bc",
+            "Halves",
+            "Doubles",
+            "Stays the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Radius is doubled and speed is doubled. What happens to centripetal acceleration?",
+          "given": "ac = v\u00b2 / r. New ac = (2v)\u00b2 / (2r)",
+          "opts": [
+            "Doubles (\u00d72)",
+            "Quadruples",
+            "Stays the same",
+            "Halves"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Speed increases by a factor of 3 and radius stays constant. The centripetal acceleration:",
+          "given": "ac \u221d v\u00b2. If v \u00d7 3, ac \u00d7 ?",
+          "opts": [
+            "Increases by a factor of 9",
+            "Increases by a factor of 3",
+            "Stays the same",
+            "Decreases"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A 1.5 kg object has a centripetal acceleration of 10 m/s². What is the centripetal force?",
-      "given": "Formula:  Fc = m × ac",
-      "opts": ["15 N", "6.67 N", "10 N", "11.5 N"],
-      "ans": 0,
-      "sol": "Fc = 1.5 × 10 = 15 N."
+      "sets": [
+        {
+          "q": "A 1.5 kg object has a centripetal acceleration of 10 m/s\u00b2. What is the centripetal force?",
+          "given": "Formula: Fc = m \u00d7 ac",
+          "opts": [
+            "15 N",
+            "6.67 N",
+            "10 N",
+            "11.5 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg object has centripetal acceleration 8 m/s\u00b2. Find the centripetal force.",
+          "given": "Fc = m \u00d7 ac",
+          "opts": [
+            "32 N",
+            "2 N",
+            "12 N",
+            "0.5 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 0.5 kg ball has centripetal acceleration 20 m/s\u00b2. What centripetal force acts on it?",
+          "given": "Fc = m \u00d7 ac",
+          "opts": [
+            "10 N",
+            "40 N",
+            "0.025 N",
+            "20.5 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 8 kg object has centripetal acceleration 5 m/s\u00b2. What is the centripetal force?",
+          "given": "Fc = m \u00d7 ac",
+          "opts": [
+            "40 N",
+            "1.6 N",
+            "13 N",
+            "0.625 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 6 kg object has centripetal acceleration 3 m/s\u00b2. Find the centripetal force.",
+          "given": "Fc = m \u00d7 ac",
+          "opts": [
+            "18 N",
+            "2 N",
+            "9 N",
+            "0.5 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "An object moves in a circle of radius 4 m with a centripetal force of 50 N and mass 2 kg. What is its speed?",
-      "given": "Rearrange:  Fc = m × v² / r\n→  v² = Fc × r / m\n→  v = √(Fc × r / m)",
-      "opts": ["10 m/s", "100 m/s", "5 m/s", "25 m/s"],
-      "ans": 0,
-      "sol": "v² = (50 × 4) / 2 = 200 / 2 = 100.  v = √100 = 10 m/s."
+      "sets": [
+        {
+          "q": "An object moves in a circle of radius 4 m with centripetal force 50 N and mass 2 kg. What is its speed?",
+          "given": "Rearrange: v = \u221a(Fc \u00d7 r / m)",
+          "opts": [
+            "10 m/s",
+            "100 m/s",
+            "5 m/s",
+            "25 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Fc = 72 N, m = 2 kg, r = 8 m. What is the speed of the object?",
+          "given": "v = \u221a(Fc \u00d7 r / m)",
+          "opts": [
+            "12 m/s",
+            "6 m/s",
+            "144 m/s",
+            "9 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Fc = 45 N, m = 5 kg, r = 5 m. Find the speed.",
+          "given": "v = \u221a(Fc \u00d7 r / m)",
+          "opts": [
+            "\u221a45 \u2248 6.7 m/s",
+            "9 m/s",
+            "\u221a225 = 15 m/s",
+            "3 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 4 kg object in a circle of radius 9 m has centripetal force 16 N. What is the speed?",
+          "given": "v = \u221a(Fc \u00d7 r / m)",
+          "opts": [
+            "6 m/s",
+            "2 m/s",
+            "36 m/s",
+            "\u221a36 = 6 m/s"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Fc = 200 N, m = 8 kg, r = 2 m. What is the speed?",
+          "given": "v = \u221a(Fc \u00d7 r / m)",
+          "opts": [
+            "\u221a50 \u2248 7.07 m/s",
+            "25 m/s",
+            "5 m/s",
+            "10 m/s"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "What provides the centripetal force for a car making a turn on a flat road?",
-      "given": "Centripetal force must be provided by some physical force.\nThink about what acts between the car tires and the road horizontally.",
-      "opts": ["Friction between tires and road", "The normal force", "Gravity", "Air resistance"],
-      "ans": 0,
-      "sol": "Friction between the tires and the road provides the centripetal force that keeps the car turning."
+      "sets": [
+        {
+          "q": "What provides the centripetal force for a car making a turn on a flat road?",
+          "given": "Centripetal force must come from a real physical force between surfaces.",
+          "opts": [
+            "Friction between tires and road",
+            "The normal force",
+            "Gravity",
+            "Air resistance"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "What provides the centripetal force that keeps a satellite in orbit?",
+          "given": "Think about what acts between the satellite and Earth at a distance.",
+          "opts": [
+            "Gravity",
+            "Friction",
+            "Normal force",
+            "Tension"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ball on a string is spun in a horizontal circle. What provides the centripetal force?",
+          "given": "The force acts along the string toward the center.",
+          "opts": [
+            "Tension in the string",
+            "Gravity",
+            "Normal force",
+            "Air resistance"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A roller coaster car moves in a vertical loop. At the top of the loop, what provides centripetal force?",
+          "given": "At the top, both gravity and normal force point toward the center.",
+          "opts": [
+            "Gravity and normal force combined",
+            "Gravity alone",
+            "Normal force alone",
+            "Friction"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A proton moves in a circle inside a cyclotron (particle accelerator). What provides the centripetal force?",
+          "given": "A magnetic force acts perpendicular to a moving charge.",
+          "opts": [
+            "Magnetic force",
+            "Gravity",
+            "Electric potential",
+            "Friction"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "If the radius of circular motion is halved (speed unchanged), what happens to centripetal acceleration?",
-      "given": "Formula:  ac = v² / r\nAnalyze how halving r affects ac.",
-      "opts": ["It doubles (×2)", "It halves (÷2)", "It quadruples (×4)", "It stays the same"],
-      "ans": 0,
-      "sol": "ac = v²/r. If r is halved, ac = v²/(r/2) = 2v²/r. The acceleration doubles."
+      "sets": [
+        {
+          "q": "If radius of circular motion is halved (speed unchanged), what happens to ac?",
+          "given": "Formula: ac = v\u00b2 / r. Halving r means r \u2192 r/2.",
+          "opts": [
+            "It doubles (\u00d72)",
+            "It halves (\u00f72)",
+            "It quadruples (\u00d74)",
+            "It stays the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "If radius is tripled (speed unchanged), centripetal acceleration:",
+          "given": "ac = v\u00b2 / r. New r = 3r.",
+          "opts": [
+            "Decreases to \u2153",
+            "Triples",
+            "Decreases to \u2151",
+            "Stays the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Radius is quadrupled while speed stays constant. Centripetal acceleration:",
+          "given": "ac = v\u00b2 / r. New ac = v\u00b2 / (4r)",
+          "opts": [
+            "Decreases to \u00bc",
+            "Increases by 4",
+            "Doubles",
+            "Stays the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Both radius and speed are halved. What happens to centripetal acceleration?",
+          "given": "ac = v\u00b2 / r. New v = v/2, new r = r/2. New ac = ?",
+          "opts": [
+            "Halves",
+            "Stays the same",
+            "Doubles",
+            "Quadruples"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Radius is reduced to \u2153 of original (speed unchanged). Centripetal acceleration:",
+          "given": "ac = v\u00b2 / r. New r = r/3.",
+          "opts": [
+            "Triples",
+            "Decreases to \u2153",
+            "Increases 9\u00d7",
+            "Halves"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A satellite orbits Earth in a circular path. What force provides the centripetal force?",
-      "given": "The satellite stays in orbit because a force pulls it\nconstantly toward Earth's center.",
-      "opts": ["Gravity", "Friction", "Tension", "Normal Force"],
-      "ans": 0,
-      "sol": "Gravity provides the centripetal force that keeps the satellite in circular orbit around Earth."
+      "sets": [
+        {
+          "q": "What force provides the centripetal force for a satellite orbiting Earth?",
+          "given": "The satellite stays in orbit because a force continuously pulls it toward Earth's center.",
+          "opts": [
+            "Gravity",
+            "Friction",
+            "Tension",
+            "Normal Force"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The Moon orbits Earth because of:",
+          "given": "A non-contact force acts between Earth and the Moon.",
+          "opts": [
+            "Gravitational force from Earth",
+            "Normal force from space",
+            "Magnetic force",
+            "Tension from space-time"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A spacecraft orbits a planet at constant speed. The net force on it is:",
+          "given": "For circular motion, the net force is centripetal \u2014 directed inward.",
+          "opts": [
+            "Directed toward the planet (centripetal)",
+            "Zero",
+            "Directed away from the planet",
+            "Tangent to the orbit"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Earth orbits the Sun due to which centripetal force?",
+          "given": "A non-contact attractive force acts between massive objects.",
+          "opts": [
+            "Gravitational attraction from the Sun",
+            "Magnetic repulsion",
+            "Normal force",
+            "Atmospheric friction"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A communications satellite stays in orbit because gravity provides:",
+          "given": "Gravity acts as the centripetal force for orbital motion.",
+          "opts": [
+            "The centripetal force directed toward Earth's center",
+            "A forward thrust",
+            "An outward force",
+            "Zero net force"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "An object moves in a circle at 5 m/s. Its centripetal acceleration is 25 m/s². What is the radius of the circle?",
-      "given": "Rearrange:  ac = v² / r\n→  r = v² / ac",
-      "opts": ["1 m", "5 m", "0.2 m", "125 m"],
-      "ans": 0,
-      "sol": "r = v² / ac = 5² / 25 = 25 / 25 = 1 m."
+      "sets": [
+        {
+          "q": "An object moves at 5 m/s with centripetal acceleration 25 m/s\u00b2. What is the radius?",
+          "given": "Rearrange: r = v\u00b2 / ac",
+          "opts": [
+            "1 m",
+            "5 m",
+            "0.2 m",
+            "125 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "An object moves at 6 m/s with centripetal acceleration 12 m/s\u00b2. What is the radius?",
+          "given": "r = v\u00b2 / ac",
+          "opts": [
+            "3 m",
+            "2 m",
+            "72 m",
+            "0.5 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A car rounds a curve at 20 m/s with centripetal acceleration 4 m/s\u00b2. What is the radius?",
+          "given": "r = v\u00b2 / ac",
+          "opts": [
+            "100 m",
+            "5 m",
+            "80 m",
+            "0.01 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "An object at 8 m/s has centripetal acceleration 16 m/s\u00b2. Find the radius.",
+          "given": "r = v\u00b2 / ac",
+          "opts": [
+            "4 m",
+            "2 m",
+            "0.5 m",
+            "128 m"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A satellite at 7 000 m/s has centripetal acceleration 9.8 m/s\u00b2. What is the orbital radius?",
+          "given": "r = v\u00b2 / ac",
+          "opts": [
+            "\u2248 5 000 000 m",
+            "\u2248 714 286 m",
+            "\u2248 68 600 m",
+            "\u2248 9.8 m"
+          ],
+          "ans": 0
+        }
+      ]
     }
   ]
 }
