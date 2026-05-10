@@ -4,121 +4,96 @@
     "subject": "Physics · Rotational Motion",
     "lock_key": "quiz_torque_done"
   },
-  "examples": [
-    {
-      "q": "A force of 20 N is applied perpendicular to a wrench 0.3 m from the pivot. What is the torque produced?",
-      "solution": "Torque is the rotational effect of a force.\nIt depends on the force AND where it is applied.\n\nFormula:\n    τ = F × d\n\nwhere  τ = torque             (N·m)\n       F = applied force      (N)\n       d = moment arm (lever arm) — the perpendicular\n           distance from the pivot to the line of force (m)\n\nStep 1 — Identify the values:\n    F = 20 N\n    d = 0.3 m\n\nStep 2 — Substitute and solve:\n    τ = 20 × 0.3\n    τ = 6 N·m\n\nAnswer:  τ = 6 N·m\n\nNote: The force is already perpendicular,\nso no angle adjustment is needed.",
-      "opts": [
-        "6 N·m",
-        "66.7 N·m",
-        "0.6 N·m",
-        "60 N·m"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 50 N force is applied at 30° to a lever arm of 0.8 m. What is the torque?",
-      "solution": "When the force is NOT perpendicular to the lever arm,\nonly the perpendicular component creates torque.\n\nFormula:\n    τ = F × d × sin θ\n\nwhere  θ = angle between the force and the lever arm\n\nStep 1 — Identify the values:\n    F = 50 N\n    d = 0.8 m\n    θ = 30°\n\nStep 2 — Substitute and solve:\n    τ = 50 × 0.8 × sin 30°\n    τ = 50 × 0.8 × 0.5\n    τ = 20 N·m\n\nAnswer:  τ = 20 N·m\n\nNote: Maximum torque occurs at θ = 90°\n(force fully perpendicular to lever arm).",
-      "opts": [
-        "20 N·m",
-        "40 N·m",
-        "34.6 N·m",
-        "25 N·m"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A seesaw is balanced. A 40 N weight sits 2 m from the pivot on the left. Where must a 80 N weight be placed on the right to keep it balanced?",
-      "solution": "For a seesaw to be balanced (in rotational equilibrium),\nthe total clockwise torque must equal the total\ncounterclockwise torque:\n\n    τ_left = τ_right\n    F₁ × d₁ = F₂ × d₂\n\nStep 1 — Identify the values:\n    F₁ = 40 N,  d₁ = 2 m  (left side)\n    F₂ = 80 N,  d₂ = ?    (right side)\n\nStep 2 — Substitute and solve:\n    40 × 2 = 80 × d₂\n    80 = 80 × d₂\n    d₂ = 80 / 80\n    d₂ = 1 m\n\nAnswer:  The 80 N weight must be placed  1 m\nfrom the pivot on the right side.",
-      "opts": [
-        "1 m",
-        "2 m",
-        "4 m",
-        "0.5 m"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "A 15 N force is applied perpendicular to a lever 0.5 m from the pivot. What is the torque?",
-      "given": "Formula:  τ = F × d\nForce is perpendicular — no angle needed.",
-      "opts": ["7.5 N·m", "30 N·m", "0.033 N·m", "15.5 N·m"],
-      "ans": 0,
-      "sol": "τ = 15 × 0.5 = 7.5 N·m."
+      "sets": [
+        { "q": "A 15 N force is applied perpendicular to a lever 0.5 m from the pivot. What is the torque?", "given": "Formula: τ = F × d\nForce is perpendicular — no angle needed.", "opts": ["7.5 N·m", "30 N·m", "0.033 N·m", "15.5 N·m"], "ans": 0 },
+        { "q": "A 20 N force is applied perpendicular to a lever 0.4 m from the pivot. What is the torque?", "given": "Formula: τ = F × d\nForce is perpendicular — no angle needed.", "opts": ["8 N·m", "50 N·m", "0.05 N·m", "20.4 N·m"], "ans": 0 },
+        { "q": "A 10 N force is applied perpendicular to a lever 0.6 m from the pivot. What is the torque?", "given": "Formula: τ = F × d\nForce is perpendicular — no angle needed.", "opts": ["6 N·m", "16.7 N·m", "0.06 N·m", "10.6 N·m"], "ans": 0 },
+        { "q": "A 25 N force is applied perpendicular to a lever 0.3 m from the pivot. What is the torque?", "given": "Formula: τ = F × d\nForce is perpendicular — no angle needed.", "opts": ["7.5 N·m", "83.3 N·m", "0.012 N·m", "25.3 N·m"], "ans": 0 },
+        { "q": "A 12 N force is applied perpendicular to a lever 0.75 m from the pivot. What is the torque?", "given": "Formula: τ = F × d\nForce is perpendicular — no angle needed.", "opts": ["9 N·m", "16 N·m", "0.0625 N·m", "12.75 N·m"], "ans": 0 }
+      ]
     },
     {
-      "q": "What is the unit of torque?",
-      "given": "Torque = Force × distance.\nForce is in Newtons (N); distance is in meters (m).",
-      "opts": ["N·m (Newton-meter)", "N/m", "kg·m/s²", "J/s"],
-      "ans": 0,
-      "sol": "Torque = F × d = N × m = N·m (Newton-meter)."
+      "sets": [
+        { "q": "What is the unit of torque?", "given": "Torque = Force × distance.\nForce is in Newtons (N); distance is in meters (m).", "opts": ["N·m (Newton-meter)", "N/m", "kg·m/s²", "J/s"], "ans": 0 },
+        { "q": "Which of the following is the correct SI unit for torque?", "given": "Torque = Force × distance.", "opts": ["N·m", "kg/m", "W/s", "Pa·m"], "ans": 0 },
+        { "q": "Torque is measured in which unit?", "given": "Torque = Force × distance = N × m.", "opts": ["N·m", "N/m²", "J/s", "kg·m"], "ans": 0 },
+        { "q": "Which unit correctly expresses torque in the SI system?", "given": "Torque = Force × perpendicular distance.", "opts": ["Newton-meter (N·m)", "Joule per second (J/s)", "Pascal (Pa)", "Newton per meter (N/m)"], "ans": 0 },
+        { "q": "The SI unit of torque is equivalent to which combination?", "given": "Torque = F × d. Force unit = N, distance unit = m.", "opts": ["kg·m²/s²", "kg/m·s²", "m²/s²", "kg·m/s"], "ans": 0 }
+      ]
     },
     {
-      "q": "A force of 30 N is applied at 90° to a lever arm of 0.6 m. What is the torque?",
-      "given": "Formula:  τ = F × d × sin θ\nsin 90° = 1",
-      "opts": ["18 N·m", "9 N·m", "30 N·m", "0.6 N·m"],
-      "ans": 0,
-      "sol": "τ = 30 × 0.6 × sin 90° = 30 × 0.6 × 1 = 18 N·m."
+      "sets": [
+        { "q": "A force of 30 N is applied at 90° to a lever arm of 0.6 m. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 90° = 1", "opts": ["18 N·m", "9 N·m", "30 N·m", "0.6 N·m"], "ans": 0 },
+        { "q": "A force of 40 N is applied at 90° to a lever arm of 0.5 m. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 90° = 1", "opts": ["20 N·m", "10 N·m", "40 N·m", "0.5 N·m"], "ans": 0 },
+        { "q": "A force of 50 N is applied at 90° to a lever arm of 0.8 m. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 90° = 1", "opts": ["40 N·m", "20 N·m", "50 N·m", "0.8 N·m"], "ans": 0 },
+        { "q": "A force of 25 N is applied at 90° to a lever arm of 1.2 m. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 90° = 1", "opts": ["30 N·m", "15 N·m", "25 N·m", "1.2 N·m"], "ans": 0 },
+        { "q": "A force of 60 N is applied at 90° to a lever arm of 0.4 m. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 90° = 1", "opts": ["24 N·m", "12 N·m", "60 N·m", "0.4 N·m"], "ans": 0 }
+      ]
     },
     {
-      "q": "A 60 N force is applied at 0° to a lever arm (parallel to it). What is the torque produced?",
-      "given": "Formula:  τ = F × d × sin θ\nsin 0° = 0",
-      "opts": ["0 N·m", "60 N·m", "Depends on length", "30 N·m"],
-      "ans": 0,
-      "sol": "τ = F × d × sin 0° = F × d × 0 = 0 N·m. A force parallel to the lever arm produces no torque."
+      "sets": [
+        { "q": "A 60 N force is applied at 0° to a lever arm (parallel to it). What is the torque produced?", "given": "Formula: τ = F × d × sin θ\nsin 0° = 0", "opts": ["0 N·m", "60 N·m", "Depends on length", "30 N·m"], "ans": 0 },
+        { "q": "A 45 N force is applied parallel to a lever arm. What is the resulting torque?", "given": "Formula: τ = F × d × sin θ\nParallel means θ = 0°, sin 0° = 0", "opts": ["0 N·m", "45 N·m", "22.5 N·m", "Depends on lever length"], "ans": 0 },
+        { "q": "A force acts along the same direction as a 2 m lever arm. What torque does it produce?", "given": "A force parallel to the lever arm has θ = 0°\nτ = F × d × sin 0° = 0", "opts": ["Zero torque", "2F newton-meters", "F/2 newton-meters", "Cannot be determined"], "ans": 0 },
+        { "q": "If a force of 80 N acts at 0° to a wrench handle, what torque is produced?", "given": "sin 0° = 0, so τ = F × d × 0 = 0", "opts": ["0 N·m", "80 N·m", "40 N·m", "160 N·m"], "ans": 0 },
+        { "q": "A 100 N force is applied exactly along the length of a lever arm. What torque results?", "given": "τ = F × d × sin θ. Force along lever arm means θ = 0°.", "opts": ["0 N·m", "100 N·m", "50 N·m", "Depends on d"], "ans": 0 }
+      ]
     },
     {
-      "q": "At what angle should a force be applied to a lever arm to produce maximum torque?",
-      "given": "Formula:  τ = F × d × sin θ\nConsider which angle maximizes sin θ.",
-      "opts": ["90°", "45°", "0°", "180°"],
-      "ans": 0,
-      "sol": "sin 90° = 1, which is the maximum value of sin θ. Maximum torque is produced when force is perpendicular to the lever arm."
+      "sets": [
+        { "q": "At what angle should a force be applied to a lever arm to produce maximum torque?", "given": "Formula: τ = F × d × sin θ\nConsider which angle maximizes sin θ.", "opts": ["90°", "45°", "0°", "180°"], "ans": 0 },
+        { "q": "For a given force and lever arm length, torque is greatest when the angle between them is:", "given": "τ = F × d × sin θ — find the θ that maximizes this expression.", "opts": ["90°", "60°", "30°", "0°"], "ans": 0 },
+        { "q": "Which angle between a force and its lever arm produces the maximum torque?", "given": "Maximum value of sin θ occurs at θ = ?", "opts": ["90° (perpendicular)", "45° (diagonal)", "0° (parallel)", "180° (anti-parallel)"], "ans": 0 },
+        { "q": "A mechanic wants to apply the most torque possible to a bolt. At what angle to the wrench handle should the force be applied?", "given": "τ = F × d × sin θ is maximized when sin θ is maximum.", "opts": ["90°", "45°", "30°", "60°"], "ans": 0 },
+        { "q": "To maximize the torque on a nut, a force should be applied at what angle to the wrench?", "given": "sin θ has a maximum value of 1 at θ = 90°.", "opts": ["Perpendicular (90°)", "Parallel (0°)", "45° diagonal", "Any angle works equally"], "ans": 0 }
+      ]
     },
     {
-      "q": "A torque of 24 N·m is produced by a perpendicular force applied 0.4 m from the pivot. What is the force?",
-      "given": "Rearrange:  τ = F × d\n→  F = τ / d",
-      "opts": ["60 N", "9.6 N", "24.4 N", "96 N"],
-      "ans": 0,
-      "sol": "F = τ / d = 24 / 0.4 = 60 N."
+      "sets": [
+        { "q": "A torque of 24 N·m is produced by a perpendicular force applied 0.4 m from the pivot. What is the force?", "given": "Rearrange: τ = F × d\n→ F = τ / d", "opts": ["60 N", "9.6 N", "24.4 N", "96 N"], "ans": 0 },
+        { "q": "A torque of 36 N·m is produced by a perpendicular force applied 0.6 m from the pivot. What is the force?", "given": "Rearrange: τ = F × d → F = τ / d", "opts": ["60 N", "21.6 N", "36.6 N", "216 N"], "ans": 0 },
+        { "q": "A torque of 48 N·m is produced by a perpendicular force applied 0.8 m from the pivot. What is the force?", "given": "Rearrange: τ = F × d → F = τ / d", "opts": ["60 N", "38.4 N", "48.8 N", "384 N"], "ans": 0 },
+        { "q": "A perpendicular force applied 0.5 m from a pivot produces 30 N·m of torque. What is the magnitude of the force?", "given": "F = τ / d", "opts": ["60 N", "15 N", "150 N", "30.5 N"], "ans": 0 },
+        { "q": "A torque of 18 N·m is produced by a perpendicular force applied 0.3 m from the pivot. What is the force?", "given": "F = τ / d", "opts": ["60 N", "5.4 N", "54 N", "18.3 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "A 100 N weight sits 3 m from the pivot on one side of a seesaw. What force must be applied 5 m from the pivot on the other side to balance it?",
-      "given": "Rotational equilibrium:  F₁ × d₁ = F₂ × d₂\nSolve for F₂.",
-      "opts": ["60 N", "300 N", "167 N", "40 N"],
-      "ans": 0,
-      "sol": "100 × 3 = F₂ × 5  →  F₂ = 300 / 5 = 60 N."
+      "sets": [
+        { "q": "A 100 N weight sits 3 m from the pivot on one side of a seesaw. What force must be applied 5 m from the pivot on the other side to balance it?", "given": "Rotational equilibrium: F₁ × d₁ = F₂ × d₂\nSolve for F₂.", "opts": ["60 N", "300 N", "167 N", "40 N"], "ans": 0 },
+        { "q": "A 90 N weight sits 4 m from the pivot. What force at 6 m balances the seesaw?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["60 N", "135 N", "40 N", "54 N"], "ans": 0 },
+        { "q": "A 120 N weight is placed 2 m from a pivot. What force at 4 m from the pivot on the other side maintains equilibrium?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["60 N", "240 N", "30 N", "480 N"], "ans": 0 },
+        { "q": "A 80 N force acts 3 m from a pivot. What force at 4 m on the opposite side creates rotational equilibrium?", "given": "Rotational equilibrium: F₁d₁ = F₂d₂", "opts": ["60 N", "107 N", "45 N", "320 N"], "ans": 0 },
+        { "q": "A 150 N load hangs 2 m from a pivot. What upward force at 5 m from the pivot keeps the beam level?", "given": "F₁ × d₁ = F₂ × d₂", "opts": ["60 N", "375 N", "75 N", "300 N"], "ans": 0 }
+      ]
     },
     {
-      "q": "Which of the following changes would NOT increase the torque on a bolt being turned by a wrench?",
-      "given": "τ = F × d × sin θ\nConsider each factor that affects torque.",
-      "opts": [
-        "Applying the force closer to the pivot",
-        "Increasing the applied force",
-        "Using a longer wrench",
-        "Applying the force at 90° to the wrench"
-      ],
-      "ans": 0,
-      "sol": "Applying force closer to the pivot reduces the moment arm (d), which decreases torque. All other options increase torque."
+      "sets": [
+        { "q": "Which of the following changes would NOT increase the torque on a bolt being turned by a wrench?", "given": "τ = F × d × sin θ\nConsider each factor that affects torque.", "opts": ["Applying the force closer to the pivot", "Increasing the applied force", "Using a longer wrench", "Applying the force at 90° to the wrench"], "ans": 0 },
+        { "q": "A mechanic wants to increase torque on a stubborn nut. Which action would NOT help?", "given": "τ = F × d × sin θ — consider what each factor does.", "opts": ["Gripping the wrench near the bolt head", "Applying greater force", "Using a longer extension on the wrench", "Pushing perpendicular to the handle"], "ans": 0 },
+        { "q": "Which action reduces the torque applied to a bolt?", "given": "τ = F × d × sin θ", "opts": ["Shortening the wrench arm (reducing d)", "Pushing harder on the wrench", "Using a longer wrench handle", "Pushing at 90° to the handle"], "ans": 0 },
+        { "q": "Which of the following would decrease torque when turning a bolt with a wrench?", "given": "τ = F × d × sin θ — identify what decreases torque.", "opts": ["Moving your grip closer to the bolt", "Applying more force", "Extending the wrench handle", "Pushing perpendicular to the handle"], "ans": 0 },
+        { "q": "To reduce torque when tightening a screw, which change should you make?", "given": "τ = F × d × sin θ — what reduces the result?", "opts": ["Apply force closer to the pivot point", "Use a longer screwdriver handle", "Push harder on the handle", "Apply force perpendicular to the handle"], "ans": 0 }
+      ]
     },
     {
-      "q": "A force of 40 N is applied at 30° to a 1.5 m lever arm. What is the torque?",
-      "given": "Formula:  τ = F × d × sin θ\nsin 30° = 0.5",
-      "opts": ["30 N·m", "60 N·m", "52 N·m", "20 N·m"],
-      "ans": 0,
-      "sol": "τ = 40 × 1.5 × sin 30° = 40 × 1.5 × 0.5 = 30 N·m."
+      "sets": [
+        { "q": "A force of 40 N is applied at 30° to a 1.5 m lever arm. What is the torque?", "given": "Formula: τ = F × d × sin θ\nsin 30° = 0.5", "opts": ["30 N·m", "60 N·m", "52 N·m", "20 N·m"], "ans": 0 },
+        { "q": "A force of 50 N is applied at 30° to a 1.2 m lever arm. What is the torque?", "given": "τ = F × d × sin θ, sin 30° = 0.5", "opts": ["30 N·m", "60 N·m", "43.3 N·m", "15 N·m"], "ans": 0 },
+        { "q": "A force of 60 N is applied at 30° to a 1.0 m lever arm. What is the torque?", "given": "τ = F × d × sin θ, sin 30° = 0.5", "opts": ["30 N·m", "60 N·m", "51.96 N·m", "15 N·m"], "ans": 0 },
+        { "q": "A force of 80 N is applied at 30° to a 0.75 m lever arm. What is the torque?", "given": "τ = F × d × sin θ, sin 30° = 0.5", "opts": ["30 N·m", "60 N·m", "51.96 N·m", "20 N·m"], "ans": 0 },
+        { "q": "A force of 120 N is applied at 30° to a 0.5 m lever arm. What is the torque?", "given": "τ = F × d × sin θ, sin 30° = 0.5", "opts": ["30 N·m", "60 N·m", "51.96 N·m", "10 N·m"], "ans": 0 }
+      ]
     },
     {
-      "q": "Two forces act on opposite sides of a pivot. Force A = 25 N at 2 m. Force B = 50 N at 1 m. Is the system in rotational equilibrium?",
-      "given": "Equilibrium requires:  τ_A = τ_B\nCompare torques on each side.",
-      "opts": [
-        "Yes — both torques equal 50 N·m",
-        "No — torque A is greater",
-        "No — torque B is greater",
-        "Cannot be determined"
-      ],
-      "ans": 0,
-      "sol": "τ_A = 25 × 2 = 50 N·m. τ_B = 50 × 1 = 50 N·m. Equal torques → rotational equilibrium."
+      "sets": [
+        { "q": "Two forces act on opposite sides of a pivot. Force A = 25 N at 2 m. Force B = 50 N at 1 m. Is the system in rotational equilibrium?", "given": "Equilibrium requires: τ_A = τ_B\nCompare torques on each side.", "opts": ["Yes — both torques equal 50 N·m", "No — torque A is greater", "No — torque B is greater", "Cannot be determined"], "ans": 0 },
+        { "q": "Force A = 30 N acts 3 m from a pivot. Force B = 45 N acts 2 m from the same pivot on the opposite side. Is the beam balanced?", "given": "Calculate τ_A and τ_B. If equal, the system is in rotational equilibrium.", "opts": ["Yes — both produce 90 N·m", "No — τ_A is larger", "No — τ_B is larger", "Cannot be determined"], "ans": 0 },
+        { "q": "A 40 N force at 5 m and a 100 N force at 2 m act on opposite sides of a fulcrum. Is the system balanced?", "given": "τ = F × d. Compare torques on each side.", "opts": ["Yes — both torques equal 200 N·m", "No — the 40 N side has more torque", "No — the 100 N side has more torque", "Cannot be determined without angle"], "ans": 0 },
+        { "q": "A beam has 60 N at 4 m on the left and 80 N at 3 m on the right. Is it in equilibrium?", "given": "τ_left = 60 × 4, τ_right = 80 × 3", "opts": ["Yes — both equal 240 N·m", "No — left side is heavier", "No — right side is heavier", "Not enough data"], "ans": 0 },
+        { "q": "Force X = 35 N at 6 m left of pivot. Force Y = 70 N at 3 m right of pivot. Is the system in rotational equilibrium?", "given": "τ_X = 35 × 6, τ_Y = 70 × 3", "opts": ["Yes — both torques equal 210 N·m", "No — X produces more torque", "No — Y produces more torque", "Cannot tell without angles"], "ans": 0 }
+      ]
     }
   ]
 }
