@@ -4,121 +4,96 @@
     "subject": "Physics · Dynamics",
     "lock_key": "quiz_forces_done"
   },
-  "examples": [
-    {
-      "q": "A book rests on a table. The table pushes upward on the book with a force equal to the book's weight. What type of force is this?",
-      "solution": "This is the NORMAL FORCE.\n\nDefinition:\n  The normal force (FN) is the contact force exerted\n  by a surface on an object resting on it.\n  It acts PERPENDICULAR to the surface.\n\nKey facts:\n  → It is a reaction force — it only exists when\n    an object is in contact with a surface.\n  → It balances the component of weight pushing\n    into the surface.\n  → On a flat surface, FN = weight of the object.\n\nIn this case:\n  Weight of book pushes DOWN on table.\n  Table pushes UP on book with equal force.\n  That upward push is the Normal Force.",
-      "opts": [
-        "Normal Force",
-        "Friction",
-        "Tension",
-        "Applied Force"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A box is being pulled across a rough floor with a rope. The floor resists the motion of the box. What force does the floor exert on the box?",
-      "solution": "This is FRICTION.\n\nDefinition:\n  Friction is a contact force that opposes the\n  relative motion (or tendency of motion) between\n  two surfaces in contact.\n\nTwo main types:\n  → Static friction: prevents an object from starting\n    to move. Acts when the object is at rest.\n  → Kinetic friction: acts on a moving object,\n    opposing its motion.\n\nIn this case:\n  The box is moving → kinetic friction applies.\n  The floor exerts a friction force OPPOSITE to\n  the direction of the box's motion.",
-      "opts": [
-        "Friction (Kinetic)",
-        "Normal Force",
-        "Tension",
-        "Gravity"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A chandelier hangs from the ceiling by a wire. What force does the wire exert on the chandelier?",
-      "solution": "This is TENSION.\n\nDefinition:\n  Tension is the pulling force transmitted through\n  a string, rope, cable, or wire when it is pulled\n  tight by forces acting from opposite ends.\n\nKey facts:\n  → Tension acts ALONG the rope or string.\n  → It pulls the object toward the attachment point.\n  → The rope pulls the chandelier UP and pulls\n    the ceiling DOWN with equal magnitude.\n\nIn this case:\n  The wire is taut because the chandelier's weight\n  pulls it down. The wire pulls the chandelier UP —\n  this upward pull is the tension force.",
-      "opts": [
-        "Tension",
-        "Normal Force",
-        "Friction",
-        "Applied Force"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "Which force always acts downward toward the center of the Earth on any object with mass?",
-      "given": "This force acts on ALL objects with mass.\nIt is always directed downward (toward Earth's center).\nFormula: Fg = mg",
-      "opts": ["Gravity (Weight)", "Normal Force", "Friction", "Tension"],
-      "ans": 0,
-      "sol": "Gravity (weight) is the force of Earth's gravitational pull on any mass. Fg = mg, always downward."
+      "sets": [
+        { "q": "Which force always acts downward toward the center of the Earth on any object with mass?", "given": "This force acts on ALL objects with mass.\nFormula: Fg = mg", "opts": ["Gravity (Weight)", "Normal Force", "Friction", "Tension"], "ans": 0 },
+        { "q": "A coconut falls from a tree. Which force pulls it straight down?", "given": "This is a non-contact force acting on all masses near Earth.", "opts": ["Gravitational force", "Normal force", "Air resistance", "Tension"], "ans": 0 },
+        { "q": "What force causes a ball thrown upward to eventually come back down?", "given": "Fg = mg, always directed toward Earth's center.", "opts": ["Gravity", "Friction", "Normal force", "Applied force"], "ans": 0 },
+        { "q": "Which force gives an object its weight?", "given": "Weight = mass × gravitational acceleration (W = mg).", "opts": ["Gravitational force", "Normal force", "Magnetic force", "Elastic force"], "ans": 0 },
+        { "q": "A skydiver in free fall experiences which dominant force pulling them downward?", "given": "Fg = mg, directed downward toward Earth's center.", "opts": ["Gravity", "Air resistance", "Tension", "Normal force"], "ans": 0 }
+      ]
     },
     {
-      "q": "A book is sitting still on a table. The table pushes up on the book. What is this force called?",
-      "given": "This force is a contact force.\nIt acts perpendicular to the surface.\nIt balances the weight of the object on flat ground.",
-      "opts": ["Normal Force", "Friction", "Gravity", "Applied Force"],
-      "ans": 0,
-      "sol": "The normal force is the perpendicular contact force a surface exerts on an object resting on it."
+      "sets": [
+        { "q": "A book is sitting still on a table. The table pushes up on the book. What is this force called?", "given": "This force is a contact force.\nIt acts perpendicular to the surface.\nIt balances the weight of the object on flat ground.", "opts": ["Normal Force", "Friction", "Gravity", "Applied Force"], "ans": 0 },
+        { "q": "A box rests on the floor. The floor exerts an upward force on the box. What is this upward force?", "given": "This contact force always acts perpendicular (normal) to the surface.", "opts": ["Normal force", "Friction", "Tension", "Buoyancy"], "ans": 0 },
+        { "q": "A person stands still on a bridge. The bridge pushes upward on the person with a force equal to their weight. What type of force is this?", "given": "This is a contact force perpendicular to the surface.", "opts": ["Normal force", "Applied force", "Gravitational force", "Magnetic force"], "ans": 0 },
+        { "q": "What is the name of the contact force a surface exerts on an object, directed perpendicular to the surface?", "given": "This force prevents objects from passing through surfaces.", "opts": ["Normal force", "Friction", "Tension", "Spring force"], "ans": 0 },
+        { "q": "A laptop rests on a desk. Perpendicular to the desk surface, the desk exerts what force on the laptop?", "given": "This force balances the weight when the surface is horizontal.", "opts": ["Normal force", "Kinetic friction", "Gravitational force", "Air resistance"], "ans": 0 }
+      ]
     },
     {
-      "q": "You push a heavy crate across the floor. The floor resists your push and slows the crate. What force is acting against the motion?",
-      "given": "This force opposes motion between two surfaces.\nIt acts in the OPPOSITE direction of movement.",
-      "opts": ["Kinetic Friction", "Static Friction", "Normal Force", "Tension"],
-      "ans": 0,
-      "sol": "Kinetic friction opposes the motion of a sliding object. Since the crate is moving, kinetic friction applies."
+      "sets": [
+        { "q": "You push a heavy crate across the floor. The floor resists your push and slows the crate. What force is acting against the motion?", "given": "This force opposes motion between two surfaces.\nIt acts in the OPPOSITE direction of movement.", "opts": ["Kinetic Friction", "Static Friction", "Normal Force", "Tension"], "ans": 0 },
+        { "q": "A sled slides down a snowy hill. What force from the snow opposes the sled's motion?", "given": "This friction type acts on a moving object.", "opts": ["Kinetic friction", "Static friction", "Normal force", "Gravity"], "ans": 0 },
+        { "q": "A car skids to a stop on the road. What force between the tires and the road opposes the skidding motion?", "given": "This friction acts when surfaces are sliding against each other.", "opts": ["Kinetic friction", "Static friction", "Rolling resistance", "Normal force"], "ans": 0 },
+        { "q": "A book slides across a table and slows down. What force decelerates the book?", "given": "This is friction between two surfaces in relative motion.", "opts": ["Kinetic friction", "Static friction", "Applied force", "Tension"], "ans": 0 },
+        { "q": "Which type of friction opposes the motion of an object that is already sliding?", "given": "There are two main types of friction: one for stationary objects, one for moving objects.", "opts": ["Kinetic friction", "Static friction", "Normal force", "Air resistance"], "ans": 0 }
+      ]
     },
     {
-      "q": "A person tries to push a heavy refrigerator but it does not move. What force prevents the refrigerator from moving?",
-      "given": "This type of friction acts when an object is at REST.\nIt prevents the object from beginning to move.",
-      "opts": ["Static Friction", "Kinetic Friction", "Normal Force", "Applied Force"],
-      "ans": 0,
-      "sol": "Static friction acts when an object is at rest and prevents it from starting to move."
+      "sets": [
+        { "q": "A person tries to push a heavy refrigerator but it does not move. What force prevents the refrigerator from moving?", "given": "This type of friction acts when an object is at REST.\nIt prevents the object from beginning to move.", "opts": ["Static Friction", "Kinetic Friction", "Normal Force", "Applied Force"], "ans": 0 },
+        { "q": "You push against a wall and it does not move. What friction type resists your push?", "given": "This friction prevents the initiation of motion.", "opts": ["Static friction", "Kinetic friction", "Rolling friction", "Normal force"], "ans": 0 },
+        { "q": "A file cabinet sits on a floor. You push gently and it doesn't budge. What force holds it in place?", "given": "This force acts between surfaces at rest relative to each other.", "opts": ["Static friction", "Kinetic friction", "Tension", "Buoyancy"], "ans": 0 },
+        { "q": "Before a box begins to slide, which friction force must be overcome?", "given": "This type of friction is generally larger than kinetic friction.", "opts": ["Static friction", "Kinetic friction", "Rolling friction", "Air resistance"], "ans": 0 },
+        { "q": "Which type of friction acts on a stationary car parked on a slope, preventing it from sliding?", "given": "This friction prevents the onset of motion.", "opts": ["Static friction", "Kinetic friction", "Sliding friction", "Viscous friction"], "ans": 0 }
+      ]
     },
     {
-      "q": "A bucket is lifted by a rope. What is the force that the rope exerts on the bucket called?",
-      "given": "This force is transmitted through a rope, cable, or string.\nIt acts along the rope, pulling the object toward the attachment point.",
-      "opts": ["Tension", "Normal Force", "Friction", "Gravity"],
-      "ans": 0,
-      "sol": "Tension is the pulling force transmitted through a rope or string. It acts upward along the rope on the bucket."
+      "sets": [
+        { "q": "A bucket is lifted by a rope. What is the force that the rope exerts on the bucket called?", "given": "This force is transmitted through a rope, cable, or string.\nIt acts along the rope, pulling the object toward the attachment point.", "opts": ["Tension", "Normal Force", "Friction", "Gravity"], "ans": 0 },
+        { "q": "A chandelier hangs from the ceiling by a wire. What force does the wire exert on the chandelier?", "given": "This pulling force is transmitted through a flexible connector.", "opts": ["Tension", "Normal force", "Applied force", "Magnetic force"], "ans": 0 },
+        { "q": "A tightrope walker stands on a rope. The rope pulls the walker upward at an angle. What is this force?", "given": "This force acts along a rope or cable.", "opts": ["Tension", "Friction", "Normal force", "Weight"], "ans": 0 },
+        { "q": "A car tows a trailer using a tow bar. What is the force the tow bar exerts on the trailer?", "given": "This is the force transmitted through the connecting bar.", "opts": ["Tension", "Friction", "Normal force", "Gravity"], "ans": 0 },
+        { "q": "A climber hangs from a rope. What type of force does the rope exert on the climber's harness?", "given": "This force pulls the object toward the anchor point via the rope.", "opts": ["Tension", "Static friction", "Normal force", "Applied force"], "ans": 0 }
+      ]
     },
     {
-      "q": "Which of the following best defines 'applied force'?",
-      "given": "An applied force is one that a person or object directly\nexerts on another object.",
-      "opts": [
-        "A force directly exerted on an object by a person or another object",
-        "The force of gravity on an object",
-        "The force a surface exerts perpendicular to an object",
-        "The resistance force between two surfaces"
-      ],
-      "ans": 0,
-      "sol": "Applied force is a force directly exerted on an object by a person or another object, such as a push or pull."
+      "sets": [
+        { "q": "Which of the following best defines 'applied force'?", "given": "An applied force is one that a person or object directly exerts on another object.", "opts": ["A force directly exerted on an object by a person or another object", "The force of gravity on an object", "The force a surface exerts perpendicular to an object", "The resistance force between two surfaces"], "ans": 0 },
+        { "q": "A student pushes a shopping cart down an aisle. The student's push on the cart is an example of:", "given": "This force involves direct contact and intentional action.", "opts": ["Applied force", "Gravitational force", "Normal force", "Tension"], "ans": 0 },
+        { "q": "Which of the following is the best example of an applied force?", "given": "An applied force is directly exerted by a person or object.", "opts": ["A hand pushing a door open", "Gravity pulling a ball downward", "A table supporting a book", "A rope holding a swing"], "ans": 0 },
+        { "q": "When you kick a ball, the force your foot exerts on the ball is called:", "given": "This force is directly exerted through contact.", "opts": ["Applied force", "Normal force", "Friction", "Elastic force"], "ans": 0 },
+        { "q": "A construction worker hammers a nail. The force of the hammer on the nail is best described as:", "given": "This is a deliberate contact force from one object to another.", "opts": ["Applied force", "Tension", "Static friction", "Buoyancy"], "ans": 0 }
+      ]
     },
     {
-      "q": "A spring is compressed and then pushes a toy car forward. What type of force does the spring exert?",
-      "given": "This force is stored in elastic objects (springs, rubber bands).\nIt acts to restore the object to its natural shape.\nFormula: F = kx  (Hooke's Law)",
-      "opts": ["Spring (Elastic) Force", "Tension", "Normal Force", "Friction"],
-      "ans": 0,
-      "sol": "The spring force (elastic force) is stored energy in a compressed or stretched spring, described by Hooke's Law: F = kx."
+      "sets": [
+        { "q": "A spring is compressed and then pushes a toy car forward. What type of force does the spring exert?", "given": "This force is stored in elastic objects (springs, rubber bands).\nFormula: F = kx (Hooke's Law)", "opts": ["Spring (Elastic) Force", "Tension", "Normal Force", "Friction"], "ans": 0 },
+        { "q": "A rubber band is stretched and released, launching a paper ball. What force did the rubber band exert?", "given": "This is the restoring force of an elastic object. F = kx.", "opts": ["Elastic (spring) force", "Tension", "Applied force", "Normal force"], "ans": 0 },
+        { "q": "A trampoline surface is depressed and then springs back. What force causes the rebound?", "given": "This force acts to restore an elastic material to its natural shape.", "opts": ["Spring (elastic) force", "Normal force", "Gravity", "Kinetic friction"], "ans": 0 },
+        { "q": "A student uses a slingshot (elastic band) to launch a stone. The force from the slingshot is:", "given": "F = kx — Hooke's Law describes this type of restoring force.", "opts": ["Elastic force", "Applied force", "Tension", "Static friction"], "ans": 0 },
+        { "q": "A diving board bends when a diver stands on it and springs back when they jump. The restoring force of the board is:", "given": "This force is proportional to the deformation of the material.", "opts": ["Elastic (spring) force", "Normal force", "Tension", "Kinetic friction"], "ans": 0 }
+      ]
     },
     {
-      "q": "An object is falling through the air and a force opposes its downward motion. What is this force?",
-      "given": "This force acts on objects moving through a fluid (air or liquid).\nIt opposes the direction of motion.",
-      "opts": ["Air Resistance (Drag)", "Friction", "Normal Force", "Gravity"],
-      "ans": 0,
-      "sol": "Air resistance (drag) is a force that opposes the motion of an object moving through air or any fluid."
+      "sets": [
+        { "q": "An object is falling through the air and a force opposes its downward motion. What is this force?", "given": "This force acts on objects moving through a fluid (air or liquid).\nIt opposes the direction of motion.", "opts": ["Air Resistance (Drag)", "Friction", "Normal Force", "Gravity"], "ans": 0 },
+        { "q": "A sky diver reaches terminal velocity when the upward force on them balances gravity. What is that upward force?", "given": "This force increases with speed and opposes motion through air.", "opts": ["Air resistance (drag)", "Normal force", "Tension", "Buoyancy"], "ans": 0 },
+        { "q": "A feather falls more slowly than a rock because it experiences greater:", "given": "This force from the air opposes the falling motion.", "opts": ["Air resistance", "Gravity", "Normal force", "Static friction"], "ans": 0 },
+        { "q": "A cyclist must pedal harder at high speeds because of increasing:", "given": "This is the force exerted by the air on a moving object, opposing its motion.", "opts": ["Air resistance (drag)", "Kinetic friction", "Normal force", "Gravity"], "ans": 0 },
+        { "q": "A badminton shuttlecock decelerates quickly in the air due to:", "given": "This force opposes motion through any fluid medium.", "opts": ["Air resistance", "Gravity only", "Friction with air molecules (static)", "Normal force"], "ans": 0 }
+      ]
     },
     {
-      "q": "Two magnets attract each other without touching. What type of force is this an example of?",
-      "given": "This force acts between objects without direct contact.\nIt can be attractive or repulsive.\nIt is a non-contact force.",
-      "opts": ["Magnetic Force", "Friction", "Normal Force", "Tension"],
-      "ans": 0,
-      "sol": "Magnetic force is a non-contact force that acts between magnets or magnetic materials. No physical contact is needed."
+      "sets": [
+        { "q": "Two magnets attract each other without touching. What type of force is this an example of?", "given": "This force acts between objects without direct contact.\nIt can be attractive or repulsive.", "opts": ["Magnetic Force", "Friction", "Normal Force", "Tension"], "ans": 0 },
+        { "q": "A compass needle aligns with Earth's field. The force that rotates the needle is:", "given": "This is a non-contact force between magnetic materials.", "opts": ["Magnetic force", "Gravitational force", "Normal force", "Static friction"], "ans": 0 },
+        { "q": "Two bar magnets repel each other when like poles are brought together. This is an example of:", "given": "This non-contact force can be attractive or repulsive.", "opts": ["Magnetic force", "Electric force", "Normal force", "Tension"], "ans": 0 },
+        { "q": "A refrigerator magnet holds a paper note without any mechanical fastener. The force holding it is:", "given": "This force acts through the air without contact between the note and magnet.", "opts": ["Magnetic force", "Normal force", "Friction only", "Applied force"], "ans": 0 },
+        { "q": "Iron filings arrange in a pattern around a bar magnet. The force acting on the filings is:", "given": "This is a non-contact force that creates a field around magnetic objects.", "opts": ["Magnetic force", "Gravitational force", "Normal force", "Elastic force"], "ans": 0 }
+      ]
     },
     {
-      "q": "Which pair correctly matches the force type with its definition?",
-      "given": "Review all force definitions:\nNormal = perpendicular contact force from a surface\nFriction = opposes motion between surfaces\nTension = pull through a rope\nGravity = pull toward Earth's center",
-      "opts": [
-        "Friction — opposes motion between two surfaces in contact",
-        "Normal Force — pulls objects toward Earth's center",
-        "Tension — pushes objects apart",
-        "Gravity — acts perpendicular to a surface"
-      ],
-      "ans": 0,
-      "sol": "Friction opposes relative motion between surfaces. The other options describe the wrong forces."
+      "sets": [
+        { "q": "Which pair correctly matches the force type with its definition?", "given": "Review all force definitions:\nNormal = perpendicular contact force from a surface\nFriction = opposes motion between surfaces\nTension = pull through a rope\nGravity = pull toward Earth's center", "opts": ["Friction — opposes motion between two surfaces in contact", "Normal Force — pulls objects toward Earth's center", "Tension — pushes objects apart", "Gravity — acts perpendicular to a surface"], "ans": 0 },
+        { "q": "Which statement correctly describes the normal force?", "given": "Normal = perpendicular, Friction = opposing motion, Tension = along rope, Weight = downward.", "opts": ["It acts perpendicular to the surface, pushing away from it", "It always acts downward", "It opposes motion between surfaces", "It pulls objects along a string"], "ans": 0 },
+        { "q": "Which of the following correctly describes tension?", "given": "Tension is transmitted through ropes, strings, cables, or wires.", "opts": ["A pulling force transmitted through a rope or string", "A pushing force from a surface", "A force opposing relative motion", "A downward pull due to gravity"], "ans": 0 },
+        { "q": "A student says: 'Gravity is a contact force that acts perpendicular to a surface.' What is wrong with this statement?", "given": "Review definitions: Gravity acts at a distance (non-contact), directed toward Earth's center.", "opts": ["Gravity is non-contact and acts toward Earth's center, not perpendicular to surfaces", "Nothing is wrong — gravity is a contact force", "Gravity does act perpendicular to surfaces", "Gravity is not a force"], "ans": 0 },
+        { "q": "Which pair is INCORRECTLY matched?", "given": "Normal force = perpendicular to surface; Friction = opposing motion; Tension = along rope; Gravity = toward Earth's center.", "opts": ["Normal force — acts parallel to the surface", "Friction — opposes motion between surfaces", "Tension — acts along a rope or string", "Gravity — pulls toward Earth's center"], "ans": 0 }
+      ]
     }
   ]
 }
