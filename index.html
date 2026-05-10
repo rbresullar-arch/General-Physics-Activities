@@ -830,14 +830,18 @@ function drawSummary() {
   var totalPoss  = allRecords.reduce(function(s,r){return s+(r.total||10);},0);
   var totalCount = allRecords.length;
   var avgPct     = totalCount>0?Math.round(allRecords.reduce(function(s,r){return s+r.score;},0)/totalCount):0;
+  var totalTabs  = allRecords.reduce(function(s,r){return s+(r.tabSwitches||0);},0);
+  var totalFast  = allRecords.reduce(function(s,r){return s+(r.fastAnswerCount||0);},0);
+  var passing    = allRecords.filter(function(r){return r.score>=75;}).length;
 
   ctx.fillStyle='#1a1a1a'; ctx.font='700 44px Fraunces,serif';
   ctx.fillText(totalScore+' / '+totalPoss, cx, 352);
   ctx.fillStyle='#5a5a5a'; ctx.font='400 16px "JetBrains Mono",monospace';
-  ctx.fillText(totalCount+' submissions  ·  '+avgPct+'% avg  ·  '+
-    allRecords.filter(function(r){return r.score>=75;}).length+' passing', cx, 382);
+  ctx.fillText(totalCount+' submissions  ·  '+avgPct+'% avg  ·  '+passing+' passing', cx, 378);
+  ctx.fillStyle=(totalTabs>0||totalFast>0)?'#b00020':'#9a9a9a';
+  ctx.fillText('Tab switches: '+totalTabs+'  ·  Fast answers: '+totalFast, cx, 400);
 
-  var y = 430;
+  var y = 435;
 
   // Group by activity
   var groups = {};
@@ -900,8 +904,19 @@ function drawSummary() {
   ctx.fillText('SURIGAO  EDUCATION  CENTER  ·  PHYS 111', cx, y+26);
 
   lastCanvas = canvas;
-  document.getElementById('preview-img').src = canvas.toDataURL('image/png');
-  document.getElementById('summary-modal').classList.add('show');
+  var lastBlobUrl = null;
+  if (canvas.toBlob) {
+    canvas.toBlob(function(blob) {
+      if (!blob) { alert('Could not generate image.'); return; }
+      if (lastBlobUrl) URL.revokeObjectURL(lastBlobUrl);
+      lastBlobUrl = URL.createObjectURL(blob);
+      document.getElementById('preview-img').src = lastBlobUrl;
+      document.getElementById('summary-modal').classList.add('show');
+    }, 'image/png');
+  } else {
+    document.getElementById('preview-img').src = canvas.toDataURL('image/png');
+    document.getElementById('summary-modal').classList.add('show');
+  }
 }
 
 function drawCorner(ctx,x,y,dx,dy) {
@@ -927,10 +942,17 @@ function drawDivider(ctx,cx,y) {
 function closeSummaryModal() { document.getElementById('summary-modal').classList.remove('show'); }
 function downloadPNG() {
   if (!lastCanvas) return;
-  var a=document.createElement('a');
-  a.href=lastCanvas.toDataURL('image/png');
-  a.download='phys111_activity_summary.png';
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  lastCanvas.toBlob(function(blob) {
+    if (!blob) { alert('Download failed — could not generate image.'); return; }
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'phys111_activity_summary.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+  }, 'image/png');
 }
 
 /* ── Boot ── */
