@@ -1,119 +1,599 @@
 {
   "meta": {
     "title": "Vector Addition",
-    "subject": "Physics · Vectors",
+    "subject": "Physics \u00b7 Vectors",
     "lock_key": "quiz_vector_addition_done"
   },
-  "examples": [
-    {
-      "q": "Two forces act on an object in the SAME direction: 30 N east and 20 N east. What is the resultant vector?",
-      "solution": "When vectors point in the SAME direction,\nyou simply ADD their magnitudes.\n\nThe resultant keeps the same direction.\n\nStep 1 — Add the magnitudes:\n    30 N + 20 N = 50 N\n\nStep 2 — Keep the direction:\n    Direction = East\n\nAnswer:  Resultant = 50 N, East\n\nThis is called finding the NET vector.\nSame direction → magnitudes add up.",
-      "opts": [
-        "50 N, East",
-        "10 N, East",
-        "50 N, West",
-        "600 N, East"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Two forces act on an object in OPPOSITE directions: 40 N east and 15 N west. What is the resultant vector?",
-      "solution": "When vectors point in OPPOSITE directions,\nyou SUBTRACT the smaller from the larger.\nThe resultant points in the direction of the larger vector.\n\nStep 1 — Assign signs (East = positive, West = negative):\n    +40 N  and  −15 N\n\nStep 2 — Add algebraically:\n    +40 + (−15) = +25 N\n\nStep 3 — Interpret the sign:\n    Positive → East\n\nAnswer:  Resultant = 25 N, East",
-      "opts": [
-        "25 N, East",
-        "55 N, East",
-        "25 N, West",
-        "55 N, West"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Two vectors act at RIGHT ANGLES: 3 N north and 4 N east. Find the magnitude and direction of the resultant.",
-      "solution": "When vectors are PERPENDICULAR, use the\nPythagorean Theorem to find the magnitude,\nand tan⁻¹ for the direction.\n\nStep 1 — Find the magnitude:\n    R² = 3² + 4² = 9 + 16 = 25\n    R = √25 = 5 N\n\nStep 2 — Find the direction angle from East:\n    tan θ = opposite / adjacent\n    tan θ = 3 (North) / 4 (East) = 0.75\n    θ = tan⁻¹(0.75) ≈ 37°\n\nAnswer:  5 N at 37° North of East",
-      "opts": [
-        "5 N at 37° North of East",
-        "7 N at 45° North of East",
-        "5 N at 53° North of East",
-        "5 N due North"
-      ],
-      "ans": 0
-    }
-  ],
   "questions": [
     {
-      "q": "Two vectors point in the same direction: 14 N north and 11 N north. What is the resultant?",
-      "given": "Same direction → add magnitudes, keep direction.",
-      "opts": ["25 N, North", "3 N, North", "25 N, South", "14 N, North"],
-      "ans": 0,
-      "sol": "14 + 11 = 25 N, North."
+      "sets": [
+        {
+          "q": "Two vectors: 14 N north and 11 N north. What is the resultant?",
+          "given": "Same direction \u2192 add magnitudes.",
+          "opts": [
+            "25 N, North",
+            "3 N, North",
+            "25 N, South",
+            "14 N, North"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 18 N east and 7 N east. What is the resultant?",
+          "given": "Same direction \u2192 add magnitudes.",
+          "opts": [
+            "25 N, East",
+            "11 N, East",
+            "25 N, West",
+            "18 N, East"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two vectors: 30 N south and 15 N south. What is the resultant?",
+          "given": "Same direction \u2192 add magnitudes.",
+          "opts": [
+            "45 N, South",
+            "15 N, South",
+            "45 N, North",
+            "30 N, South"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 20 N west and 20 N west. What is the resultant?",
+          "given": "Same direction \u2192 add magnitudes.",
+          "opts": [
+            "40 N, West",
+            "0 N",
+            "40 N, East",
+            "20 N, West"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two vectors: 12 N up and 13 N up. What is the resultant?",
+          "given": "Same direction \u2192 add magnitudes.",
+          "opts": [
+            "25 N, Up",
+            "1 N, Up",
+            "25 N, Down",
+            "13 N, Up"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Two forces act in opposite directions: 60 N right and 25 N left. What is the resultant?",
-      "given": "Opposite directions → subtract smaller from larger.\nResultant points in the direction of the larger vector.",
-      "opts": ["35 N, Right", "85 N, Right", "35 N, Left", "85 N, Left"],
-      "ans": 0,
-      "sol": "60 − 25 = 35 N in the direction of the larger force (Right)."
+      "sets": [
+        {
+          "q": "Two forces: 60 N right and 25 N left. What is the resultant?",
+          "given": "Opposite directions \u2192 subtract. Resultant points in direction of larger vector.",
+          "opts": [
+            "35 N, Right",
+            "85 N, Right",
+            "35 N, Left",
+            "85 N, Left"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 80 N north and 30 N south. What is the resultant?",
+          "given": "Opposite directions \u2192 subtract.",
+          "opts": [
+            "50 N, North",
+            "110 N, North",
+            "50 N, South",
+            "110 N, South"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 45 N east and 20 N west. What is the resultant?",
+          "given": "Opposite directions \u2192 subtract.",
+          "opts": [
+            "25 N, East",
+            "65 N, East",
+            "25 N, West",
+            "65 N, West"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 100 N up and 60 N down. What is the resultant?",
+          "given": "Opposite directions \u2192 subtract.",
+          "opts": [
+            "40 N, Up",
+            "160 N, Up",
+            "40 N, Down",
+            "160 N, Down"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two forces: 55 N right and 35 N left. What is the resultant?",
+          "given": "Opposite directions \u2192 subtract.",
+          "opts": [
+            "20 N, Right",
+            "90 N, Right",
+            "20 N, Left",
+            "90 N, Left"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A vector of 50 N East and a vector of 50 N West are added. What is the resultant?",
-      "given": "When two equal vectors oppose each other, they cancel out.\nAssign East = positive, West = negative.",
-      "opts": ["0 N", "100 N, East", "100 N, West", "50 N, East"],
-      "ans": 0,
-      "sol": "+50 + (−50) = 0 N. The vectors cancel — the object is in equilibrium."
+      "sets": [
+        {
+          "q": "50 N East and 50 N West are added. What is the resultant?",
+          "given": "Equal and opposite \u2192 they cancel. East = positive, West = negative.",
+          "opts": [
+            "0 N",
+            "100 N, East",
+            "100 N, West",
+            "50 N, East"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "40 N North and 40 N South act on an object. What is the net force?",
+          "given": "Equal magnitudes, opposite directions \u2192 they cancel.",
+          "opts": [
+            "0 N",
+            "80 N, North",
+            "80 N, South",
+            "40 N, North"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two equal forces of 25 N act in exactly opposite directions on a box. What is the net force?",
+          "given": "Equal and opposite forces cancel.",
+          "opts": [
+            "0 N",
+            "50 N",
+            "25 N",
+            "\u221225 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 70 N force acts east and a 70 N force acts west on an object. What is the resultant?",
+          "given": "Equal magnitude, opposite direction \u2192 vector sum = 0.",
+          "opts": [
+            "0 N",
+            "140 N, East",
+            "70 N, East",
+            "140 N, West"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 90 N pull and a 90 N push act along the same line in opposite directions. The net force is:",
+          "given": "Equal and opposite forces produce zero net force.",
+          "opts": [
+            "0 N",
+            "180 N",
+            "90 N",
+            "\u221290 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Two perpendicular vectors have magnitudes 6 N and 8 N. What is the magnitude of the resultant?",
-      "given": "For perpendicular vectors:\n    R² = A² + B²\n    R = √(A² + B²)",
-      "opts": ["10 N", "14 N", "√28 N", "48 N"],
-      "ans": 0,
-      "sol": "R = √(6² + 8²) = √(36 + 64) = √100 = 10 N."
+      "sets": [
+        {
+          "q": "Two perpendicular vectors: 6 N and 8 N. What is the resultant magnitude?",
+          "given": "R\u00b2 = A\u00b2 + B\u00b2",
+          "opts": [
+            "10 N",
+            "14 N",
+            "\u221a28 N",
+            "48 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular forces: 3 N and 4 N. What is the resultant?",
+          "given": "R = \u221a(A\u00b2 + B\u00b2)",
+          "opts": [
+            "5 N",
+            "7 N",
+            "\u221a7 N",
+            "12 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 9 N and 12 N. What is the resultant magnitude?",
+          "given": "R = \u221a(9\u00b2 + 12\u00b2)",
+          "opts": [
+            "15 N",
+            "21 N",
+            "\u221a63 N",
+            "108 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 8 N and 15 N. What is the resultant magnitude?",
+          "given": "R = \u221a(8\u00b2 + 15\u00b2)",
+          "opts": [
+            "17 N",
+            "23 N",
+            "\u221a89 N",
+            "120 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 5 N and 12 N. What is the resultant magnitude?",
+          "given": "R = \u221a(5\u00b2 + 12\u00b2)",
+          "opts": [
+            "13 N",
+            "17 N",
+            "\u221a119 N",
+            "60 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Which of the following correctly describes a vector quantity?",
-      "given": "A vector has both MAGNITUDE and DIRECTION.\nA scalar has magnitude only.",
-      "opts": [
-        "40 N applied eastward",
-        "40 N of force",
-        "A temperature of 30°C",
-        "A mass of 5 kg"
-      ],
-      "ans": 0,
-      "sol": "Vectors require both magnitude and direction. '40 N eastward' specifies both."
+      "sets": [
+        {
+          "q": "Which correctly describes a vector quantity?",
+          "given": "A vector has both MAGNITUDE and DIRECTION. A scalar has only magnitude.",
+          "opts": [
+            "40 N applied eastward",
+            "40 N of force",
+            "A temperature of 30\u00b0C",
+            "A mass of 5 kg"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which of the following is a vector quantity?",
+          "given": "Vectors have both magnitude and direction.",
+          "opts": [
+            "Velocity (e.g., 10 m/s north)",
+            "Speed (e.g., 10 m/s)",
+            "Mass (e.g., 5 kg)",
+            "Temperature (e.g., 30\u00b0C)"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which pair lists two vector quantities?",
+          "given": "Vectors require direction; scalars do not.",
+          "opts": [
+            "Displacement and velocity",
+            "Speed and mass",
+            "Distance and temperature",
+            "Time and energy"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A student says '50 km/h' when asked for velocity. What is missing?",
+          "given": "Velocity is a vector \u2014 it requires both magnitude and direction.",
+          "opts": [
+            "Direction (e.g., north, east)",
+            "A larger number",
+            "The unit should be m/s",
+            "Nothing is missing"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Which of the following is NOT a vector quantity?",
+          "given": "Vectors have direction; scalars do not.",
+          "opts": [
+            "Speed",
+            "Force",
+            "Velocity",
+            "Acceleration"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A person walks 10 m East then 10 m West. What is their total displacement?",
-      "given": "Displacement is a vector — it has direction.\nEast = positive, West = negative.\nAdd algebraically.",
-      "opts": ["0 m", "20 m, East", "20 m, West", "10 m, East"],
-      "ans": 0,
-      "sol": "+10 + (−10) = 0 m. The person returns to the starting point. Displacement = 0."
+      "sets": [
+        {
+          "q": "A person walks 10 m East then 10 m West. What is the total displacement?",
+          "given": "Displacement is a vector. East = positive, West = negative.",
+          "opts": [
+            "0 m",
+            "20 m, East",
+            "20 m, West",
+            "10 m, East"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ball rolls 5 m north then 5 m south. What is the displacement?",
+          "given": "Displacement = net change in position.",
+          "opts": [
+            "0 m",
+            "10 m, North",
+            "10 m, South",
+            "5 m, North"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A car drives 30 km east then 30 km west. What is the displacement?",
+          "given": "Equal and opposite displacements cancel.",
+          "opts": [
+            "0 km",
+            "60 km, East",
+            "30 km, East",
+            "60 km, West"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A student walks 8 m right, then 8 m left. What is the displacement?",
+          "given": "Displacement = final position \u2212 initial position.",
+          "opts": [
+            "0 m",
+            "16 m, Right",
+            "8 m, Right",
+            "16 m, Left"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A ship sails 100 km north then 100 km south. What is the net displacement?",
+          "given": "Vectors in opposite directions cancel when equal in magnitude.",
+          "opts": [
+            "0 km",
+            "200 km, North",
+            "200 km, South",
+            "100 km, North"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Two perpendicular vectors measure 5 N and 12 N. What is the resultant magnitude?",
-      "given": "Pythagorean Theorem for perpendicular vectors:\n    R = √(A² + B²)",
-      "opts": ["13 N", "17 N", "7 N", "60 N"],
-      "ans": 0,
-      "sol": "R = √(5² + 12²) = √(25 + 144) = √169 = 13 N."
+      "sets": [
+        {
+          "q": "Two perpendicular vectors: 5 N and 12 N. What is the resultant?",
+          "given": "R = \u221a(A\u00b2 + B\u00b2)",
+          "opts": [
+            "13 N",
+            "17 N",
+            "7 N",
+            "60 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 9 N and 40 N. What is the resultant?",
+          "given": "R = \u221a(9\u00b2 + 40\u00b2)",
+          "opts": [
+            "41 N",
+            "49 N",
+            "31 N",
+            "360 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 20 N and 21 N. What is the resultant?",
+          "given": "R = \u221a(20\u00b2 + 21\u00b2)",
+          "opts": [
+            "29 N",
+            "41 N",
+            "1 N",
+            "420 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 12 N and 35 N. What is the resultant?",
+          "given": "R = \u221a(12\u00b2 + 35\u00b2)",
+          "opts": [
+            "37 N",
+            "47 N",
+            "23 N",
+            "420 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Two perpendicular vectors: 15 N and 20 N. What is the resultant?",
+          "given": "R = \u221a(15\u00b2 + 20\u00b2)",
+          "opts": [
+            "25 N",
+            "35 N",
+            "5 N",
+            "300 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A resultant vector of 10 N is formed by two perpendicular components. One component is 6 N. What is the other?",
-      "given": "Rearrange the Pythagorean Theorem:\n    B = √(R² − A²)",
-      "opts": ["8 N", "4 N", "√136 N", "16 N"],
-      "ans": 0,
-      "sol": "B = √(10² − 6²) = √(100 − 36) = √64 = 8 N."
+      "sets": [
+        {
+          "q": "Resultant = 10 N from two perpendicular components. One component is 6 N. What is the other?",
+          "given": "B = \u221a(R\u00b2 \u2212 A\u00b2)",
+          "opts": [
+            "8 N",
+            "4 N",
+            "\u221a136 N",
+            "16 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Resultant = 13 N. One perpendicular component = 5 N. Find the other.",
+          "given": "B = \u221a(13\u00b2 \u2212 5\u00b2)",
+          "opts": [
+            "12 N",
+            "8 N",
+            "18 N",
+            "\u221a194 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Resultant = 25 N. One perpendicular component = 7 N. Find the other.",
+          "given": "B = \u221a(25\u00b2 \u2212 7\u00b2)",
+          "opts": [
+            "24 N",
+            "18 N",
+            "32 N",
+            "\u221a576 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Resultant = 15 N. One perpendicular component = 9 N. Find the other.",
+          "given": "B = \u221a(15\u00b2 \u2212 9\u00b2)",
+          "opts": [
+            "12 N",
+            "6 N",
+            "24 N",
+            "\u221a306 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Resultant = 17 N. One perpendicular component = 8 N. Find the other.",
+          "given": "B = \u221a(17\u00b2 \u2212 8\u00b2)",
+          "opts": [
+            "15 N",
+            "9 N",
+            "25 N",
+            "\u221a353 N"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "Three forces act on an object in a straight line: 20 N right, 30 N right, and 10 N left. What is the net force?",
-      "given": "Assign right = positive, left = negative.\nAdd all vectors algebraically.",
-      "opts": ["40 N, Right", "60 N, Right", "40 N, Left", "20 N, Right"],
-      "ans": 0,
-      "sol": "+20 + 30 + (−10) = +40 N. Net force = 40 N, Right."
+      "sets": [
+        {
+          "q": "Three forces: 20 N right, 30 N right, 10 N left. What is the net force?",
+          "given": "Right = positive, left = negative. Add algebraically.",
+          "opts": [
+            "40 N, Right",
+            "60 N, Right",
+            "40 N, Left",
+            "20 N, Right"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Three forces: 15 N up, 25 N up, 10 N down. What is the net force?",
+          "given": "Add algebraically: up = positive, down = negative.",
+          "opts": [
+            "30 N, Up",
+            "50 N, Up",
+            "30 N, Down",
+            "20 N, Up"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Four forces along a line: 10 N right, 20 N right, 5 N left, 15 N left. Net force?",
+          "given": "Right = positive, left = negative. Sum all.",
+          "opts": [
+            "10 N, Right",
+            "50 N, Right",
+            "10 N, Left",
+            "20 N, Right"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Forces on an object: 50 N east, 30 N east, 20 N west. What is the net force?",
+          "given": "East = positive, west = negative.",
+          "opts": [
+            "60 N, East",
+            "100 N, East",
+            "60 N, West",
+            "20 N, East"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Three forces in a line: 8 N forward, 12 N forward, 5 N backward. Net force?",
+          "given": "Forward = positive, backward = negative.",
+          "opts": [
+            "15 N, Forward",
+            "25 N, Forward",
+            "15 N, Backward",
+            "5 N, Forward"
+          ],
+          "ans": 0
+        }
+      ]
     },
     {
-      "q": "A vector pointing at 37° above the horizontal has a magnitude of 10 N. What is its vertical component?",
-      "given": "Vertical component = R × sin θ\nsin 37° ≈ 0.6",
-      "opts": ["6 N", "8 N", "10 N", "4 N"],
-      "ans": 0,
-      "sol": "Vertical = 10 × sin 37° = 10 × 0.6 = 6 N."
+      "sets": [
+        {
+          "q": "A vector at 37\u00b0 above horizontal has magnitude 10 N. What is the vertical component?",
+          "given": "Vertical component = R \u00d7 sin \u03b8, sin 37\u00b0 \u2248 0.6",
+          "opts": [
+            "6 N",
+            "8 N",
+            "10 N",
+            "4 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A vector at 37\u00b0 above horizontal has magnitude 20 N. What is the vertical component?",
+          "given": "Vertical = R \u00d7 sin 37\u00b0, sin 37\u00b0 \u2248 0.6",
+          "opts": [
+            "12 N",
+            "16 N",
+            "20 N",
+            "8 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A vector at 30\u00b0 above horizontal has magnitude 10 N. What is the horizontal component?",
+          "given": "Horizontal = R \u00d7 cos 30\u00b0, cos 30\u00b0 \u2248 0.866",
+          "opts": [
+            "8.66 N",
+            "5 N",
+            "10 N",
+            "6 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A vector at 53\u00b0 above horizontal has magnitude 10 N. What is the horizontal component?",
+          "given": "Horizontal = R \u00d7 cos 53\u00b0, cos 53\u00b0 \u2248 0.6",
+          "opts": [
+            "6 N",
+            "8 N",
+            "10 N",
+            "4 N"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A 25 N force acts at 37\u00b0 above horizontal. What is its horizontal component?",
+          "given": "Horizontal = R \u00d7 cos 37\u00b0, cos 37\u00b0 \u2248 0.8",
+          "opts": [
+            "20 N",
+            "15 N",
+            "25 N",
+            "10 N"
+          ],
+          "ans": 0
+        }
+      ]
     }
   ]
 }
